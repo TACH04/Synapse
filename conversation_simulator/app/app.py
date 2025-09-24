@@ -75,7 +75,8 @@ def chat():
         return jsonify({'error': 'No scenario or patient selected'}), 400
     
     # Generate patient response
-    response = conversation_engine.generate_response(doctor_message, next(key for key, value in SCENARIOS.items() if value == scenario), patient)
+    scenario_key_val = next(key for key, value in SCENARIOS.items() if value == scenario)
+    response = conversation_engine.generate_response(doctor_message, scenario_key_val, patient, scenario)
     
     # Update session conversation history
     if 'conversation_history' not in session:
