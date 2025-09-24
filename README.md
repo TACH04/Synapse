@@ -53,4 +53,3 @@ This is the single authoritative index for all DHF elements, folders, and docume
 
 Last updated: September 24, 2025
 
-Permissions note: Ensure the instructional team has access to this repository (add them as collaborators or make it public). If you prefer cloud links, mirror the `DHF` folder to a shared drive and replace the links above with share URLs.
