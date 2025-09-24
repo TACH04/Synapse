@@ -47,7 +47,8 @@ SCENARIOS = {
             "Assess patient's understanding and readiness",
             "Address emotional responses appropriately",
             "Discuss goals of care and quality of life"
-        ]
+        ],
+        "patient_awareness": "unaware"
     },
     "treatment_options": {
         "title": "Discussing Treatment Options",
@@ -58,7 +59,8 @@ SCENARIOS = {
             "Help patient weigh quality vs. quantity of life",
             "Address fears about stopping treatment",
             "Introduce palliative care positively"
-        ]
+        ],
+        "patient_awareness": "partial"
     },
     "family_discussion": {
         "title": "Family Meeting About Prognosis",
@@ -69,7 +71,8 @@ SCENARIOS = {
             "Ensure patient voice is heard",
             "Manage family conflicts or differing opinions",
             "Help family prepare emotionally and practically"
-        ]
+        ],
+        "patient_awareness": "aware"
     },
     "end_of_life_care": {
         "title": "Planning End-of-Life Care",
@@ -80,7 +83,8 @@ SCENARIOS = {
             "Explore patient's fears and hopes",
             "Document care preferences clearly",
             "Provide emotional support during difficult decisions"
-        ]
+        ],
+        "patient_awareness": "aware"
     }
 }
 
