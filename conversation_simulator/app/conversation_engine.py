@@ -18,11 +18,48 @@ class ConversationEngine:
         self.model_name = os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
         self.client = None
         self.conversation_history = []
+        
+        # Simple keyword maps for heuristic emotion detection
+        self._emotion_keywords = {
+            "anxious": ["worried", "anxious", "nervous", "scared", "afraid", "concerned"],
+            "sad": ["sad", "down", "depressed", "cry", "tears", "hopeless"],
+            "angry": ["angry", "mad", "upset", "frustrated", "annoyed", "furious"],
+            "fearful": ["fear", "terrified", "scared", "afraid"],
+            "hopeful": ["hope", "optimistic", "positive", "grateful", "thank"],
+            "accepting": ["accept", "okay with", "at peace", "ready"],
+            "frustrated": ["frustrated", "fed up", "tired of"],
+            "neutral": ["okay", "fine", "alright", "manage", "managing"],
+            "calm": ["calm", "steady", "manageable", "coping"]
+        }
 
         # Configure Gemini if API key is present
         if self.api_key:
             genai.configure(api_key=self.api_key)
     
+    def _infer_emotion(self, doctor_message: str, patient_response: str, patient_profile: Dict) -> Dict:
+        """Infer a coarse emotion label and confidence score from messages and profile."""
+        text = f"{patient_response} \n {doctor_message}".lower()
+        scores: Dict[str, int] = {label: 0 for label in self._emotion_keywords.keys()}
+        for label, keywords in self._emotion_keywords.items():
+            for kw in keywords:
+                if kw in text:
+                    scores[label] += 1
+        # Nudge toward baseline from profile if no strong signals
+        baseline = (patient_profile.get("emotional_state") or "").lower()
+        baseline_label = None
+        for label in self._emotion_keywords.keys():
+            if label in baseline:
+                baseline_label = label
+                break
+        if all(v == 0 for v in scores.values()) and baseline_label:
+            scores[baseline_label] = 1
+        # Pick best label
+        label = max(scores, key=lambda k: scores[k]) if scores else "neutral"
+        max_score = scores.get(label, 0)
+        total = sum(scores.values()) or 1
+        confidence = max(0.3, min(0.95, max_score / total))
+        return {"label": label, "score": round(confidence, 2)}
+
     def _get_client(self):
         if self.client is None:
             if self.api_key:
@@ -134,10 +171,12 @@ Remember: This is a training tool for doctors to practice empathetic communicati
             initial_reply = self._generate_initial_patient_reply(patient_profile, details.get("patient_awareness", "unknown"))
             self.conversation_history.append({"role": "user", "content": doctor_message})
             self.conversation_history.append({"role": "assistant", "content": initial_reply})
+            emotion = self._infer_emotion(doctor_message, initial_reply, patient_profile)
             return {
                 "response": initial_reply,
                 "timestamp": datetime.now().isoformat(),
-                "success": True
+                "success": True,
+                "emotion": emotion
             }
         
         # Use mock responses if API key is missing
@@ -150,10 +189,12 @@ Remember: This is a training tool for doctors to practice empathetic communicati
             self.conversation_history.append({"role": "user", "content": doctor_message})
             self.conversation_history.append({"role": "assistant", "content": mock_response})
             
+            emotion = self._infer_emotion(doctor_message, mock_response, patient_profile)
             return {
                 "response": mock_response,
                 "timestamp": datetime.now().isoformat(),
-                "success": True
+                "success": True,
+                "emotion": emotion
             }
         
         try:
@@ -179,10 +220,12 @@ Remember: This is a training tool for doctors to practice empathetic communicati
             self.conversation_history.append({"role": "user", "content": doctor_message})
             self.conversation_history.append({"role": "assistant", "content": patient_response})
             
+            emotion = self._infer_emotion(doctor_message, patient_response, patient_profile)
             return {
                 "response": patient_response,
                 "timestamp": datetime.now().isoformat(),
-                "success": True
+                "success": True,
+                "emotion": emotion
             }
             
         except Exception as e:

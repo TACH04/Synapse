@@ -85,7 +85,8 @@ def chat():
     session['conversation_history'].append({
         'doctor': doctor_message,
         'patient': response['response'],
-        'timestamp': response['timestamp']
+        'timestamp': response['timestamp'],
+        'emotion': response.get('emotion')
     })
     
     return jsonify(response)
