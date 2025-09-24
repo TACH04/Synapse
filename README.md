@@ -6,79 +6,51 @@ Elijah Don, Tanner Hochberg, Alex Roussas, Ian Marcon, Ethan Vanderpool
 
 Our team is developing innovative solutions to improve healthcare communication and reduce physician burnout, with a focus on empathetic patient interactions during difficult conversations.
 
-## 🏥 Medical Conversation Simulator
 
-**An AI-powered training tool to help medical professionals practice empathetic communication during difficult conversations in hospice and palliative care settings.**
+# Design History File (DHF) - Table of Contents
 
-### 🎯 Key Features
-- **Realistic AI Patients**: Multiple patient personas with different backgrounds and emotional states
-- **Scenario-Based Training**: Terminal diagnosis, treatment options, family discussions, end-of-life care
-- **Real-time Feedback**: AI analysis of conversation quality and empathetic communication
-- **Progress Tracking**: Conversation history and improvement analytics
-
-### 🚀 Quick Start
-```bash
-cd conversation_simulator
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-cp .env.template .env
-# Edit .env with your OpenAI API key
-python run.py
-```
-
-Visit `http://localhost:5000` to start training!
-
-### 📁 Project Structure
-```
-conversation_simulator/
-├── app/
-│   ├── app.py                 # Main Flask application
-│   ├── conversation_engine.py # OpenAI integration
-│   └── patient_scenarios.py   # Patient profiles & scenarios
-├── templates/                 # HTML templates
-├── static/                    # CSS/JS assets
-├── run.py                     # Startup script
-├── requirements.txt           # Dependencies
-└── README.md                  # Detailed documentation
-```
-
-## 📋 Problem Statements
-
-### From Our Team:
-- **Tanner**: "A way to address a doctors fatigue due to difficult conversations with consecutive patients in order to create more emotionally centered conversation."
-- **Elijah**: "A way to provide objective feedback on empathetic communication in palliative care trainees in order to accelerate the development of their conversational skills."
-- **Alex**: "A way to facilitate empathetic conversation practice for a medical practitioner to improve their conversational skills."
-- **Ian**: "A way to discover a patients uncertain emotional needs in order to reach a deeper patient-doctor emotional understanding."
-
-## 🎓 Learning Objectives
-
-Our solution addresses:
-1. **Empathetic Communication**: Training doctors to deliver difficult news with compassion
-2. **Emotional Awareness**: Recognizing and responding to patient emotional cues
-3. **Burnout Prevention**: Building resilience through better communication skills
-4. **Patient-Centered Care**: Understanding diverse patient perspectives and needs
-5. **Professional Development**: Continuous learning and improvement in communication
-
-## 🔬 Technical Approach
-
-- **AI-Powered Simulation**: Using OpenAI's GPT models for realistic patient interactions
-- **Web-Based Interface**: Flask application for easy access and training
-- **Modular Design**: Separate components for scenarios, patients, and analysis
-- **Scalable Architecture**: Easy to extend with additional features and scenarios
-
-## 🚀 Future Vision
-
-- **Multimodal Analysis**: Voice and facial expression recognition
-- **Advanced Analytics**: Detailed metrics on empathy and communication skills
-- **Integration**: EMR system integration for real patient data
-- **VR/AR Training**: Immersive training environments
-- **Multi-language Support**: Training for diverse patient populations
-
-## 🤝 Collaboration
-
-This project represents a collaborative effort across multiple disciplines to address critical gaps in medical education and patient care communication.
+This is the single authoritative index for all DHF elements, folders, and documents. Links below go directly to GitHub paths so they are always clickable for the instructional team.
 
 ---
 
-*Building better healthcare communication, one conversation at a time.*
+## Quick Access
+- [Project root](https://github.com/TACH04/Synapse)
+- [Main project README](https://github.com/TACH04/Synapse/blob/main/README.md)
+- [Conversation Simulator app](https://github.com/TACH04/Synapse/tree/main/conversation_simulator)
+
+---
+
+## 1. Design and Development Plan
+- Folder: [Design and Development Plan](https://github.com/TACH04/Synapse/tree/main/DHF/Design%20and%20Development%20Plan)
+
+## 2. Design Input
+- Folder: [Design Input](https://github.com/TACH04/Synapse/tree/main/DHF/Design%20Input)
+- Subfolder: [Team Problem Statements](https://github.com/TACH04/Synapse/tree/main/DHF/Design%20Input/Team%20Problem%20Statements)
+  - Tanner: [tanners statements](https://github.com/TACH04/Synapse/blob/main/DHF/Design%20Input/Team%20Problem%20Statements/tanners%20statements)
+  - Elijah: [elijah_statements.txt](https://github.com/TACH04/Synapse/blob/main/DHF/Design%20Input/Team%20Problem%20Statements/elijah_statements.txt)
+  - Alex: [Alex_ProblemStatements](https://github.com/TACH04/Synapse/blob/main/DHF/Design%20Input/Team%20Problem%20Statements/Alex_ProblemStatements)
+  - Ian: [Ian_Problem_Statements.txt](https://github.com/TACH04/Synapse/blob/main/DHF/Design%20Input/Team%20Problem%20Statements/Ian_Problem_Statements.txt)
+
+## 3. Design Output
+- Folder: [Design Output](https://github.com/TACH04/Synapse/tree/main/DHF/Design%20Output)
+
+## 4. Design Review
+- Folder: [Design Review](https://github.com/TACH04/Synapse/tree/main/DHF/Design%20Review)
+
+## 5. Design Verification
+- Folder: [Design Verification](https://github.com/TACH04/Synapse/tree/main/DHF/Design%20Verification)
+
+## 6. Design Validation
+- Folder: [Design Validation](https://github.com/TACH04/Synapse/tree/main/DHF/Design%20Validation)
+
+## 7. Design Transfer
+- Folder: [Design Transfer](https://github.com/TACH04/Synapse/tree/main/DHF/Design%20Transfer)
+
+## 8. Design Changes
+- Folder: [Design Changes](https://github.com/TACH04/Synapse/tree/main/DHF/Design%20Changes)
+
+---
+
+Last updated: September 24, 2025
+
+Permissions note: Ensure the instructional team has access to this repository (add them as collaborators or make it public). If you prefer cloud links, mirror the `DHF` folder to a shared drive and replace the links above with share URLs.
