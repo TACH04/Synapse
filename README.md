@@ -70,6 +70,26 @@ This is the single authoritative index for all DHF elements, folders, and docume
 
 - Folder: [Design Changes](https://github.com/TACH04/Synapse/tree/main/DHF/Design%20Changes)
 
----
+## 9. Google Drive Files
 
-Last updated: October 9, 2025
+- [Gantt Chart.csv](google_drive_sync/Gantt Chart.csv)
+- [DT 3 - Assignment- Ethical Issues in Medical Device Design.md](google_drive_sync/DT 3 - Assignment- Ethical Issues in Medical Device Design.md)
+- [DT 3 - Assignment- Competitive Benchmarking.md](google_drive_sync/DT 3 - Assignment- Competitive Benchmarking.md)
+- [DT3- DHF.pdf](google_drive_sync/DT3/DT3- DHF.pdf)
+- [DT3-Gantt Chart.xlsx](google_drive_sync/DT3/DT3-Gantt Chart.xlsx)
+- [DT3- Cover Page + Executive Summary.pdf](google_drive_sync/DT3/DT3- Cover Page + Executive Summary.pdf)
+- [Concept_Map.md](google_drive_sync/DT3/Concept_Map.md)
+- [DT 3 - Assignment- Survey Interview Questions.md](google_drive_sync/DT3/DT 3 - Assignment- Survey Interview Questions.md)
+- [Brainstorming Plan.md](google_drive_sync/DT3/Brainstorming Plan.md)
+- [DT3.md](google_drive_sync/DT3/DT3.md)
+- [DT 2 - Assignment- MDDI Technical Report.md](google_drive_sync/DT 2 - Assignment- MDDI Technical Report.md)
+- [DT 2 - Assignment- Initial Design History File (DHF).md](google_drive_sync/DT 2 - Assignment- Initial Design History File (DHF).md)
+- [DT2 - Assignment- Lab Notebook, Time Logs, Due Diligence.md](google_drive_sync/DT2 - Assignment- Lab Notebook, Time Logs, Due Diligence.md)
+- [DT 2- Excutive sumary Latex.md](google_drive_sync/DT 2- Excutive sumary Latex.md)
+- [DT 2- Assignment- Project Selection and Statement.md](google_drive_sync/DT 2- Assignment- Project Selection and Statement.md)
+- [DT 2- Gantt Chart.md](google_drive_sync/DT 2- Gantt Chart.md)
+- [Faculty Mentor Agreement.md](google_drive_sync/Faculty Mentor Agreement.md)
+- [Faculty Mentor Agreement .pdf](google_drive_sync/Faculty Mentor Agreement .pdf)
+- [DT 1 - Generating Insights.md](google_drive_sync/DT 1 - Generating Insights.md)
+- [Team Commitment.md](google_drive_sync/DT1 - TEAM CHARTER/Team Commitment.md)
+- [Links from 8-11 Mayo Meeting.md](google_drive_sync/Links from 8-11 Mayo Meeting.md) 
