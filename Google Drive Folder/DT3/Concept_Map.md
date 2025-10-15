@@ -1,76 +1,129 @@
-﻿Concept Map for Medical Communication Improvements
-Team: Tanner Hochberg, Elijah Don, Ian Marcon, Ethan Vanderpool, Alex Roussas
-Date: October 3, 2025
-  
-  
+Concept Map for Medical Communication Improvements
 
-
+**Team:** Tanner Hochberg, Elijah Don, Ian Marcon, Ethan Vanderpool, Alex Roussas  
+**Date:** October 3, 2025
 
 I Like, I Wish:
 
+**Peer-to-Peer Coaching/Feedback**
 
-Peer-to-Peer Coaching/Feedback
 Ethan: I like that peer-to-peer coaching provides a stream of qualitative, experience-based data that we could use to establish a baseline for our AI's conversational analysis. I wish we could develop a standardized method to digitize and tag these in-person conversations to create a structured dataset for machine learning.
+
 Alex: I like the inherent empathy and shared understanding that comes from one practitioner coaching another; it's a level of personal training an AI can't easily replicate. I wish there was a way to moderate this feedback to filter out the heavy personal bias that could be introduced, ensuring the advice is consistently constructive.
+
 Tanner: I like the idea of using recordings from peer coaching sessions as a foundational dataset for our empathy bot, giving it a rich source of real-world communication patterns. I wish we could create a hybrid system where an AI passively observes these sessions and generates supplementary, data-driven insights for the coaches to consider.
+
 Elijah: I like that this method relies on human experience, which can serve as a valuable safeguard against purely algorithmic feedback that might lack context or contain hidden biases. I wish there was a formal oversight process to ensure the advice given is equitable and evidence-based, preventing the spread of poor or biased communication habits.
+
 Ian: I like that a peer-coaching system is fundamentally cheap to implement since it primarily uses the time of existing staff. I wish this approach wasn't so dependent on taking more time from already busy doctors, as scheduling and participation could become a significant logistical challenge.
-Mock-Patient Clinical Simulator
+
+**Mock-Patient Clinical Simulator**
+
 Ethan: I like that a clinical simulator can provide a controlled environment to test our AI's feedback algorithms and collect performance data without involving real patients. I wish the software simulations were sophisticated enough to provide the nuanced, unpredictable responses of a real person, as current software can be difficult to get useful simulations from.
+
 Alex: I like that a simulator offers a safe space for practitioners to practice and make mistakes without real-world consequences, which could build confidence. I wish the experience didn't feel so impersonal, as the lack of genuine human connection might limit the development of true empathy.
+
 Tanner: I like the potential to integrate our live feedback AI directly into a next-generation simulator, creating a dynamic training environment that adapts the mock-patient's personality and responses based on the practitioner's communication style. I wish we had access to more advanced simulation software that could model complex emotional and verbal cues realistically.
+
 Elijah: I like that a simulator can be programmed with diverse patient profiles, allowing us to systematically train practitioners and our AI on how to handle a wide range of cultural and social situations, thereby reducing bias. I wish we could verify that skills developed in a simulation effectively transfer to real-world patient interactions, with data to prove the training is effective.
+
 Ian: I like that simulators are a one-time cost and can be used repeatedly without scheduling conflicts, making them a potentially cheap and efficient training tool. I wish the upfront development cost for a truly high-quality, non-impersonal simulator wasn't so high, as building one from scratch would be a major undertaking for our project.
-Live Feedback AI Bot
+
+**Live Feedback AI Bot**
+
 Ethan: I like the concept of a live AI bot because it allows for immediate, data-driven feedback on specific conversational metrics like speech pace, tone, and keyword usage. I wish we could solve the technical challenge of running our analysis AI simultaneously with EMRs and other clinical software without requiring the doctor to use multiple devices.
+
 Alex: I like that a live bot can provide objective, discreet feedback that a human observer might not notice or feel comfortable giving. I wish there was a way to deliver this live feedback without it being distracting to the practitioner, as a pop-up or notification could easily break the flow of a sensitive patient conversation.
+
 Tanner: I like how a live feedback bot represents the cutting edge of practitioner assistance, moving beyond post-encounter analysis to real-time improvement. I wish we could expand its capabilities beyond simple feedback to predictive analytics, perhaps suggesting empathetic phrases or questions based on the live conversation.
+
 Elijah: I like that an AI bot can be programmed to be completely objective, providing feedback free from the human biases that plague peer coaching. I wish we could ensure the bot's core programming is itself free from inherited bias, and that its feedback is validated to be culturally competent and truly beneficial for patient rapport.
+
 Ian: I like the scalability of a software-based solution like an AI bot; once developed, it can be deployed to any number of practitioners with minimal overhead. I wish the integration with existing hospital EMR systems was simpler, as navigating hospital IT security and proprietary software APIs can be a major project roadblock.
-Speech-to-Text Language and Speech Pattern Analysis
+
+**Speech-to-Text Language and Speech Pattern Analysis**
+
 Ethan: I like that we can leverage many pre-existing LLMs and speech-to-text APIs for the core of our project, which drastically speeds up development. I wish these off-the-shelf models were better tuned for the specific medical jargon and conversational dynamics of a clinical setting to improve accuracy.
+
 Alex: I like that analyzing speech patterns can reveal subtle cues, like hesitation or a lack of confidence, that a practitioner may not even be aware of, providing a new layer of self-awareness. I wish the analysis could accurately differentiate between a thoughtful pause and a sign of uncertainty, ensuring the feedback is meaningful and not just statistical.
+
 Tanner: I like the potential to integrate this analysis not just for post-encounter coaching but also for pre-clinical coaching, maybe by analyzing a doctor's dictation notes to find patterns. I wish we could eventually build a system that correlates specific speech patterns with patient outcomes, creating a powerful predictive tool for communication effectiveness.
+
 Elijah: I like that speech pattern analysis provides objective, quantifiable data on communication, moving away from subjective assessments. I wish there was a clear ethical framework and consent process for recording and analyzing doctor-patient conversations to ensure total transparency and protect patient privacy (HIPAA).
+
 Ian: I like the potential for this system to be integrated directly into existing EMRs, making it a seamless background feature rather than another standalone app doctors have to learn. I wish the cost of API calls to powerful, pre-existing LLMs wasn't so high at scale, as this could be a major long-term operational expense.
-Formal Etiquette Training
+
+**Formal Etiquette Training**
+
 Ethan: I like that the principles of etiquette training are well-defined, which would make it straightforward to create a set of rules and heuristics for our AI to check against. I wish we could design a system that tracks the application of these rules automatically, as manual tracking would require significant HR personnel and time from doctors.
+
 Alex: I like that focusing on etiquette addresses the foundational, often overlooked, aspects of professional communication that build patient trust. I wish this training could be delivered in a way that feels authentic and personalized, rather than a generic checklist of "dos and don'ts" that might feel robotic.
+
 Tanner: I like the idea of gamifying etiquette training through our AI, creating modules and simulations where practitioners earn points for demonstrating positive communication behaviors. I wish we could use AI to generate dynamic training scenarios that go beyond basic etiquette to tackle complex, ethically ambiguous situations.
+
 Elijah: I like that formal etiquette training can establish a standardized, baseline level of professionalism and respect for all patients. I wish there was a way to ensure this training is culturally aware and not based on a single, dominant cultural perspective of what constitutes "good" etiquette.
+
 Ian: I like that the content for etiquette training already exists, so we wouldn't have to spend resources developing a curriculum from scratch. I wish this approach didn't require so much time from doctors for training sessions and HR personnel for oversight, as these are two of the most limited resources in a hospital.
 
+**Structured Bedside Manner Training**
 
-Structured Bedside Manner Training
 Ethan: I like the challenge of trying to quantify "good" bedside manner into a set of measurable parameters that our AI could track, such as tone of voice, speaking speed, and use of empathetic language. I wish we could develop software that provides useful, interactive simulations for this, as it's a very difficult and nuanced skill to simulate effectively.
+
 Alex: I like that this training directly targets the humanistic side of medicine, which is crucial for patient satisfaction and outcomes. I wish the training could focus more on genuine connection and empathy rather than just a set of practiced behaviors, which can come across as insincere to patients.
+
 Tanner: I like the idea of using augmented reality (AR) to create hyper-realistic bedside manner simulations, where our AI could generate virtual patients with diverse emotional states. I wish we had the technology to accurately capture and analyze non-verbal cues like eye contact and body language, as these are critical components of bedside manner.
+
 Elijah: I like that focusing on bedside manner encourages a patient-centered approach to care. I wish we could gather robust data to prove that improvements in simulated bedside manner directly lead to better patient-reported outcomes and a reduction in complaints.
+
 Ian: I like that improving bedside manner is a high-impact goal that hospital administrators would likely support. I wish this training didn't require so much time from busy doctors, as pulling them away from patient care for training is always a major logistical and financial hurdle.
-Automated Daily Professionalism Tips
+
+**Automated Daily Professionalism Tips**
+
 Ethan: I like that an automated system for delivering tips is technically simple to implement via SMS or app notifications, serving as a good starting point for our project. I wish we could build a backend system that intelligently selects and sends tips based on a user's recent performance data, making the advice personalized and relevant.
+
 Alex: I like that daily tips are a low-effort way to keep communication skills top-of-mind and promote daily improvements. I wish we could ensure these tips don't become "notification spam" that doctors quickly learn to ignore; the delivery has to be engaging and valuable.
+
 Tanner: I like the idea of evolving these simple tips into an interactive "micro-learning" platform, where a daily notification links to a 30-second simulation or a quick poll related to a communication challenge. I wish the tips could be generated by an advanced AI that analyzes current medical news and trends to provide timely advice.
+
 Elijah: I like that automated tips can be standardized to ensure every practitioner receives the same high-quality, evidence-based advice. I wish we had a mechanism for tracking whether the tips are actually being read and implemented, and a way to measure their impact on behavior over time.
+
 Ian: I like how easy and cheap it is to push a message to doctors through SMS or an app; it's the most straightforward concept to deploy on our list. I wish we could find a way to make this a unique, "must-have" feature, as there are already many apps that send daily tips for various things.
-Role-Playing Sessions with Trained Actors as Patients
+
+**Role-Playing Sessions with Trained Actors as Patients**
+
 Ethan: I like that using trained actors creates a high-fidelity, dynamic dataset; we could record these sessions to capture nuanced verbal and non-verbal data for training our AI. I wish we could find a way to standardize the actors' performances to ensure the data collected is consistent and comparable across sessions.
+
 Alex: I like that actors can provide immediate, high-quality feedback from a "patient's" perspective, which is invaluable for developing genuine empathy. I wish we could make the sessions feel less like a performance and more like an authentic interaction to elicit genuine responses from practitioners.
+
 Tanner: I like this as the "gold standard" for generating realistic training data that a purely digital simulator can't yet match. I wish we could combine this with bio-feedback sensors on the practitioner to measure stress and physiological responses, adding a whole new data layer to our analysis.
+
 Elijah: I like that professional actors can be trained to portray diverse patient demographics and emotional states, allowing us to test for and mitigate potential biases in a controlled environment. I wish we had a clear, ethical protocol for the feedback process so it feels constructive and not like a personal critique.
+
 Ian: I like the high-impact nature of this training; it's a proven method. I wish it wasn't so expensive and resource-intensive, as hiring professional actors, facilitators, and booking rooms for ongoing sessions is a huge logistical and budgetary challenge.
-Formal Mentorship Program
+
+**Formal Mentorship Program**
+
 Ethan: I like the idea of recording conversations between mentors and mentees (with consent) to build a rich dataset of expert advice and common junior practitioner challenges. I wish we could develop a platform that uses an algorithm to create optimal mentor-mentee pairings based on specialty, communication patterns, and personality metrics.
+
 Alex: I like the potential for deep, long-term trust and professional development that a formal mentorship program offers, which goes far beyond a single training session. I wish we could design the program in a way that protects mentees, allowing them to be vulnerable about their weaknesses without fear of professional judgment.
+
 Tanner: I like how a mentorship program can build a powerful, internal culture of empathy and continuous improvement from the ground up. I wish we could create a companion AI tool for the mentors, feeding them data-driven insights about their mentees to help guide coaching sessions more effectively.
+
 Elijah: I like that a formal program ensures mentorship is available equitably, rather than being an informal process that can perpetuate biases and "in-groups." I wish there was a system to monitor the quality of the mentorship, preventing the transfer of bad habits or outdated advice from senior to junior staff.
+
 Ian: I like that this program leverages existing human capital within the hospital, which is more cost-effective than hiring outside consultants. I wish there was a way to structure it that respects the intense time constraints of senior doctors, maybe by offering them a stipend or protected, non-clinical time for their mentoring duties.
-EMR-Integrated Tool that Suggests Empathetic Phrasing
+
+**EMR-Integrated Tool that Suggests Empathetic Phrasing**
+
 Ethan: I like the direct application of Natural Language Processing here; we can model conversational context and have the tool pull from a pre-approved phrase bank. I wish we could guarantee the suggested phrases were perfectly timed, as a robotic or out-of-place suggestion could be worse than none at all.
+
 Alex: I like that this tool provides real-time support directly within the EMR, which is where practitioners do most of their work, making it seamless and non-disruptive. I wish the suggestions felt like a helpful guide rather than a script, allowing doctors to maintain their own authentic voice.
+
 Tanner: I like the potential for this tool to learn from user interactions, eventually generating novel, context-aware phrases instead of just relying on a static list. I wish we could expand it to suggest non-verbal actions, like when a moment of silence would be more powerful than any phrase.
+
 Elijah: I like that we could build the phrase bank from evidence-based communication techniques, ensuring the suggestions are ethically sound and proven effective. I wish there was a clear feedback loop to track which phrases correlate with positive patient-reported outcomes, so the system continually refines itself.
+
 Ian: I like that this is a pure software feature, which could be a relatively low-cost add-on for a hospital. I wish the process of getting certified for integration with major EMR vendors like Epic wasn't so notoriously time-consuming and expensive.
 
+\`
 
-`
