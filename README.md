@@ -103,3 +103,18 @@ This is the single authoritative index for all DHF elements, folders, and docume
 *Last updated: 2025-10-15 17:42:29*
 
 - [test file](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/test%20file.md)
+- [DT 2 - Assignment_ MDDI Technical Report](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT2/DT%202%20-%20Assignment_%20MDDI%20Technical%20Report.md)
+- [DT 2 - Assignment_ Initial Design History File (DHF)](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT2/DT%202%20-%20Assignment_%20Initial%20Design%20History%20File%20(DHF).md)
+- [DT2 - Assignment_ Lab Notebook, Time Logs, Due Diligence](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT2/DT2%20-%20Assignment_%20Lab%20Notebook,%20Time%20Logs,%20Due%20Diligence.md)
+- [DT 2_ Excutive sumary Latex](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT2/DT%202_%20Excutive%20sumary%20Latex.md)
+- [DT 2_ Assignment_ Project Selection and Statement](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT2/DT%202_%20Assignment_%20Project%20Selection%20and%20Statement.md)
+- [DT 2_ Gantt Chart](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT2/DT%202_%20Gantt%20Chart.md)
+- [10_21 Touchpoint Meeting](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/Touchpoint%20Meetings/10_21%20Touchpoint%20Meeting.pdf)
+- [Touchpoint meeting 10_9](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/Touchpoint%20Meetings/Touchpoint%20meeting%2010_9.pdf)
+- [Attempt #1_ Taken off the Donor List and Placed on Paliative Care](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/AI%20Generated%20Sample%20Data/Attempt%20#1_%20Taken%20off%20the%20Donor%20List%20and%20Placed%20on%20Paliative%20Care.csv)
+- [DT 4 - Assignment_ Continued Benchmarking](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT4/DT%204%20-%20Assignment_%20Continued%20Benchmarking.md)
+- [DT 4 - Assignment_ Generating Design Solutions](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT4/DT%204%20-%20Assignment_%20Generating%20Design%20Solutions.md)
+- [DT 4 - Assignment_ Concept Iteration](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT4/DT%204%20-%20Assignment_%20Concept%20Iteration.md)
+- [DT 3 - Assignment_ Ethical Issues in Medical Device Design](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT3/DT%203%20-%20Assignment_%20Ethical%20Issues%20in%20Medical%20Device%20Design.md)
+- [DT 3 - Assignment_ Competitive Benchmarking](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT3/DT%203%20-%20Assignment_%20Competitive%20Benchmarking.md)
+- [DT 1 - Generating Insights](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT1%20-%20TEAM%20CHARTER/DT%201%20-%20Generating%20Insights.md)
