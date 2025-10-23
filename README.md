@@ -27,7 +27,7 @@ This is the single authoritative index for all DHF elements, folders, and docume
 - [DT2: Initial Design History File](https://docs.google.com/document/d/1ZGKpiBo09NvjRLXrCT-WZjgMbCEisN2xN1vwIlr4zqQ/edit?usp=drive_link)
 - [DT2: MDDI Technical Report](https://docs.google.com/document/d/1bY_rUbhvNfxos7Ye2asOFa4g3rgQjFmpw1CLbrqYdX0/edit?usp=drive_link)
 - [DT2: Project Selection and Statement](https://docs.google.com/document/d/1ZIm5112BKRVF3WArS-glyYQeEtchvlUhHJRpa3YtjyE/edit?usp=drive_link)
-- ***NEW***: [DT3: Brainstorming plan](https://docs.google.com/document/d/1C9rGscbJzZMOgr0zOocJoMNPMxebgnE4BjAtaCV8BWc/edit?usp=drive_link)
+- [DT3: Brainstorming plan](https://docs.google.com/document/d/1C9rGscbJzZMOgr0zOocJoMNPMxebgnE4BjAtaCV8BWc/edit?usp=drive_link)
 
 
 ## 2. Design Input
@@ -37,18 +37,24 @@ This is the single authoritative index for all DHF elements, folders, and docume
 - [elijah_statements.txt](https://github.com/TACH04/Synapse/blob/main/DHF/Design%20Input/Team%20Problem%20Statements/elijah_statements.txt)
 - [Alex_ProblemStatements](https://github.com/TACH04/Synapse/blob/main/DHF/Design%20Input/Team%20Problem%20Statements/Alex_ProblemStatements)
 - [Ian_Problem_Statements.txt](https://github.com/TACH04/Synapse/blob/main/DHF/Design%20Input/Team%20Problem%20Statements/Ian_Problem_Statements.txt)
-- ***NEW***: [DT3: Competitive Benchmarking](https://docs.google.com/document/d/1S2kfCfjrz_N6uJE-bNW_vn9k8RCKPb37ds7B4hZXVxY/edit?usp=drive_link) 
-- ***NEW***: [DT3: Concept Map](https://docs.google.com/document/d/1xj2NNwJ8OQZbndGWVdGvJ9wKfdVO_ARfO34rUiCiuks/edit?usp=drive_link)
-- ***NEW***: [DT3: Ethical Issues in Medical Devices](https://docs.google.com/document/d/1UIjjGRLe42mS3-UX6jP7cUdUyXfGw2fUPiTCERRQqGg/edit?usp=drive_link)
-- ***NEW***: [DT3: Needs Metric Table](https://docs.google.com/document/d/1Rn6ign4Q32LNvc7bvyXXkeR5QmWC3LUQZaWAUHecsU0/edit?usp=drive_link)
-- ***NEW***: [DT3: Survey Interview Questions](https://docs.google.com/document/d/1ZWAlE8qKRAdotSlWmRBeya8JlQiNOT1w30CeQTqDZ2E/edit?usp=drive_link)
+- [DT3: Competitive Benchmarking](https://docs.google.com/document/d/1S2kfCfjrz_N6uJE-bNW_vn9k8RCKPb37ds7B4hZXVxY/edit?usp=drive_link) 
+- [DT3: Concept Map](https://docs.google.com/document/d/1xj2NNwJ8OQZbndGWVdGvJ9wKfdVO_ARfO34rUiCiuks/edit?usp=drive_link)
+- [DT3: Ethical Issues in Medical Devices](https://docs.google.com/document/d/1UIjjGRLe42mS3-UX6jP7cUdUyXfGw2fUPiTCERRQqGg/edit?usp=drive_link)
+- [DT3: Needs Metric Table](https://docs.google.com/document/d/1Rn6ign4Q32LNvc7bvyXXkeR5QmWC3LUQZaWAUHecsU0/edit?usp=drive_link)
+- [DT3: Survey Interview Questions](https://docs.google.com/document/d/1ZWAlE8qKRAdotSlWmRBeya8JlQiNOT1w30CeQTqDZ2E/edit?usp=drive_link)
 - [DT1: Generating insights](https://docs.google.com/document/d/1kNAxS7c4XYkPLRYb_zfLALkN51bi4Dif1TdJimjG3eg/edit?usp=drive_link)
+- ***NEW***: [DT 4 - Assignment_ Continued Benchmarking](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT4/DT%204%20-%20Assignment_%20Continued%20Benchmarking.md)
 
 
 ## 3. Design Output
 
 - Folder: [Design Output](https://github.com/TACH04/Synapse/tree/main/DHF/Design%20Output)
 - ***NEW***: [Touchpoint Meeting 10/9 Slides](https://docs.google.com/presentation/d/1ns0ZDvTHIcmyZcgFo3FhUwHNYUX99S2SuaqlfBuAWkE/edit?usp=drive_link)
+- ***NEW***: [DT 4 - Assignment_ Concept Iteration](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT4/DT%204%20-%20Assignment_%20Concept%20Iteration.md)
+- ***NEW***: [DT 4 - Assignment_ Generating Design Solutions](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT4/DT%204%20-%20Assignment_%20Generating%20Design%20Solutions.md)
+- ***NEW***: [DT 4 - Assignment_ Preliminary Business Model](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT4/DT%204%20-%20Assignment_%20Preliminary%20Business%20Model.pdf)
+
+
 
 ## 4. Design Review
 
