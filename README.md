@@ -132,3 +132,4 @@ This is the single authoritative index for all DHF elements, folders, and docume
 - [Links from 8_11 Mayo Meeting](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/Touchpoint%20Meetings/Links%20from%208_11%20Mayo%20Meeting.md)
 - [Prior Art Search Documentation Template](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT4/Prior%20Art%20Search%20Documentation%20Template.docx)
 - [DT 4 - Assignment_ Preliminary Business Model](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT4/DT%204%20-%20Assignment_%20Preliminary%20Business%20Model.pdf)
+- [Preliminary Business Model](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT4/Preliminary%20Business%20Model.md)
