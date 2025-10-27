@@ -1,0 +1,64 @@
+# .gitignore for Synapse project
+
+# Virtual environments
+venv/
+.venv/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions / DLLs
+*.so
+*.pyd
+*.dll
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage
+.coverage
+.tox/
+.nox/
+.pytest_cache/
+
+# Type checkers
+.mypy_cache/
+.pyre/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints
+
+# Local env files
+.env
+.env.*
+
+# Logs
+*.log
+
+# Notes on large model files:
+# If you intend to store large model checkpoints (.bin, .safetensors, etc.)
+# in this repository using Git LFS, DO NOT add those extensions to this
+# .gitignore. Instead, run `git lfs track "*.safetensors" "*.bin"`
+# and follow the Git LFS steps to move existing files into LFS. If you
+# do NOT want large model files in this repo at all, you can add the
+# relevant paths here (for example `CODEBASE/Vocal Feature Analysis/wav2vec2_checkpoints/`).
+
