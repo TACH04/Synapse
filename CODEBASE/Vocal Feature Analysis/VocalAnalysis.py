@@ -2,11 +2,14 @@ import torch
 import torchaudio
 import whisper
 from pyannote.audio import Pipeline
-from speechbrain.inference.classifiers import EncoderClassifier
-from speechbrain.utils.fetching import LocalStrategy
+from transformers import Wav2Vec2ForSequenceClassification, Wav2Vec2FeatureExtractor
 import numpy as np
 import os
 import sys
+from convert_audio import convert_to_wav
+import noisereduce as nr
+from scipy import signal
+from langdetect import detect, LangDetectException
 
 # Hugging Face token for accessing gated models
 HF_TOKEN = "REDACTED"
@@ -62,13 +65,121 @@ class VocalAnalysisPipeline:
         print("Transcription model loaded.")
 
         # Step 3: Load Speech Emotion Recognition Model
-        print("Loading Emotion Recognition model (SpeechBrain)...")
-        self.emotion_classifier = EncoderClassifier.from_hparams(
-            source="speechbrain/emotion-recognition-wav2vec2-IEMOCAP",
-            savedir="pretrained_models/ser_model",
-            local_strategy=LocalStrategy.COPY  # Use COPY instead of SYMLINK for Windows compatibility
+        print("Loading Emotion Recognition model (Wav2Vec2)...")
+        model_name = "ehcalabres/wav2vec2-lg-xlsr-en-speech-emotion-recognition"
+        self.emotion_model = Wav2Vec2ForSequenceClassification.from_pretrained(
+            model_name,
+            cache_dir="pretrained_models/emotion_model"
         ).to(self.device)
+        self.emotion_feature_extractor = Wav2Vec2FeatureExtractor.from_pretrained(
+            model_name,
+            cache_dir="pretrained_models/emotion_model"
+        )
+        self.emotion_model.eval()
+
+        # Emotion labels for this model
+        self.emotion_labels = ['angry', 'calm', 'disgust', 'fearful', 'happy', 'neutral', 'sad', 'surprised']
         print("Emotion Recognition model loaded.")
+
+    def _preprocess_audio(self, waveform, sample_rate=16000):
+        """
+        Apply comprehensive audio preprocessing for better analysis quality.
+        Args:
+            waveform (torch.Tensor): The audio signal (1D or 2D tensor).
+            sample_rate (int): The sample rate of the audio.
+
+        Returns:
+            torch.Tensor: Preprocessed audio waveform
+        """
+        # Convert to numpy for processing
+        if isinstance(waveform, torch.Tensor):
+            audio_np = waveform.squeeze().cpu().numpy()
+        else:
+            audio_np = waveform
+
+        # 1. Noise Reduction using spectral gating
+        print("  Applying noise reduction...")
+        try:
+            # Use first 0.5 seconds as noise profile (if available)
+            audio_np = nr.reduce_noise(
+                y=audio_np,
+                sr=sample_rate,
+                stationary=True,
+                prop_decrease=0.8
+            )
+        except Exception as e:
+            print(f"  Warning: Noise reduction failed: {e}, continuing without it")
+
+        # 2. Normalize audio amplitude
+        print("  Normalizing audio amplitude...")
+        max_val = np.abs(audio_np).max()
+        if max_val > 0:
+            audio_np = audio_np / max_val * 0.95  # Normalize to 95% to avoid clipping
+
+        # 3. Apply high-pass filter to remove low-frequency noise (< 80Hz)
+        print("  Applying high-pass filter...")
+        sos = signal.butter(4, 80, 'hp', fs=sample_rate, output='sos')
+        audio_np = signal.sosfilt(sos, audio_np)
+
+        # 4. Apply low-pass filter to remove high-frequency noise (> 7.5kHz)
+        # Note: Cutoff must be < fs/2 (Nyquist frequency)
+        print("  Applying low-pass filter...")
+        sos = signal.butter(4, 7500, 'lp', fs=sample_rate, output='sos')
+        audio_np = signal.sosfilt(sos, audio_np)
+
+        # Convert back to tensor
+        return torch.from_numpy(audio_np).float().unsqueeze(0)
+
+    def _detect_language(self, text):
+        """
+        Detect the language of the transcribed text.
+        Args:
+            text (str): The transcribed text.
+
+        Returns:
+            str: ISO 639-1 language code (e.g., 'en', 'ru', 'ko') or 'unknown'
+        """
+        if not text or len(text.strip()) < 3:
+            return 'unknown'
+
+        try:
+            lang = detect(text)
+            return lang
+        except LangDetectException:
+            return 'unknown'
+
+    def _is_valid_segment(self, transcript, duration_sec, min_duration=1.0):
+        """
+        Check if a segment is valid for analysis.
+        Args:
+            transcript (str): The transcribed text.
+            duration_sec (float): Duration of the segment in seconds.
+            min_duration (float): Minimum duration threshold in seconds.
+
+        Returns:
+            tuple: (is_valid, reason) where is_valid is bool and reason is str
+        """
+        # Filter 1: Check minimum duration
+        if duration_sec < min_duration:
+            return False, f"too_short ({duration_sec:.2f}s < {min_duration}s)"
+
+        # Filter 2: Check for empty or very short transcripts
+        if not transcript or len(transcript.strip()) < 2:
+            return False, "empty_transcript"
+
+        # Filter 3: Language detection - only accept English
+        detected_lang = self._detect_language(transcript)
+        if detected_lang != 'en' and detected_lang != 'unknown':
+            return False, f"non_english (detected: {detected_lang})"
+
+        # Filter 4: Check for hallucination indicators (non-ASCII characters suggesting wrong language)
+        try:
+            transcript.encode('ascii')
+        except UnicodeEncodeError:
+            # Contains non-ASCII characters - likely a hallucination
+            return False, "non_ascii_characters"
+
+        return True, "valid"
 
     def _extract_vocal_features(self, waveform, sample_rate):
         """
@@ -112,25 +223,102 @@ class VocalAnalysisPipeline:
         }
         return features
 
-    def process_audio(self, audio_path, practitioner_speaker_id="SPEAKER_01"):
+    def _recognize_emotion(self, waveform, sample_rate=16000):
+        """
+        Recognize emotion from audio waveform using Wav2Vec2 model.
+        Args:
+            waveform (torch.Tensor): The audio signal (1D or 2D tensor).
+            sample_rate (int): The sample rate of the audio.
+
+        Returns:
+            tuple: (dominant_emotion, emotion_scores_dict)
+        """
+        try:
+            # Ensure waveform is 1D numpy array
+            if isinstance(waveform, torch.Tensor):
+                waveform_np = waveform.squeeze().cpu().numpy()
+            else:
+                waveform_np = waveform
+
+            # Ensure it's 1D
+            if waveform_np.ndim > 1:
+                waveform_np = waveform_np[0]
+
+            # Minimum length check
+            min_samples = 16000  # 1 second minimum
+            if len(waveform_np) < min_samples:
+                # Pad if too short
+                padding = min_samples - len(waveform_np)
+                waveform_np = np.pad(waveform_np, (0, padding), mode='constant')
+
+            # Extract features
+            inputs = self.emotion_feature_extractor(
+                waveform_np,
+                sampling_rate=sample_rate,
+                return_tensors="pt",
+                padding=True
+            )
+
+            # Move to device
+            input_values = inputs.input_values.to(self.device)
+
+            # Get predictions
+            with torch.no_grad():
+                logits = self.emotion_model(input_values).logits
+                probabilities = torch.nn.functional.softmax(logits, dim=-1)
+
+            # Get emotion scores
+            probs = probabilities[0].cpu().numpy()
+            emotion_scores = {self.emotion_labels[i]: float(probs[i]) for i in range(len(self.emotion_labels))}
+
+            # Get dominant emotion
+            dominant_idx = np.argmax(probs)
+            dominant_emotion = self.emotion_labels[dominant_idx]
+
+            return dominant_emotion, emotion_scores
+
+        except Exception as e:
+            print(f"Warning: Emotion recognition failed: {e}")
+            return "unknown", {}
+
+    def process_audio(self, audio_path, practitioner_speaker_id="SPEAKER_01", min_segment_duration=1.0):
         """
         Processes a single audio file through the full pipeline.
         Args:
             audio_path (str): Path to the audio file.
             practitioner_speaker_id (str): The label assigned to the practitioner by the diarization model.
                                            This may need to be determined dynamically. For this example, we assume a fixed ID.
+            min_segment_duration (float): Minimum duration for segments to be analyzed (in seconds).
 
         Returns:
             list: A list of dictionaries, where each dictionary represents a speech segment.
         """
         print(f"\nProcessing audio file: {audio_path}")
 
-        # --- Step 1: Load and Resample Audio ---
+        # Check if the file is not a WAV file - if so, convert it first
+        file_ext = os.path.splitext(audio_path)[1].lower()
+        converted_file = None
+
+        if file_ext != '.wav':
+            print(f"Detected non-WAV file format ({file_ext}). Converting to WAV format...")
+            try:
+                # Use the existing convert_audio module to convert the file
+                converted_file = convert_to_wav(audio_path)
+                audio_path = converted_file
+                print(f"Using converted file: {audio_path}")
+            except Exception as e:
+                print(f"\nError during audio conversion: {e}")
+                print("Please ensure ffmpeg is installed and in your system PATH.")
+                print("Download from: https://ffmpeg.org/download.html")
+                return None
+
+        # --- Step 1: Load Audio ---
         try:
             waveform, sample_rate = torchaudio.load(audio_path)
+            print("Audio loaded successfully.")
         except Exception as e:
             print(f"Error loading audio file: {e}")
-            return
+            return None
 
         # Resample to 16kHz, convert to mono
         if sample_rate != 16000:
@@ -140,21 +328,34 @@ class VocalAnalysisPipeline:
         if waveform.shape[0] > 1:  # If stereo, convert to mono
             waveform = torch.mean(waveform, dim=0, keepdim=True)
 
-        print("Audio loaded and preprocessed.")
+        print("Audio preprocessed (16kHz, mono).")
+
+        # --- Step 1.5: Apply Advanced Preprocessing ---
+        print("\nApplying advanced audio preprocessing...")
+        waveform = self._preprocess_audio(waveform, sample_rate=16000)
+        print("Advanced preprocessing complete.")
 
         # --- Step 2: Perform Speaker Diarization ---
-        print("Running diarization...")
-        diarization = self.diarization_pipeline({"waveform": waveform, "sample_rate": 16000})
+        print("\nRunning diarization...")
+        diarization_result = self.diarization_pipeline({"waveform": waveform, "sample_rate": 16000})
         print("Diarization complete.")
 
         conversation_data = []
         segment_id_counter = 0
+        filtered_count = 0
+        filter_reasons = {}
 
         # --- Steps 3, 4, 5: Iterate, Transcribe, and Analyze ---
-        print("Iterating through segments for transcription and analysis...")
-        for turn, _, speaker in diarization.itertracks(yield_label=True):
-            segment_start_sec = turn.start
-            segment_end_sec = turn.end
+        print(f"\nIterating through segments for transcription and analysis...")
+        print(f"Filtering segments shorter than {min_segment_duration}s and non-English content...")
+        # In pyannote.audio 3.x+, DiarizeOutput has a 'speaker_diarization' attribute
+        # that contains the annotation object
+        annotation = diarization_result.speaker_diarization
+
+        # Now iterate over the annotation
+        for segment, track, speaker in annotation.itertracks(yield_label=True):
+            segment_start_sec = segment.start
+            segment_end_sec = segment.end
             duration_sec = segment_end_sec - segment_start_sec
 
             # Extract audio chunk for this segment
@@ -169,32 +370,40 @@ class VocalAnalysisPipeline:
             )
             transcript = result['text'].strip()
 
+            # Check if segment is valid (duration, language, etc.)
+            is_valid, filter_reason = self._is_valid_segment(transcript, duration_sec, min_segment_duration)
+
+            if not is_valid:
+                filtered_count += 1
+                filter_reasons[filter_reason] = filter_reasons.get(filter_reason, 0) + 1
+                print(f"  Skipping segment {segment_id_counter} ({speaker}): {filter_reason}")
+                continue
+
             segment_data = {
                 "segment_id": segment_id_counter,
                 "speaker_label": "Patient" if speaker != practitioner_speaker_id else "Practitioner",
                 "start_time": round(segment_start_sec, 3),
                 "end_time": round(segment_end_sec, 3),
+                "duration": round(duration_sec, 3),
                 "transcript": transcript,
                 "vocal_analysis": None
             }
 
-            # If the speaker is the practitioner, perform vocal analysis
-            if segment_data["speaker_label"] == "Practitioner" and segment_waveform.numel() > 0:
+            # Perform vocal analysis for ALL speakers (not just practitioner)
+            if segment_waveform.numel() > 0:
                 # Speech Rate
                 word_count = len(transcript.split())
                 speech_rate_wps = word_count / duration_sec if duration_sec > 0 else 0
 
-                # Emotion Recognition
-                out_prob, score, index, text_lab = self.emotion_classifier.classify_batch(segment_waveform)
-
-                emotion_scores = {label.lower(): prob.item() for label, prob in
-                                  zip(self.emotion_classifier.hparams.label_encoder.get_ind2lab().values(), out_prob)}
+                # Emotion Recognition for all speakers
+                print(f"  Analyzing emotions for segment {segment_id_counter} ({segment_data['speaker_label']})...")
+                dominant_emotion, emotion_scores = self._recognize_emotion(segment_waveform, 16000)
 
                 # Low-level vocal features
                 vocal_features = self._extract_vocal_features(segment_waveform, 16000)
                 vocal_features["speech_rate_wps"] = round(speech_rate_wps, 2)
                 vocal_features["emotion_recognition"] = {
-                    "dominant_emotion": text_lab.lower(),
+                    "dominant_emotion": dominant_emotion,
                     "scores": emotion_scores
                 }
                 segment_data["vocal_analysis"] = vocal_features
@@ -202,7 +411,14 @@ class VocalAnalysisPipeline:
             conversation_data.append(segment_data)
             segment_id_counter += 1
 
-        print("Processing complete.")
+        print(f"\nProcessing complete.")
+        print(f"Total segments analyzed: {len(conversation_data)}")
+        print(f"Segments filtered out: {filtered_count}")
+        if filter_reasons:
+            print(f"Filter breakdown:")
+            for reason, count in filter_reasons.items():
+                print(f"  - {reason}: {count}")
+
         return conversation_data
 
 
@@ -214,29 +430,40 @@ if __name__ == '__main__':
     # Instantiate the pipeline
     pipeline = VocalAnalysisPipeline(device=selected_device)
 
-    # Create a dummy audio file for demonstration
-    # In a real scenario, you would use an actual recording path.
-    dummy_audio_path = "sample_conversation.wav"
-    sample_rate = 16000
-    # Create a 10-second silent audio file with two speech segments
-    # Segment 1 (Patient): 1s - 4s
-    # Segment 2 (Practitioner): 5s - 9s
-    t = torch.linspace(0., 10., 160000)
-    patient_speech = torch.cos(2 * torch.pi * 220 * t[1 * sample_rate:4 * sample_rate]) * 0.5
-    practitioner_speech = torch.cos(2 * torch.pi * 150 * t[5 * sample_rate:9 * sample_rate]) * 0.5
-    dummy_waveform = torch.zeros(1, 10 * sample_rate)
-    dummy_waveform[0, 1 * sample_rate:4 * sample_rate] = patient_speech
-    dummy_waveform[0, 5 * sample_rate:9 * sample_rate] = practitioner_speech
-    torchaudio.save(dummy_audio_path, dummy_waveform, sample_rate)
+    # Use the real audio file
+    audio_path = r"C:\Users\elija\OneDrive\Desktop\MAYO REPO\Synapse\CODEBASE\Vocal Feature Analysis\test_audio.m4a"
+
+    # Check if file exists
+    if not os.path.exists(audio_path):
+        print(f"Error: Audio file not found at {audio_path}")
+        sys.exit(1)
+
+    print(f"Using audio file: {audio_path}")
 
     # Process the audio file
-    # Note: Diarization models are trained on real speech and may not perform perfectly on synthetic tones.
-    # The output structure is the key takeaway.
-    # We assume the model correctly identifies the practitioner as SPEAKER_01. This might change file to file.
-    analysis_result = pipeline.process_audio(dummy_audio_path, practitioner_speaker_id="SPEAKER_01")
+    # Note: The practitioner_speaker_id may need to be adjusted based on which speaker
+    # the diarization model assigns to the practitioner. You may need to run it once
+    # and check the output to determine the correct speaker ID.
+    analysis_result = pipeline.process_audio(audio_path, practitioner_speaker_id="SPEAKER_00")
 
     # Print the result in a readable format
     import json
 
-    print("\n--- Analysis Result ---")
-    print(json.dumps(analysis_result, indent=2))
+    # Save results even if processing had issues
+    output_file = "analysis_result.json"
+
+    if analysis_result is not None:
+        print("\n--- Analysis Result ---")
+        print(json.dumps(analysis_result, indent=2))
+
+        # Save to a file
+        with open(output_file, 'w') as f:
+            json.dump(analysis_result, f, indent=2)
+        print(f"\nResults saved to: {output_file}")
+    else:
+        print("\n--- Analysis Failed ---")
+        print("No results to save. Check error messages above.")
+        # Save an empty result with error indication
+        with open(output_file, 'w') as f:
+            json.dump({"error": "Processing failed", "segments": []}, f, indent=2)
+        print(f"\nError status saved to: {output_file}")
