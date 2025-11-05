@@ -1,3 +1,11 @@
+# =========================================
+# Vocal Feature Analysis Module - Requirements
+# =========================================
+# Project: AI-Based Communication Trainer for Medical Professionals
+# Phase 1: Setup, Data Curation & Feature Research
+# Last Updated: November 2025
+# =========================================
+
 # Core deep learning and audio processing
 torch>=2.0.0
 torchaudio>=2.0.0
@@ -18,5 +26,20 @@ ffmpeg-python>=0.2.0
 noisereduce>=3.0.0
 scipy>=1.10.0
 
-# Language detection
+# Language detection for filtering non-English segments
 langdetect>=1.0.9
+
+# Advanced vocal feature extraction (for Phase 2)
+# Uncomment when ready to implement engineered features
+# praat-parselmouth>=0.4.3
+# librosa>=0.10.0
+
+# Development and testing tools (optional)
+# pytest>=7.0.0
+# jupyter>=1.0.0
+# matplotlib>=3.5.0
+# seaborn>=0.12.0
+
+# Environment management
+python-dotenv>=1.0.0
+

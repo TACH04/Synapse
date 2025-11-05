@@ -12,9 +12,9 @@ from scipy import signal
 from langdetect import detect, LangDetectException
 
 # Hugging Face token for accessing gated models
-HF_TOKEN = "REDACTED"
+HF_TOKEN = os.environ.get("HF_TOKEN", None)
 
-if HF_TOKEN is None or HF_TOKEN == "YOUR_HF_TOKEN":
+if HF_TOKEN is None:
     print("\n" + "="*80)
     print("ERROR: Hugging Face Token Not Set!")
     print("="*80)
@@ -27,10 +27,12 @@ if HF_TOKEN is None or HF_TOKEN == "YOUR_HF_TOKEN":
     print("   - Select 'Read' permissions")
     print("   - Copy the token (starts with 'hf_')")
     print("\n3. Set the token as an environment variable:")
-    print("   In PowerShell, run:")
+    print("   On Linux/Mac, run:")
+    print("   export HF_TOKEN=\"hf_your_token_here\"")
+    print("\n   On Windows PowerShell, run:")
     print("   $env:HF_TOKEN = \"hf_your_token_here\"")
-    print("\n   OR edit this file and replace line 12 with:")
-    print("   HF_TOKEN = \"hf_your_actual_token_here\"")
+    print("\n   Or create a .env file in the project root with:")
+    print("   HF_TOKEN=hf_your_token_here")
     print("\n" + "="*80 + "\n")
     sys.exit(1)
 

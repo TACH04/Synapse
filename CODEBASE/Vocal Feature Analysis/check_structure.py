@@ -1,8 +1,13 @@
 import torch
+import os
 from pyannote.audio import Pipeline
 
 # Simple test to understand DiarizeOutput structure
-HF_TOKEN = "REDACTED"
+HF_TOKEN = os.environ.get("HF_TOKEN", None)
+if HF_TOKEN is None:
+    print("Error: HF_TOKEN environment variable not set")
+    print("Please set it with: export HF_TOKEN='hf_your_token_here'")
+    exit(1)
 pipeline = Pipeline.from_pretrained("pyannote/speaker-diarization-3.1", token=HF_TOKEN)
 
 # Create dummy audio
