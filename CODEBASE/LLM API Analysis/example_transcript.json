@@ -1,0 +1,172 @@
+[
+  {
+    "segment_id": 0,
+    "speaker_label": "Practitioner",
+    "start_time": 1.5,
+    "end_time": 5.8,
+    "duration": 4.3,
+    "transcript": "Alex, thanks for coming in. I have your test results here. How are you feeling right now?",
+    "vocal_analysis": {
+      "prosody": { "pitch_hz": { "mean": 130.0, "std_dev": 20.0 }, "intensity_db": { "mean": -22.0 } },
+      "voice_quality": { "jitter_percent": null, "shimmer_percent": null, "hnr_db": null },
+      "speech_rate_wps": 3.4,
+      "emotion_recognition": {
+        "dominant_emotion": "calm",
+        "scores": { "angry": 0.05, "calm": 0.7, "disgust": 0.02, "fearful": 0.05, "happy": 0.05, "neutral": 0.1, "sad": 0.01, "surprised": 0.02 }
+      }
+    }
+  },
+  {
+    "segment_id": 1,
+    "speaker_label": "Patient",
+    "start_time": 6.9,
+    "end_time": 10.1,
+    "duration": 3.2,
+    "transcript": "Nervous, Doctor. I just... I really just want to know. Please.",
+    "vocal_analysis": {
+      "prosody": { "pitch_hz": { "mean": 180.0, "std_dev": 35.0 }, "intensity_db": { "mean": -19.5 } },
+      "voice_quality": { "jitter_percent": null, "shimmer_percent": null, "hnr_db": null },
+      "speech_rate_wps": 4.0,
+      "emotion_recognition": {
+        "dominant_emotion": "fearful",
+        "scores": { "angry": 0.1, "calm": 0.1, "disgust": 0.05, "fearful": 0.6, "happy": 0.0, "neutral": 0.1, "sad": 0.0, "surprised": 0.05 }
+      }
+    }
+  },
+  {
+    "segment_id": 2,
+    "speaker_label": "Practitioner",
+    "start_time": 11.0,
+    "end_time": 16.5,
+    "duration": 5.5,
+    "transcript": "Okay. I'll be direct. The biopsy did show cancer cells. The diagnosis is lung cancer.",
+    "vocal_analysis": {
+      "prosody": { "pitch_hz": { "mean": 125.0, "std_dev": 15.0 }, "intensity_db": { "mean": -24.0 } },
+      "voice_quality": { "jitter_percent": null, "shimmer_percent": null, "hnr_db": null },
+      "speech_rate_wps": 2.9,
+      "emotion_recognition": {
+        "dominant_emotion": "sad",
+        "scores": { "angry": 0.0, "calm": 0.3, "disgust": 0.0, "fearful": 0.1, "happy": 0.0, "neutral": 0.2, "sad": 0.4, "surprised": 0.0 }
+      }
+    }
+  },
+  {
+    "segment_id": 3,
+    "speaker_label": "Patient",
+    "start_time": 17.5,
+    "end_time": 22.0,
+    "duration": 4.5,
+    "transcript": "Oh my god... Cancer. I... I can't believe it. Is it... is it bad?",
+    "vocal_analysis": {
+      "prosody": { "pitch_hz": { "mean": 190.0, "std_dev": 40.0 }, "intensity_db": { "mean": -20.0 } },
+      "voice_quality": { "jitter_percent": null, "shimmer_percent": null, "hnr_db": null },
+      "speech_rate_wps": 3.1,
+      "emotion_recognition": {
+        "dominant_emotion": "surprised",
+        "scores": { "angry": 0.1, "calm": 0.0, "disgust": 0.0, "fearful": 0.3, "happy": 0.0, "neutral": 0.0, "sad": 0.2, "surprised": 0.4 }
+      }
+    }
+  },
+  {
+    "segment_id": 4,
+    "speaker_label": "Practitioner",
+    "start_time": 22.8,
+    "end_time": 30.0,
+    "duration": 7.2,
+    "transcript": "It's a Stage 3A non-small cell adenocarcinoma. This means we'll need to proceed with the standard-of-care, which is a concurrent chemoradiation protocol.",
+    "vocal_analysis": {
+      "prosody": { "pitch_hz": { "mean": 135.0, "std_dev": 10.0 }, "intensity_db": { "mean": -21.0 } },
+      "voice_quality": { "jitter_percent": null, "shimmer_percent": null, "hnr_db": null },
+      "speech_rate_wps": 3.0,
+      "emotion_recognition": {
+        "dominant_emotion": "neutral",
+        "scores": { "angry": 0.0, "calm": 0.3, "disgust": 0.0, "fearful": 0.0, "happy": 0.0, "neutral": 0.7, "sad": 0.0, "surprised": 0.0 }
+      }
+    }
+  },
+  {
+    "segment_id": 5,
+    "speaker_label": "Patient",
+    "start_time": 30.8,
+    "end_time": 36.1,
+    "duration": 5.3,
+    "transcript": "Stage 3A? Chemo? What... what does that mean? You're just... you're talking like I'm a textbook!",
+    "vocal_analysis": {
+      "prosody": { "pitch_hz": { "mean": 200.0, "std_dev": 45.0 }, "intensity_db": { "mean": -15.0 } },
+      "voice_quality": { "jitter_percent": null, "shimmer_percent": null, "hnr_db": null },
+      "speech_rate_wps": 3.5,
+      "emotion_recognition": {
+        "dominant_emotion": "angry",
+        "scores": { "angry": 0.6, "calm": 0.0, "disgust": 0.1, "fearful": 0.2, "happy": 0.0, "neutral": 0.0, "sad": 0.0, "surprised": 0.1 }
+      }
+    }
+  },
+  {
+    "segment_id": 6,
+    "speaker_label": "Practitioner",
+    "start_time": 37.0,
+    "end_time": 41.5,
+    "duration": 4.5,
+    "transcript": "You're right. I'm sorry. I'm throwing too much at you. Let's just stop for a second.",
+    "vocal_analysis": {
+      "prosody": { "pitch_hz": { "mean": 120.0, "std_dev": 15.0 }, "intensity_db": { "mean": -25.0 } },
+      "voice_quality": { "jitter_percent": null, "shimmer_percent": null, "hnr_db": null },
+      "speech_rate_wps": 3.7,
+      "emotion_recognition": {
+        "dominant_emotion": "calm",
+        "scores": { "angry": 0.0, "calm": 0.5, "disgust": 0.0, "fearful": 0.1, "happy": 0.0, "neutral": 0.1, "sad": 0.3, "surprised": 0.0 }
+      }
+    }
+  },
+  {
+    "segment_id": 7,
+    "speaker_label": "Practitioner",
+    "start_time": 42.5,
+    "end_time": 49.0,
+    "duration": 6.5,
+    "transcript": "This is a huge shock, and your reaction is completely normal. The most important thing is that we have a clear diagnosis and we have a very effective plan.",
+    "vocal_analysis": {
+      "prosody": { "pitch_hz": { "mean": 125.0, "std_dev": 20.0 }, "intensity_db": { "mean": -23.0 } },
+      "voice_quality": { "jitter_percent": null, "shimmer_percent": null, "hnr_db": null },
+      "speech_rate_wps": 3.2,
+      "emotion_recognition": {
+        "dominant_emotion": "calm",
+        "scores": { "angry": 0.0, "calm": 0.6, "disgust": 0.0, "fearful": 0.0, "happy": 0.1, "neutral": 0.2, "sad": 0.1, "surprised": 0.0 }
+      }
+    }
+  },
+  {
+    "segment_id": 8,
+    "speaker_label": "Patient",
+    "start_time": 50.0,
+    "end_time": 53.5,
+    "duration": 3.5,
+    "transcript": "A plan... okay. 'Effective'? You... you said effective?",
+    "vocal_analysis": {
+      "prosody": { "pitch_hz": { "mean": 170.0, "std_dev": 25.0 }, "intensity_db": { "mean": -26.0 } },
+      "voice_quality": { "jitter_percent": null, "shimmer_percent": null, "hnr_db": null },
+      "speech_rate_wps": 3.1,
+      "emotion_recognition": {
+        "dominant_emotion": "sad",
+        "scores": { "angry": 0.0, "calm": 0.1, "disgust": 0.0, "fearful": 0.3, "happy": 0.0, "neutral": 0.1, "sad": 0.4, "surprised": 0.1 }
+      }
+    }
+  },
+  {
+    "segment_id": 9,
+    "speaker_label": "Practitioner",
+    "start_time": 54.5,
+    "end_time": 62.0,
+    "duration": 7.5,
+    "transcript": "Yes. Very. What I'd like to do is schedule a follow-up for tomorrow with you and your family. We'll go over everything, step-by-step. You are not alone in this.",
+    "vocal_analysis": {
+      "prosody": { "pitch_hz": { "mean": 130.0, "std_dev": 20.0 }, "intensity_db": { "mean": -22.5 } },
+      "voice_quality": { "jitter_percent": null, "shimmer_percent": null, "hnr_db": null },
+      "speech_rate_wps": 3.3,
+      "emotion_recognition": {
+        "dominant_emotion": "calm",
+        "scores": { "angry": 0.0, "calm": 0.7, "disgust": 0.0, "fearful": 0.0, "happy": 0.1, "neutral": 0.1, "sad": 0.1, "surprised": 0.0 }
+      }
+    }
+  }
+]
