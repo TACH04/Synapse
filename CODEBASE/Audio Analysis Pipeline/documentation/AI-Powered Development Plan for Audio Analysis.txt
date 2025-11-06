@@ -1,0 +1,1249 @@
+﻿A Step-by-Step Development Plan for the Clinical Audio Analysis Pipeline
+
+
+This document provides an exhaustive, 11-step plan to develop the "Clinical Audio Analysis Pipeline".1 The project is bifurcated into two primary phases, consistent with the foundational strategy:
+1. Phase 1: Construct the "Data Mining Machine," a complete, end-to-end pipeline using general-purpose, State-of-the-Art (SOTA) models.1
+2. Phase 2: Build the "Specialized Tool," which uses the data from Phase 1 to create a clinically-labeled dataset and fine-tune a specialized emotion model.1
+Each step includes a rationale for its design and a detailed, sophisticated prompt to be provided to an agentic AI for code generation.
+________________
+
+
+Part 1: The Phase 1 "Data Mining Machine"
+
+
+
+
+I. Project Scaffolding and Environment Configuration
+
+
+
+
+Rationale
+
+
+Before addressing the core logic, a robust and scalable project structure must be established. A well-defined directory separates concerns (e.g., pipeline logic, utilities, scripts, tests), which is essential for long-term maintainability and simplifies the "hot-swapping" modularity specified in the architecture.1 A requirements.txt file is critical for locking dependencies to ensure reproducibility, a non-negotiable aspect of systems relying on complex machine learning models.
+
+
+Key Architectural Considerations
+
+
+The project setup must account for several critical, non-obvious dependencies:
+* Hugging Face Authentication: The plan specifies pyannote/speaker-diarization-3.1.1 This is a gated model on the Hugging Face platform. Consequently, a pip install is insufficient; the system will fail at runtime unless it can authenticate. The project setup must include instructions for the user to accept the model's terms and generate an access token. The DiarizationService (Part III) will be designed to accept this token.
+* Core ML Dependencies: The primary libraries—transformers, faster-whisper, and pyannote.audio—all depend on a core machine learning framework. torch (PyTorch) must be explicitly included as the stable base, preferably with CUDA support for acceleration.
+* Audio Loading Dependencies: The AudioUtilities module is required to load "any audio format".1 This implies a dependency on a robust audio library like torchaudio or librosa, which in turn may rely on system-level binaries such as ffmpeg.
+
+
+Table 1: Project Dependency and Configuration Summary
+
+
+The README.md file should include the following summary table for user clarity.
+
+
+Library
+	Version
+	Purpose
+	pyannote.audio
+	3.1.x
+	Speaker Diarization (Module 1) 1
+	faster-whisper
+	0.10.x
+	ASR/Transcription (Module 2) 1
+	transformers
+	4.x.x
+	Emotion Service (Module 3) 1
+	parselmouth-praat
+	0.4.x
+	Acoustic Feature Service (Module 4) 1
+	torch
+	2.x.x
+	Core ML framework for all models
+	torchaudio
+	2.x.x
+	Audio loading, resampling (Utilities) 1
+	pandas
+	2.x.x
+	Data aggregation for Phase 2 1
+	numpy
+	1.2x.x
+	Numerical data handling (audio arrays)
+	
+
+Detailed Agent Prompt (Step 1)
+
+
+Prompt for Agentic AI:
+"You are tasked with scaffolding our 'Clinical Audio Analysis Pipeline' project. Create the project directory structure and all necessary environment configuration files.
+1. Project Directory Structure:
+Generate the following directory tree:
+
+
+
+
+
+
+clinical-audio-pipeline/
+├── pipeline/
+│   ├── __init__.py
+│   ├── analysis_pipeline.py  # The Orchestrator (Part VII)
+│   ├── audio_utilities.py    # Helper module (Part II)
+│   └── services/
+│       ├── __init__.py
+│       ├── diarization_service.py  # Module 1 (Part III)
+│       ├── asr_service.py          # Module 2 (Part IV)
+│       ├── acoustic_service.py     # Module 3 (Part V)
+│       └── emotion_service.py      # Module 4 (Part VI)
+├── scripts/
+│   ├── __init__.py
+│   ├── prepare_dataset.py    # Phase 2 utility (Part IX)
+│   └── train_emotion_model.py # Phase 2 training (Part X)
+├── data/
+│   ├── input/                # Placeholder for.mp3,.wav files
+│   └── output/               # Placeholder for JSON results
+├── models/                     # Placeholder for fine-tuned Phase 2 models
+├── main.py                     # Main execution script (Part VIII)
+├── requirements.txt
+└── README.md
+
+2. requirements.txt File:
+Create the requirements.txt file with the following core dependencies.
+
+
+
+
+
+
+# Core ML Models
+pyannote.audio>=3.1
+faster-whisper>=0.10
+transformers>=4.30
+parselmouth-praat>=0.4
+
+# Core ML & Audio Frameworks
+torch>=2.0
+torchaudio>=2.0
+
+# Data Handling
+pandas>=2.0
+numpy>=1.24
+
+# Utilities
+tqdm  # For progress bars
+
+3. README.md File:
+Create a README.md file. It must include:
+* A brief project description based on the plan.1
+* Crucial Setup Instructions: Add a section named 'CRITICAL: Hugging Face Authentication'. This section must instruct the user to:
+   1. Visit https://huggingface.co/pyannote/speaker-diarization-3.1 and accept the user conditions.
+   2. Visit https://huggingface.co/settings/tokens to generate a 'read' access token.
+   3. Explain that this token must be provided as an environment variable (e.g., HF_TOKEN) or passed directly to the DiarizationService.
+* The 'Project Dependency and Configuration Summary' table provided in my instructions."
+________________
+
+
+II. Core Service: The Audio Utilities Module (audio_utilities.py)
+
+
+
+
+Rationale
+
+
+This helper module functions as the "data integrity gate" for the entire pipeline. The system specification requires that it robustly load any audio format, resample it to 16kHz, and provide a utility for slicing NumPy arrays.1 This normalization is the most critical function of the module.
+
+
+Key Architectural Considerations
+
+
+* The 16kHz Imperative: The 16kHz resampling requirement is non-negotiable.1 The specified downstream models, such as faster-whisper 1 and superb/hubert-base-superb-er 1, are pre-trained on 16kHz audio. Feeding them audio at a different sample rate (e.g., 44.1kHz from a studio mic or 8kHz from a phone) will result in catastrophic failure. This utility must enforce this normalization once upon loading.
+* Mono Conversion: The models also expect mono (1-channel) audio. This utility must handle the conversion from stereo (2-channel) by averaging the channels.
+* Slicing Precision: The Diarization Service (Part III) will output start and end times in seconds.1 The slicing function will operate on a NumPy array, which is indexed by samples. The utility must robustly convert these units using the formula $start\_sample = \lfloor start\_time\_seconds \times sample\_rate \rfloor$. An off-by-one or float-to-int rounding error at this stage would poison every downstream analysis by feeding the wrong audio segment to the models.
+
+
+Detailed Agent Prompt (Step 2)
+
+
+Prompt for Agentic AI:
+"Develop the AudioUtilities module (pipeline/audio_utilities.py). This module will contain stateless helper functions for all audio processing. Do not use a class.
+Implement two core functions based on these specifications:
+1. load_and_resample_audio(file_path: str, target_sample_rate: int = 16000) -> (np.ndarray, int):
+* Purpose: To robustly load any audio file (e.g.,.wav,.mp3,.m4a) as specified in the plan.1
+* Implementation:
+   * Use the torchaudio library.
+   * Logic:
+      1. Load the audio file from file_path.
+      2. Get the original audio and its original_sample_rate.
+      3. Convert to Mono: If the audio is stereo (e.g., shape [2, N]), average its channels to create a mono signal (shape [N]).
+      4. Resample: If original_sample_rate is not equal to target_sample_rate, apply a high-quality resampler (torchaudio.transforms.Resample) to convert the audio to target_sample_rate.1
+      5. Return the audio as a 1D NumPy array (np.ndarray) and the target_sample_rate.
+* Error Handling: Include try/except blocks to catch file-not-found or corrupted-file errors.
+2. slice_audio(full_audio_array: np.ndarray, sample_rate: int, start_time_sec: float, end_time_sec: float) -> np.ndarray:
+* Purpose: To extract an audio segment (a "slice") from the full audio array, as required by the orchestrator.1
+* Implementation:
+   * Logic:
+      1. Calculate the start_sample index by multiplying $start\_time\_sec \times sample\_rate$.
+      2. Calculate the end_sample index by multiplying $end\_time\_sec \times sample\_rate$.
+      3. Critical: Convert both start_sample and end_sample to integers using int().
+      4. Perform boundary checks: ensure start_sample is not less than 0 and end_sample is not greater than the length of full_audio_array.
+      5. Return the NumPy slice: full_audio_array[start_sample:end_sample].
+* Type Hinting: Use strict type hinting for all function arguments and return values."
+________________
+
+
+III. Pipeline Module 1: The Diarization Service (diarization_service.py)
+
+
+
+
+Rationale
+
+
+This service is designated as the "spine" of the analysis.1 Its sole task is to answer the question: "Who spoke, and when?".1 It is encapsulated in a class, DiarizationService, so that the expensive pyannote/speaker-diarization-3.1 model 1 is loaded into memory once upon initialization, not on every processing call. This is a core tenant of the "load all ML models into memory once" data flow.1
+
+
+Key Architectural Considerations
+
+
+* Authentication: As established in Part I, this model requires a Hugging Face authentication token. The class constructor (__init__) must be designed to accept this token.
+* Configuration: The plan explicitly states this service must be "optimized for this use case by being configured for num_speakers $s=2$".1 This hyperparameter is critical for a clinical conversation (practitioner-patient) and must be passed to the model pipeline.
+* Input/Output: This service is unique within the pipeline. It takes a file path as input, not a NumPy array 1, as pyannote performs its own audio loading. Its output—a temporal list of speaker segments—will drive the execution of all other services.
+
+
+Detailed Agent Prompt (Step 3)
+
+
+Prompt for Agentic AI:
+"Create the DiarizationService class in pipeline/services/diarization_service.py. This class will encapsulate the pyannote.audio speaker diarization model.
+
+
+Python
+
+
+
+
+import torch
+from pyannote.audio import Pipeline
+from typing import List, Dict, Any
+
+class DiarizationService:
+   """
+   Encapsulates the pyannote.audio pipeline for speaker diarization.
+   Loads the model once and provides an interface to process audio files.
+   """
+
+   def __init__(self, model_name: str = "pyannote/speaker-diarization-3.1", auth_token: str = None):
+       """
+       Initializes the service by loading the diarization pipeline.
+       
+       Args:
+           model_name (str): The name of the pyannote model to load.
+           auth_token (str): The Hugging Face auth token.
+                               Required for gated models like 3.1.
+       """
+       if auth_token is None:
+           raise ValueError("Hugging Face auth token is required for pyannote/speaker-diarization-3.1. Please provide it via HF_TOKEN env var or argument.")
+       
+       self.device = "cuda" if torch.cuda.is_available() else "cpu"
+       try:
+           self.pipeline = Pipeline.from_pretrained(
+               model_name,
+               use_auth_token=auth_token
+           ).to(self.device)
+           print(f"DiarizationService loaded on {self.device}.")
+       except Exception as e:
+           print(f"Error loading pyannote pipeline: {e}")
+           raise
+
+   def process(self, audio_file_path: str, num_speakers: int = 2) -> List]:
+       """
+       Processes a single audio file to identify speaker segments.
+
+       Args:
+           audio_file_path (str): The path to the audio file.
+           num_speakers (int): The number of speakers to detect, 
+                               as specified in the plan.
+
+       Returns:
+           List]: A list of segment dictionaries.
+       """
+       try:
+           # The pipeline is configured for a specific number of speakers
+           diarization = self.pipeline(audio_file_path, num_speakers=num_speakers)
+
+           segments =
+           for turn, _, speaker_label in diarization.itertracks(yield_label=True):
+               segment = {
+                   "speaker": speaker_label,  # e.g., "SPEAKER_00", "SPEAKER_01"
+                   "start_time": turn.start,
+                   "end_time": turn.end
+               }
+               segments.append(segment)
+           
+           return segments
+       except Exception as e:
+           print(f"Error during diarization processing: {e}")
+           return
+
+```"
+
+________________
+
+
+IV. Pipeline Module 2: The ASR (Transcription) Service (asr_service.py)
+
+
+
+
+Rationale
+
+
+This service is responsible for "What was said?".1 It uses faster-whisper, a highly optimized implementation of the Whisper model. It is encapsulated in an ASRService class to load the model (e.g., base.en) into memory once, consistent with the pipeline architecture.1
+
+
+Key Architectural Considerations
+
+
+* Input Type: Unlike the DiarizationService, this module operates on the NumPy audio slice 1 provided by the Orchestrator (which uses AudioUtilities to perform the slicing).
+* Model Selection: The plan suggests base.en or medium.en.1 This choice represents a trade-off. base.en is faster and requires less VRAM, while medium.en is more accurate but computationally heavier. The model name must be a configurable parameter in the __init__ to allow for this flexibility.
+* Compute Type Optimization: faster-whisper supports quantization (e.g., int8) and different float precisions (e.g., float16). This should be a configurable parameter to optimize for production-grade performance, especially on CUDA-enabled hardware.
+
+
+Detailed Agent Prompt (Step 4)
+
+
+Prompt for Agentic AI:
+"Create the ASRService class in pipeline/services/asr_service.py. This class will use faster-whisper for speech-to-text.
+
+
+Python
+
+
+
+
+import torch
+import numpy as np
+from faster_whisper import WhisperModel
+from typing import List, Dict, Any
+
+class ASRService:
+   """
+   Encapsulates the faster-whisper model for transcription.
+   """
+
+   def __init__(self, model_name: str = "base.en", device: str = None, compute_type: str = "float16"):
+       """
+       Initializes the ASR service.
+
+       Args:
+           model_name (str): The faster-whisper model to use 
+                             (e.g., "base.en", "medium.en").
+           device (str): "cuda" or "cpu". Autodetect if None.
+           compute_type (str): Optimization (e.g., "float16", "int8").
+       """
+       if device is None:
+           self.device = "cuda" if torch.cuda.is_available() else "cpu"
+       else:
+           self.device = device
+       
+       # float16 is not supported on CPU, so default to float32
+       if self.device == "cpu" and compute_type == "float16":
+           compute_type = "float32" 
+
+       self.model = WhisperModel(model_name, device=self.device, compute_type=compute_type)
+       print(f"ASRService loaded model '{model_name}' on {self.device} with {compute_type}.")
+
+   def process(self, audio_slice: np.ndarray) -> str:
+       """
+       Transcribes a single audio slice (NumPy array).
+
+       Args:
+           audio_slice (np.ndarray): The 1D audio array (at 16kHz).
+
+       Returns:
+           str: The transcribed text.
+       """
+       # faster-whisper expects a 16kHz float32 NumPy array
+       if audio_slice.dtype!= np.float32:
+            audio_slice = audio_slice.astype(np.float32)
+
+       # We are transcribing short, pre-segmented audio.
+       segments, _ = self.model.transcribe(audio_slice, language="en")
+       
+       # Concatenate segments for a single transcript
+       transcript = "".join(segment.text for segment in segments).strip()
+       
+       return transcript
+
+```"
+
+________________
+
+
+V. Pipeline Module 3: The Acoustic Feature Service (acoustic_service.py)
+
+
+
+
+Rationale
+
+
+This service addresses the question, "How was it said? (Objective)".1 It provides quantitative, physical features of the speech (e.g., mean pitch $F0$, jitter, shimmer) using the parselmouth-praat library.1 This data is crucial as it "provides quantitative data to ground the LLM's analysis" 1, offering an objective complement to the subjective emotion classification.
+
+
+Key Architectural Considerations
+
+
+* Fragility of Praat: parselmouth is a Python wrapper for the Praat phonetics software, which was not designed for this type of high-throughput pipeline. It is notoriously fragile and will crash if fed audio that is too short or contains only silence.
+* Robust Error Handling: A failure in this service must not be allowed to crash the entire pipeline. The process method must be wrapped in a robust try/except block. If parselmouth fails to analyze a slice, the service should log a warning and return None or an empty dictionary. The Orchestrator (Part VII) must then handle this gracefully in the final JSON output.
+* Feature Expansion: The plan mentions pitch, jitter, and shimmer.1 To provide more value, other standard acoustic features highly correlated with emotional affect, such as Harmonics-to-Noise Ratio (HNR) and intensity (volume), should also be extracted.
+
+
+Detailed Agent Prompt (Step 5)
+
+
+Prompt for Agentic AI:
+"Create the AcousticService class in pipeline/services/acoustic_service.py. This class will use parselmouth-praat to extract objective acoustic features.
+
+
+Python
+
+
+
+
+import parselmouth
+import numpy as np
+from typing import Dict, Optional, Any
+
+class AcousticService:
+   """
+   Extracts objective acoustic features from an audio slice
+   using parselmouth-praat.
+   """
+
+   def __init__(self, sample_rate: int = 16000):
+       """
+       Initializes the service.
+
+       Args:
+           sample_rate (int): The sample rate of the incoming audio.
+       """
+       self.sample_rate = sample_rate
+       # A small floor to prevent Praat from crashing on near-silence
+       self.silence_threshold = 0.01 
+
+   def process(self, audio_slice: np.ndarray) -> Optional]:
+       """
+       Analyzes an audio slice for pitch, jitter, shimmer, and HNR.
+
+       Args:
+           audio_slice (np.ndarray): The 1D audio array (at 16kHz).
+
+       Returns:
+           Optional]: A dictionary of features,
+                                     or None if analysis fails.
+       """
+       if np.max(np.abs(audio_slice)) < self.silence_threshold:
+           return None # Audio is silent, Praat will fail
+
+       try:
+           # Load audio slice into parselmouth
+           snd = parselmouth.Sound(audio_slice, sampling_frequency=self.sample_rate)
+
+           # Get pitch
+           # We must provide pitch floor/ceiling appropriate for human speech
+           pitch = snd.to_pitch(pitch_floor=75.0, pitch_ceiling=600.0)
+           mean_f0 = pitch.get_mean(unit="Hertz")
+
+           # Get jitter and shimmer
+           # PointProcess is needed for jitter/shimmer
+           point_process = parselmouth.praat.call(pitch, "To PointProcess")
+           jitter_local = parselmouth.praat.call(point_process, "Get jitter (local)", 0.0, 0.0, 0.0001, 0.02, 1.3)
+           shimmer_local = parselmouth.praat.call([snd, point_process], "Get shimmer (local)", 0.0, 0.0, 0.0001, 0.02, 1.3, 1.6)
+
+           # Get HNR (Harmonics-to-Noise Ratio)
+           harmonicity = snd.to_harmonicity(time_step=0.01, minimum_pitch=75.0)
+           hnr = harmonicity.get_mean()
+
+           return {
+               "pitch_mean_f0": mean_f0 if not np.isnan(mean_f0) else None,
+               "jitter_local": jitter_local if not np.isnan(jitter_local) else None,
+               "shimmer_local": shimmer_local if not np.isnan(shimmer_local) else None,
+               "hnr_mean": hnr if not np.isnan(hnr) else None
+           }
+
+       except Exception as e:
+           # Praat errors are common on very short or unusual audio
+           # We must not crash the whole pipeline.
+           print(f" Could not process slice: {e}")
+           return None
+
+```"
+
+________________
+
+
+VI. Pipeline Module 4: The General Emotion Service (Phase 1) (emotion_service.py)
+
+
+
+
+Rationale
+
+
+This service answers "How was it said? (Subjective)".1 For Phase 1, it uses the general-purpose SOTA model superb/hubert-base-superb-er from the transformers library.1 This module is the most critical component for Phase 2, as it is explicitly designed to be "hot-swapped".1
+
+
+Key Architectural Considerations
+
+
+* Architecting for the "Hot-Swap": The class must be designed now to support the Phase 2 hot-swap.1 A naive implementation would hard-code the superb/hubert-base-superb-er model name. The correct, modular implementation will pass the model_name_or_path as a constructor argument. In Phase 1, this will be the Hugging Face model string. In Phase 2, this will be the local file path to the fine-tuned model (e.g., ./models/clinical_ser_model/).
+* Processor vs. Model: transformers models require a "Feature Extractor" (or "Processor") to convert raw audio into the format the model expects. Both the model and its specific feature extractor must be loaded.
+* Output Schema: The final output schema requires both a label and a score.1 The process method must be written to return this structured dictionary.
+
+
+Detailed Agent Prompt (Step 6)
+
+
+Prompt for Agentic AI:
+"Create the EmotionService class in pipeline/services/emotion_service.py. This class must be designed to support the Phase 2 'hot-swap'.1
+
+
+Python
+
+
+
+
+import torch
+import numpy as np
+from transformers import AutoFeatureExtractor, AutoModelForAudioClassification
+from typing import Dict, Optional, Any
+
+class EmotionService:
+   """
+   Encapsulates the Speech Emotion Recognition (SER) model.
+   This class is designed to be "hot-swappable".
+   """
+
+   def __init__(self, model_name_or_path: str = "superb/hubert-base-superb-er", sample_rate: int = 16000):
+       """
+       Initializes the SER service.
+
+       Args:
+           model_name_or_path (str): The HF model name (Phase 1) 
+                                     or local path to a fine-tuned model (Phase 2).
+           sample_rate (int): The sample rate of the incoming audio.
+       """
+       self.device = "cuda" if torch.cuda.is_available() else "cpu"
+       self.sample_rate = sample_rate
+       
+       self.feature_extractor = AutoFeatureExtractor.from_pretrained(model_name_or_path)
+       self.model = AutoModelForAudioClassification.from_pretrained(model_name_or_path).to(self.device)
+       
+       # Store the ID-to-Label mapping
+       self.id2label = self.model.config.id2label
+       print(f"EmotionService loaded model '{model_name_or_path}' on {self.device}.")
+       print(f"Emotion labels: {list(self.id2label.values())}")
+
+   def process(self, audio_slice: np.ndarray) -> Optional]:
+       """
+       Predicts the emotion of a single audio slice.
+
+       Args:
+           audio_slice (np.ndarray): The 1D audio array (at 16kHz).
+
+       Returns:
+           Optional]: A dict with "label" and "score", 
+                                     or None if analysis fails.
+       """
+       if audio_slice.size == 0:
+           return None # Cannot process empty slice
+
+       try:
+           # 1. Preprocess: Use the feature extractor
+           inputs = self.feature_extractor(
+               audio_slice, 
+               sampling_rate=self.sample_rate, 
+               return_tensors="pt", 
+               padding=True
+           )
+           inputs = inputs.to(self.device)
+
+           # 2. Predict: Run the model
+           with torch.no_grad():
+               logits = self.model(**inputs).logits
+
+           # 3. Post-process: Get probabilities and find best
+           scores = torch.nn.functional.softmax(logits, dim=1)
+           best_score, best_index = torch.max(scores, dim=1)
+           
+           predicted_label = self.id2label[best_index.item()]
+           predicted_score = best_score.item()
+
+           # Match the output schema 
+           return {
+               "label": predicted_label,
+               "score": round(predicted_score, 4)
+           }
+
+       except Exception as e:
+           print(f" Could not process slice: {e}")
+           return None
+
+```"
+
+________________
+
+
+VII. The Orchestrator: Building the AnalysisPipeline (analysis_pipeline.py)
+
+
+
+
+Rationale
+
+
+This class, AnalysisPipeline, is the "brain" of the system.1 It manages the entire end-to-end data flow as specified in the plan.1 Its constructor will initialize all four analytical services once, loading their respective models into memory.1 Its run method will then execute the full, multi-step analysis.
+
+
+Key Architectural Considerations
+
+
+The data flow specified in the plan 1 must be implemented precisely:
+1. The AnalysisPipeline is initialized, loading all models.
+2. The run method receives a single audio file path.
+3. It first uses AudioUtilities to load the full audio file into a NumPy array.
+4. It then passes the file path to the DiarizationService, which returns the list of speaker segments.
+5. It then iterates through this segment list.
+6. For each segment, it uses AudioUtilities to slice the full audio array using the segment's start and end times.
+7. It passes this audio slice to the ASRService, EmotionService, and AcousticService.
+8. It collects all the data for that segment and appends it to a final list.
+9. Finally, it saves this list as the structured JSON output, matching the schema.1
+This class is also where the "hot-swap" is enabled. The __init__ method will accept an emotion_model_path argument, which it simply passes through to the EmotionService constructor.
+
+
+Detailed Agent Prompt (Step 7)
+
+
+Prompt for Agentic AI:
+"Create the main orchestrator, AnalysisPipeline, in pipeline/analysis_pipeline.py. This class is the 'brain' of the system 1 and manages the entire data flow.1
+
+
+Python
+
+
+
+
+import json
+import os
+from tqdm import tqdm
+from typing import Dict, Any, Optional
+
+# Import all our modules
+from. import audio_utilities as au
+from.services.diarization_service import DiarizationService
+from.services.asr_service import ASRService
+from.services.acoustic_service import AcousticService
+from.services.emotion_service import EmotionService
+
+class AnalysisPipeline:
+   """
+   Orchestrates the entire audio analysis pipeline from end-to-end.
+   It initializes all services once and manages the data flow.
+   """
+
+   def __init__(self, 
+                hf_token: str, 
+                emotion_model_path: str = "superb/hubert-base-superb-er",
+                asr_model: str = "base.en"):
+       """
+       Initializes the pipeline by loading all ML models into memory.
+
+       Args:
+           hf_token (str): Hugging Face auth token (for Diarization).
+           emotion_model_path (str): Path for the EmotionService (supports hot-swap).
+           asr_model (str): The faster-whisper model to use.
+       """
+       print("Initializing Analysis Pipeline...")
+       self.diarization_service = DiarizationService(auth_token=hf_token)
+       self.asr_service = ASRService(model_name=asr_model)
+       self.acoustic_service = AcousticService()
+       self.emotion_service = EmotionService(model_name_or_path=emotion_model_path)
+       print("All services initialized.")
+
+   def run(self, audio_file_path: str, output_json_path: str, num_speakers: int = 2):
+       """
+       Runs the full analysis pipeline on a single audio file
+       following the specified data flow.
+       """
+       print(f"Starting pipeline for: {audio_file_path}")
+
+       # 1. Load and resample audio 
+       try:
+           full_audio_array, sample_rate = au.load_and_resample_audio(audio_file_path)
+           print(f"Audio loaded. Duration: {len(full_audio_array) / sample_rate:.2f}s")
+       except Exception as e:
+           print(f"Error loading audio file: {e}")
+           return
+
+       # 2. Get speaker segments 
+       print("Step 1: Running Diarization...")
+       speaker_segments = self.diarization_service.process(audio_file_path, num_speakers)
+       if not speaker_segments:
+           print("No speaker segments found. Exiting.")
+           return
+
+       print(f"Found {len(speaker_segments)} segments. Running analysis...")
+       
+       final_output = {
+           "file": os.path.basename(audio_file_path),
+           "segments":
+       }
+
+       # 3. Iterate segments and process 
+       for i, segment in enumerate(tqdm(speaker_segments, desc="Analyzing Segments")):
+           start_sec = segment["start_time"]
+           end_sec = segment["end_time"]
+
+           # a. Slice audio 
+           audio_slice = au.slice_audio(full_audio_array, sample_rate, start_sec, end_sec)
+
+           if audio_slice.size == 0:
+               continue # Skip empty slices
+
+           # b. Run parallel analyses 
+           transcript = self.asr_service.process(audio_slice)
+           emotion = self.emotion_service.process(audio_slice)
+           acoustics = self.acoustic_service.process(audio_slice)
+
+           # c. Collect data into the specified schema 
+           segment_data = {
+               "segment_id": i,
+               "speaker": segment["speaker"],
+               "start_time": round(start_sec, 3),
+               "end_time": round(end_sec, 3),
+               "duration": round(end_sec - start_sec, 3),
+               "transcript": transcript,
+               "predicted_emotion": emotion,
+               "acoustic_features": acoustics
+           }
+           final_output["segments"].append(segment_data)
+
+       # 4. Save final JSON 
+       try:
+           with open(output_json_path, 'w', encoding='utf-8') as f:
+               json.dump(final_output, f, indent=4, ensure_ascii=False)
+           print(f"Analysis complete. Output saved to: {output_json_path}")
+       except Exception as e:
+           print(f"Error saving JSON output: {e}")
+
+```"
+
+________________
+
+
+VIII. Execution, Data Synthesis, and Validation (main.py)
+
+
+
+
+Rationale
+
+
+With all Phase 1 components complete, a main entry point (main.py) is required to execute the pipeline. This script will parse command-line arguments (e.g., input file path), initialize the AnalysisPipeline, and trigger the run method.
+
+
+Key Architectural Considerations
+
+
+* Configuration: The HF_TOKEN required by the DiarizationService must be passed to the AnalysisPipeline. Following best practices, this script should read the token from an environment variable (os.environ.get("HF_TOKEN")) rather than accepting it as a command-line argument, which would expose the secret.
+* Validation: The primary purpose of this script is to run the "Data Mining Machine".1 Executing it validates the entire data flow 1 and confirms that the output JSON strictly adheres to the required schema.1
+
+
+Detailed Agent Prompt (Step 8)
+
+
+Prompt for Agentic AI:
+"Create the main execution script main.py in the project's root directory. This script will run the Phase 1 pipeline.
+
+
+Python
+
+
+
+
+import os
+import argparse
+from pipeline.analysis_pipeline import AnalysisPipeline
+
+def main():
+   parser = argparse.ArgumentParser(description="Run the Clinical Audio Analysis Pipeline (Phase 1).")
+   parser.add_argument(
+       "-i", "--input", 
+       required=True, 
+       type=str, 
+       help="Path to the input audio file (.wav,.mp3, etc.)"
+   )
+   parser.add_argument(
+       "-o", "--output_dir", 
+       default="./data/output/", 
+       type=str, 
+       help="Directory to save the output JSON."
+   )
+   parser.add_argument(
+       "--asr", 
+       default="base.en", 
+       type=str, 
+       help="ASR model to use (e.g., 'base.en', 'medium.en')."
+   )
+   parser.add_argument(
+       "--speakers", 
+       default=2, 
+       type=int, 
+       help="Number of speakers to detect."
+   )
+   args = parser.parse_args()
+
+   # 1. Get Hugging Face Token (Critical)
+   hf_token = os.environ.get("HF_TOKEN")
+   if hf_token is None:
+       print("Error: HF_TOKEN environment variable not set.")
+       print("Please get a token from https://huggingface.co/settings/tokens")
+       return
+
+   # 2. Create output directory if it doesn't exist
+   os.makedirs(args.output_dir, exist_ok=True)
+   
+   # 3. Define output path
+   base_filename = os.path.basename(args.input)
+   output_filename = os.path.splitext(base_filename) + ".json"
+   output_json_path = os.path.join(args.output_dir, output_filename)
+
+   # 4. Initialize and run the pipeline
+   # We use the default Phase 1 emotion model
+   try:
+       pipeline = AnalysisPipeline(
+           hf_token=hf_token,
+           emotion_model_path="superb/hubert-base-superb-er", # Phase 1 default
+           asr_model=args.asr
+       )
+       
+       pipeline.run(
+           audio_file_path=args.input,
+           output_json_path=output_json_path,
+           num_speakers=args.speakers
+       )
+   except Exception as e:
+       print(f"An error occurred during pipeline execution: {e}")
+
+if __name__ == "__main__":
+   main()
+
+
+Instructions for user:
+To run this, the user will execute:
+export HF_TOKEN="your_token_here"
+python main.py -i./data/input/convo_01.mp3"
+________________
+
+
+Part 2: The Phase 2 "Specialized Tool"
+
+
+
+
+IX. Phase 2 Utility: The Dataset Aggregation Script (prepare_dataset.py)
+
+
+
+
+Rationale
+
+
+With the Phase 1 pipeline functional, we can proceed to Phase 2: creating the "Specialized Tool".1 The first step is dataset creation. The plan specifies a script, prepare_dataset.py, to aggregate all JSON outputs from Phase 1 into a single CSV file. This CSV will then be given to a human expert for labeling.1
+
+
+Key Architectural Considerations
+
+
+* The I/O-Bound Training Problem: A naive implementation of this script would create a CSV with columns like original_audio_path, start_time, and end_time. However, the subsequent training script (Part X) would become an I/O-bound nightmare. It would need to re-load and re-slice the original, large audio files for every single item in every single batch, every single epoch.
+* The Optimization: A superior, optimized approach is implemented here. This prepare_dataset.py script will not only create the CSV but will also use the AudioUtilities to extract each audio segment and save it as a new, small, individual.wav file. The CSV will then contain a column segment_audio_path that points directly to this pre-sliced file. This makes the training script (Part X) dramatically simpler and faster, as it only needs to load small, ready-to-use files.
+
+
+Detailed Agent Prompt (Step 9)
+
+
+Prompt for Agentic AI:
+"Create the dataset preparation script scripts/prepare_dataset.py. This script implements 'Step 2.1: Dataset Creation'.1
+This script has two goals:
+1. Parse a directory of JSON outputs from Phase 1.
+2. Create a single CSV (dataset_for_labeling.csv) with all metadata.
+3. Crucial Optimization: For each segment, extract the audio slice and save it as a new, individual.wav file. The CSV must link to this new file.
+
+
+Python
+
+
+
+
+import os
+import json
+import glob
+import pandas as pd
+from tqdm import tqdm
+from typing import List, Dict, Any
+
+# We need our AudioUtilities to slice and save
+import sys
+# Add project root to path to import pipeline modules
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from pipeline import audio_utilities as au
+# We will use torchaudio to save the wave files
+import torchaudio
+import torch
+
+def create_labeling_dataset(
+   json_input_dir: str, 
+   original_audio_dir: str, 
+   output_csv_path: str, 
+   output_segments_dir: str
+):
+   """
+   Aggregates all Phase 1 JSON outputs into a single CSV for human labeling,
+   and extracts all audio segments into a new directory.
+   """
+   os.makedirs(output_segments_dir, exist_ok=True)
+   
+   all_segments_data =
+   
+   json_files = glob.glob(os.path.join(json_input_dir, "*.json"))
+   if not json_files:
+       print(f"No JSON files found in {json_input_dir}")
+       return
+
+   print(f"Aggregating {len(json_files)} JSON files...")
+
+   for json_path in tqdm(json_files, desc="Processing JSONs"):
+       with open(json_path, 'r', encoding='utf-8') as f:
+           data = json.load(f)
+       
+       original_audio_filename = data["file"]
+       original_audio_path = os.path.join(original_audio_dir, original_audio_filename)
+
+       if not os.path.exists(original_audio_path):
+           print(f"Warning: Original audio {original_audio_path} not found. Skipping.")
+           continue
+
+       # Load the original audio *once* per file
+       try:
+           full_audio, sr = au.load_and_resample_audio(original_audio_path, target_sample_rate=16000)
+       except Exception as e:
+           print(f"Warning: Could not load {original_audio_path}. Skipping. Error: {e}")
+           continue
+
+       for segment in data["segments"]:
+           # 1. Prepare Metadata
+           segment_id = segment["segment_id"]
+           start_time = segment["start_time"]
+           end_time = segment["end_time"]
+
+           # 2. Create the new audio slice file (The Optimization)
+           segment_filename = f"{os.path.splitext(original_audio_filename)}_seg{segment_id}.wav"
+           segment_output_path = os.path.join(output_segments_dir, segment_filename)
+           
+           audio_slice_np = au.slice_audio(full_audio, sr, start_time, end_time)
+           
+           # Save the slice as a.wav
+           # Convert numpy to torch tensor for saving
+           audio_slice_tensor = torch.from_numpy(audio_slice_np).float().unsqueeze(0)
+           torchaudio.save(segment_output_path, audio_slice_tensor, sample_rate=sr)
+
+           # 3. Assemble data for CSV
+           csv_row = {
+               "segment_audio_path": segment_output_path,
+               "original_file": original_audio_filename,
+               "start_time": start_time,
+               "end_time": end_time,
+               "transcript": segment["transcript"],
+               "phase1_emotion_guess": segment.get("predicted_emotion", {}).get("label"),
+               "phase1_emotion_score": segment.get("predicted_emotion", {}).get("score"),
+               "clinical_label": "" # This is the column for the human expert 
+           }
+           all_segments_data.append(csv_row)
+
+   # Create and save the final CSV
+   df = pd.DataFrame(all_segments_data)
+   df.to_csv(output_csv_path, index=False, encoding='utf-8')
+   print(f"Dataset aggregation complete. CSV saved to: {output_csv_path}")
+   print(f"All audio segments saved to: {output_segments_dir}")
+
+if __name__ == "__main__":
+   # Example usage
+   create_labeling_dataset(
+       json_input_dir="./data/output/",
+       original_audio_dir="./data/input/",
+       output_csv_path="./data/dataset_for_labeling.csv",
+       output_segments_dir="./data/segments/"
+   )
+
+```"
+
+________________
+
+
+X. Phase 2 Core: The Clinical Model Fine-Tuning Script (train_emotion_model.py)
+
+
+
+
+Rationale
+
+
+This script implements "Step 2.2: Model Fine-Tuning".1 Its purpose is to take the human-completed CSV from Part IX (which now has the clinical_label column filled in) and fine-tune a new, specialized emotion model.
+
+
+Key Architectural Considerations
+
+
+* Simplified I/O: Thanks to the optimization in Part IX, this script is simple. It only needs to read the segment_audio_path and clinical_label columns from the CSV.
+* The "Head Swap": The plan is specific: "re-initialize its final classification layer".1 This is achieved by loading the base superb/hubert-base-superb-er model but passing transformers a new num_labels argument, along with the new label-to-ID mappings. The ignore_mismatched_sizes=True flag tells the library to discard the old 4-class head and attach a new, randomly-initialized head matching our clinical labels (e.g., "anxious," "empathetic," "pain_distress").
+* Standard Training Workflow: This script follows a standard transformers fine-tuning workflow:
+   1. Create a custom PyTorch Dataset class that reads the CSV and audio files.
+   2. Use a LabelEncoder to create integer-based labels.
+   3. Instantiate Trainer with TrainingArguments.
+   4. Run the training and validation loops.
+   5. Save the final, fine-tuned model (both model weights and the feature extractor) to a directory (e.g., ./models/clinical_ser_model/).
+
+
+Detailed Agent Prompt (Step 10)
+
+
+Prompt for Agentic AI:
+"Create the model training script scripts/train_emotion_model.py. This script implements 'Step 2.2: Model Fine-Tuning'.1
+The script must perform the following:
+1. Load the completed CSV file (which now has clinical_label filled in).
+2. Define a custom PyTorch AudioDataset.
+3. Load the base superb/hubert-base-superb-er model.
+4. Re-initialize its final classification layer to match the new clinical labels.1
+5. Run a fine-tuning loop using transformers.Trainer.
+6. Save the final model and its feature extractor.
+
+
+Python
+
+
+
+
+import pandas as pd
+import torch
+import torchaudio
+import os
+from torch.utils.data import Dataset
+from transformers import AutoFeatureExtractor, AutoModelForAudioClassification, Trainer, TrainingArguments
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+import numpy as np
+
+# 1. Define the Custom Dataset
+class ClinicalAudioDataset(Dataset):
+   """
+   Custom PyTorch Dataset for loading our pre-sliced audio segments.
+   """
+   def __init__(self, df, feature_extractor, label_encoder, sample_rate=16000):
+       self.df = df
+       self.feature_extractor = feature_extractor
+       self.label_encoder = label_encoder
+       self.sample_rate = sample_rate
+
+   def __len__(self):
+       return len(self.df)
+
+   def __getitem__(self, idx):
+       row = self.df.iloc[idx]
+       audio_path = row["segment_audio_path"]
+       label_str = row["clinical_label"]
+       
+       # Load the pre-sliced audio
+       waveform, sr = torchaudio.load(audio_path)
+       
+       if sr!= self.sample_rate:
+           resampler = torchaudio.transforms.Resample(sr, self.sample_rate)
+           waveform = resampler(waveform)
+       
+       if waveform.shape > 1:
+           waveform = torch.mean(waveform, dim=0)
+           
+       # Extract features
+       inputs = self.feature_extractor(
+           waveform.numpy().squeeze(), 
+           sampling_rate=self.sample_rate, 
+           return_tensors="pt",
+           padding="max_length", # Pad/truncate to a uniform length
+           max_length=int(self.sample_rate * 5.0) # e.g., 5 seconds
+       )
+       
+       # Get numerical label
+       label_id = self.label_encoder.transform([label_str])
+       
+       return {"input_values": inputs.input_values.squeeze(0), "labels": torch.tensor(label_id)}
+
+# Define compute_metrics for evaluation
+def compute_metrics(eval_pred):
+   logits, labels = eval_pred
+   predictions = np.argmax(logits, axis=-1)
+   accuracy = np.mean(predictions == labels)
+   return {"accuracy": accuracy}
+
+def main_training():
+   # --- Configuration ---
+   BASE_MODEL = "superb/hubert-base-superb-er"
+   COMPLETED_CSV_PATH = "./data/dataset_human_labeled.csv" # ASSUMES human has filled this
+   MODEL_OUTPUT_DIR = "./models/clinical_ser_model"
+   
+   # --- 1. Load and Prepare Data ---
+   print("Loading data...")
+   if not os.path.exists(COMPLETED_CSV_PATH):
+       print(f"Error: {COMPLETED_CSV_PATH} not found.")
+       print("Please run prepare_dataset.py, have a human label the CSV,")
+       print("and save it as 'dataset_human_labeled.csv'.")
+       return
+
+   df = pd.read_csv(COMPLETED_CSV_PATH)
+   df = df.dropna(subset=["clinical_label"]) # Remove rows human didn't label
+
+   if len(df) == 0:
+       print("No labeled data found in CSV.")
+       return
+
+   # --- 2. Encode Labels ---
+   label_encoder = LabelEncoder()
+   df["clinical_label_id"] = label_encoder.fit_transform(df["clinical_label"])
+   
+   new_num_labels = len(label_encoder.classes_)
+   new_id2label = {i: label for i, label in enumerate(label_encoder.classes_)}
+   new_label2id = {label: i for i, label in new_id2label.items()}
+   
+   print(f"Found {new_num_labels} new clinical labels: {label_encoder.classes_}")
+
+   # --- 3. Load Base Model and Feature Extractor ---
+   print(f"Loading base model: {BASE_MODEL}")
+   feature_extractor = AutoFeatureExtractor.from_pretrained(BASE_MODEL)
+   
+   model = AutoModelForAudioClassification.from_pretrained(
+       BASE_MODEL,
+       num_labels=new_num_labels,  # This is the "re-initialization" 
+       id2label=new_id2label,
+       label2id=new_label2id,
+       ignore_mismatched_sizes=True # Tell transformers to swap the head
+   )
+
+   # --- 4. Create Datasets ---
+   train_df, val_df = train_test_split(df, test_size=0.2, random_state=42, stratify=df["clinical_label"])
+   
+   train_dataset = ClinicalAudioDataset(train_df, feature_extractor, label_encoder)
+   val_dataset = ClinicalAudioDataset(val_df, feature_extractor, label_encoder)
+
+   # --- 5. Set Up Trainer ---
+   training_args = TrainingArguments(
+       output_dir=f"{MODEL_OUTPUT_DIR}/checkpoints",
+       evaluation_strategy="epoch",
+       save_strategy="epoch",
+       learning_rate=3e-5,
+       per_device_train_batch_size=8,
+       per_device_eval_batch_size=8,
+       num_train_epochs=3, # Keep low for fine-tuning
+       weight_decay=0.01,
+       load_best_model_at_end=True,
+       metric_for_best_model="accuracy",
+   )
+
+   trainer = Trainer(
+       model=model,
+       args=training_args,
+       train_dataset=train_dataset,
+       eval_dataset=val_dataset,
+       tokenizer=feature_extractor, # Pass the extractor for padding
+       compute_metrics=compute_metrics,
+   )
+
+   # --- 6. Train ---
+   print("Starting model fine-tuning...")
+   trainer.train()
+
+   # --- 7. Save Final Model ---
+   print(f"Training complete. Saving model to {MODEL_OUTPUT_DIR}")
+   trainer.save_model(MODEL_OUTPUT_DIR)
+   feature_extractor.save_pretrained(MODEL_OUTPUT_DIR)
+
+if __name__ == "__main__":
+   main_training()
+
+```"
+
+________________
+
+
+XI. Final Implementation: The "Hot-Swap" and Pipeline Specialization
+
+
+
+
+Rationale
+
+
+This is the final step, demonstrating the value of the modular, service-oriented architecture.1 We now possess a proprietary, fine-tuned clinical_ser_model saved in the ./models/clinical_ser_model/ directory.1 This step executes the "hot-swap."
+
+
+Key Architectural Considerations
+
+
+* The "Hot-Swap" in Practice: Because of the foresight in Part VI (designing EmotionService to accept model_name_or_path) and Part VII (designing AnalysisPipeline to pass this argument), no code changes are needed in the core pipeline/ directory.
+* The Final Product: The "hot-swap" is achieved simply by creating a new execution script, main_phase2.py. This script is identical to main.py with one exception: it passes the local path to the fine-tuned model to the AnalysisPipeline constructor instead of the default Hugging Face model string. This seamlessly "hot-swaps" the general model for the specialized one, fulfilling the project's primary goal.1
+
+
+Detailed Agent Prompt (Step 11)
+
+
+Prompt for Agentic AI:
+"The project is complete. As the final step, demonstrate the 'hot-swap' 1 by creating a new execution script, main_phase2.py.
+This script will run the specialized pipeline.
+1. Copy the exact code from main.py (from Part VIII).
+2. Rename the file to main_phase2.py.
+3. Make one critical change: In the main() function, find the line where AnalysisPipeline is initialized.
+4. Change the emotion_model_path argument from the Hugging Face string to the local path of our newly trained model.
+The modified section in main_phase2.py should look like this:
+
+
+Python
+
+
+
+
+#... (all other code from main.py is identical)...
+
+   # 4. Initialize and run the pipeline
+   # We use the NEW Phase 2 fine-tuned emotion model
+   try:
+       pipeline = AnalysisPipeline(
+           hf_token=hf_token,
+           emotion_model_path="./models/clinical_ser_model/", # <-- THIS IS THE HOT-SWAP 
+           asr_model=args.asr
+       )
+       
+       pipeline.run(
+           audio_file_path=args.input,
+           output_json_path=output_json_path,
+           num_speakers=args.speakers
+       )
+#... (rest of the code is identical)...
+
+Finally, update the README.md file by appending a new section:
+
+
+Running the Phase 2 (Specialized) Pipeline
+
+
+After you have run scripts/prepare_dataset.py, had a human expert label the dataset_for_labeling.csv (and saved it as dataset_human_labeled.csv), and successfully run scripts/train_emotion_model.py, you can use the new, specialized pipeline.
+python main_phase2.py -i./data/input/new_convo.mp3
+This will run the exact same pipeline, but the EmotionService will now load your fine-tuned clinical model from ./models/clinical_ser_model/ and output labels like "anxious" or "empathetic" instead of the general 4-class labels. This completes the 'hot-swap' goal.1
+"
+Works cited
+1. development plan summary.pdf

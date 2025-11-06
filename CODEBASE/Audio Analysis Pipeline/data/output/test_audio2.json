@@ -1,0 +1,731 @@
+{
+    "file": "test_audio2.mp3",
+    "segments": [
+        {
+            "segment_id": 0,
+            "speaker": "SPEAKER_00",
+            "start_time": 22.171,
+            "end_time": 28.567,
+            "duration": 6.396,
+            "transcript": "Joe, have a seat.  Finally.  Sounds like you're feeling a bit frustrated.",
+            "predicted_emotion": {
+                "label": "ang",
+                "score": 0.441,
+                "confidence": "medium",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.8036,
+                "wav2vec2_emotion": "sad",
+                "wav2vec2_score": 0.1298,
+                "text_emotion": "anger",
+                "text_score": 0.8819,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 122.27808527923118,
+                "jitter_local": 0.013932858932821743,
+                "shimmer_local": 0.16662397625379857,
+                "hnr_mean": 7.1309836345853075
+            }
+        },
+        {
+            "segment_id": 1,
+            "speaker": "SPEAKER_01",
+            "start_time": 29.765,
+            "end_time": 34.743,
+            "duration": 4.978,
+            "transcript": "Dr. Miller I've been waiting for over two hours",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.4825,
+                "confidence": "high",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.6342,
+                "wav2vec2_emotion": "happy",
+                "wav2vec2_score": 0.1271,
+                "text_emotion": "neutral",
+                "text_score": 0.806,
+                "agreement": "audio_consensus",
+                "sarcasm_flag": true,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 115.38627688567081,
+                "jitter_local": 0.016002148781891462,
+                "shimmer_local": 0.1689098926723449,
+                "hnr_mean": 9.024881901167605
+            }
+        },
+        {
+            "segment_id": 2,
+            "speaker": "SPEAKER_01",
+            "start_time": 34.777,
+            "end_time": 35.35,
+            "duration": 0.574,
+            "transcript": "Mm hmm.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4738,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.6944,
+                "wav2vec2_emotion": "happy",
+                "wav2vec2_score": 0.1317,
+                "text_emotion": "neutral",
+                "text_score": 0.7843,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 91.08467384452882,
+                "jitter_local": 0.014063375073172514,
+                "shimmer_local": 0.11366330105685606,
+                "hnr_mean": 12.788523996911923
+            }
+        },
+        {
+            "segment_id": 3,
+            "speaker": "SPEAKER_01",
+            "start_time": 36.532,
+            "end_time": 59.465,
+            "duration": 22.933,
+            "transcript": "Look, when I called this morning, I explained to your receptionist that I needed this refill  right away. She said you didn't do refills over the phone. I said fine. But I explained  about my busy day and could she give me any idea as to whether you were running behind.  She said you had no idea. She was completely unhelpful and rude.",
+            "predicted_emotion": {
+                "label": "sad",
+                "score": 0.1761,
+                "confidence": "low",
+                "hubert_emotion": "sad",
+                "hubert_score": 0.4402,
+                "wav2vec2_emotion": "surprised",
+                "wav2vec2_score": 0.1305,
+                "text_emotion": "anger",
+                "text_score": 0.5812,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 129.47409816040397,
+                "jitter_local": 0.017727385754303226,
+                "shimmer_local": 0.16472802146701035,
+                "hnr_mean": 9.683039297962027
+            }
+        },
+        {
+            "segment_id": 4,
+            "speaker": "SPEAKER_00",
+            "start_time": 61.068,
+            "end_time": 64.628,
+            "duration": 3.561,
+            "transcript": "So it sounds like you didn't get the straight answer you were looking for.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.3075,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.7321,
+                "wav2vec2_emotion": "sad",
+                "wav2vec2_score": 0.1316,
+                "text_emotion": "disgust",
+                "text_score": 0.5255,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 107.90647350662037,
+                "jitter_local": 0.009390261503259766,
+                "shimmer_local": 0.1025782674782096,
+                "hnr_mean": 11.452409047786395
+            }
+        },
+        {
+            "segment_id": 5,
+            "speaker": "SPEAKER_01",
+            "start_time": 64.831,
+            "end_time": 66.012,
+            "duration": 1.181,
+            "transcript": "No, I didn't.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.2868,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.7169,
+                "wav2vec2_emotion": "disgust",
+                "wav2vec2_score": 0.1344,
+                "text_emotion": "neutral",
+                "text_score": 0.4769,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 114.74825366851758,
+                "jitter_local": 0.023820233699563046,
+                "shimmer_local": 0.14712055897990692,
+                "hnr_mean": 9.697643058182809
+            }
+        },
+        {
+            "segment_id": 6,
+            "speaker": "SPEAKER_01",
+            "start_time": 67.733,
+            "end_time": 85.165,
+            "duration": 17.432,
+            "transcript": "And all I wanted was a little information  as to when and how long you were going to be.  So I could make a decision, and should I stay?  Or should I go?  As it is.  My son had to catch a cab home from his basketball game  because I wasn't there to meet him.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.2085,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.5213,
+                "wav2vec2_emotion": "sad",
+                "wav2vec2_score": 0.1298,
+                "text_emotion": "sadness",
+                "text_score": 0.6196,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 168.09135513905747,
+                "jitter_local": 0.017459424362433966,
+                "shimmer_local": 0.16162765297066897,
+                "hnr_mean": 9.369297836831098
+            }
+        },
+        {
+            "segment_id": 7,
+            "speaker": "SPEAKER_00",
+            "start_time": 86.38,
+            "end_time": 97.028,
+            "duration": 10.648,
+            "transcript": "Well, Joe, it sounds to me like you waited a lot longer than you had expected to.  Then you didn't get the information or respect you'd hoped for from Jessica, my assistant.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4235,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.6261,
+                "wav2vec2_emotion": "disgust",
+                "wav2vec2_score": 0.1321,
+                "text_emotion": "neutral",
+                "text_score": 0.6922,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 111.56848339265261,
+                "jitter_local": 0.014225790362523373,
+                "shimmer_local": 0.1567532257442559,
+                "hnr_mean": 9.3419616337255
+            }
+        },
+        {
+            "segment_id": 8,
+            "speaker": "SPEAKER_01",
+            "start_time": 91.612,
+            "end_time": 92.168,
+            "duration": 0.557,
+            "transcript": "And then...",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4785,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.6753,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.1396,
+                "text_emotion": "neutral",
+                "text_score": 0.8337,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 121.32250246505745,
+                "jitter_local": 0.02357585922649175,
+                "shimmer_local": 0.18936120178817253,
+                "hnr_mean": 8.755425677734598
+            }
+        },
+        {
+            "segment_id": 9,
+            "speaker": "SPEAKER_00",
+            "start_time": 97.248,
+            "end_time": 108.74,
+            "duration": 11.492,
+            "transcript": "And now you're pretty irritated using time efficiently is very important to you especially  in the middle of a busy work day right?",
+            "predicted_emotion": {
+                "label": "ang",
+                "score": 0.212,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.5184,
+                "wav2vec2_emotion": "surprised",
+                "wav2vec2_score": 0.1303,
+                "text_emotion": "anger",
+                "text_score": 0.8481,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 131.06105104750318,
+                "jitter_local": 0.013318886157207924,
+                "shimmer_local": 0.1307090159215976,
+                "hnr_mean": 10.718282753982235
+            }
+        },
+        {
+            "segment_id": 10,
+            "speaker": "SPEAKER_01",
+            "start_time": 108.284,
+            "end_time": 108.706,
+            "duration": 0.422,
+            "transcript": "Right? Yeah.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.2658,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.6646,
+                "wav2vec2_emotion": "disgust",
+                "wav2vec2_score": 0.1485,
+                "text_emotion": "neutral",
+                "text_score": 0.7324,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 134.91117435437448,
+                "jitter_local": 0.0359934012856478,
+                "shimmer_local": 0.17882616516873656,
+                "hnr_mean": 5.066152086954642
+            }
+        },
+        {
+            "segment_id": 11,
+            "speaker": "SPEAKER_00",
+            "start_time": 109.567,
+            "end_time": 118.645,
+            "duration": 9.079,
+            "transcript": "And I imagine you might be a little bit worried about your son, too.  I know how important his safety is to you.  Is this partly what's going on here?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.254,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.6351,
+                "wav2vec2_emotion": "disgust",
+                "wav2vec2_score": 0.1362,
+                "text_emotion": "fear",
+                "text_score": 0.7808,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 129.20832865177937,
+                "jitter_local": 0.01494447274798774,
+                "shimmer_local": 0.1501823420229151,
+                "hnr_mean": 9.891044812283603
+            }
+        },
+        {
+            "segment_id": 12,
+            "speaker": "SPEAKER_01",
+            "start_time": 120.62,
+            "end_time": 128.028,
+            "duration": 7.408,
+            "transcript": "Yeah, well, I just expected to be in and out of here.  I didn't have to wait all this time.  I guess mine.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.5758,
+                "confidence": "high",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.8147,
+                "wav2vec2_emotion": "surprised",
+                "wav2vec2_score": 0.13,
+                "text_emotion": "neutral",
+                "text_score": 0.8198,
+                "agreement": "audio_consensus",
+                "sarcasm_flag": true,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 182.53993872654345,
+                "jitter_local": 0.02352769859060883,
+                "shimmer_local": 0.17294389317831135,
+                "hnr_mean": 7.582047629129688
+            }
+        },
+        {
+            "segment_id": 13,
+            "speaker": "SPEAKER_00",
+            "start_time": 128.028,
+            "end_time": 134.322,
+            "duration": 6.294,
+            "transcript": "plans with a day are pretty well shot. So the having some predictability would have been nice.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.2252,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.563,
+                "wav2vec2_emotion": "disgust",
+                "wav2vec2_score": 0.1277,
+                "text_emotion": "neutral",
+                "text_score": 0.8159,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 107.39289294275946,
+                "jitter_local": 0.013917750430249882,
+                "shimmer_local": 0.14302001649895013,
+                "hnr_mean": 8.82048665346674
+            }
+        },
+        {
+            "segment_id": 14,
+            "speaker": "SPEAKER_01",
+            "start_time": 135.976,
+            "end_time": 136.381,
+            "duration": 0.405,
+            "transcript": "Yes, exactly.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.6719,
+                "confidence": "high",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.5792,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1341,
+                "text_emotion": "neutral",
+                "text_score": 0.9427,
+                "agreement": "full",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 128.9125875915509,
+                "jitter_local": 0.017030055965565685,
+                "shimmer_local": 0.18520130313277156,
+                "hnr_mean": 7.682927505750923
+            }
+        },
+        {
+            "segment_id": 15,
+            "speaker": "SPEAKER_00",
+            "start_time": 136.668,
+            "end_time": 164.68,
+            "duration": 28.013,
+            "transcript": "Well, you know, Joe, predictability is something that I value as well.  And using time efficiently is something that's really important to me.  I really want to be able to give you immediate attention.  And so when I hear that you are waiting around for such a long period of time, without any  explanation as to why that's happening, I feel a bit of disappointment and regret.",
+            "predicted_emotion": {
+                "label": "sad",
+                "score": 0.781,
+                "confidence": "very_high",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.4289,
+                "wav2vec2_emotion": "disgust",
+                "wav2vec2_score": 0.1282,
+                "text_emotion": "sadness",
+                "text_score": 0.9749,
+                "agreement": "text_veto",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble",
+                "note": "Text model very high confidence override"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 118.1132387638597,
+                "jitter_local": 0.014143008938149475,
+                "shimmer_local": 0.14573429127916895,
+                "hnr_mean": 9.543024736969343
+            }
+        },
+        {
+            "segment_id": 16,
+            "speaker": "SPEAKER_00",
+            "start_time": 166.452,
+            "end_time": 181.302,
+            "duration": 14.85,
+            "transcript": "As it turns out, I was just across the street at the hospital attending to  a delivery for a patient of mine. They were having an unexpected crunch in  laboring and delivery area and taking care of that patient and her baby  is very important to me too.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.395,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.551,
+                "wav2vec2_emotion": "surprised",
+                "wav2vec2_score": 0.1306,
+                "text_emotion": "surprise",
+                "text_score": 0.5157,
+                "agreement": "full",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 114.78599242571639,
+                "jitter_local": 0.014709602164180812,
+                "shimmer_local": 0.14769517462877405,
+                "hnr_mean": 9.06105434045044
+            }
+        },
+        {
+            "segment_id": 17,
+            "speaker": "SPEAKER_00",
+            "start_time": 182.45,
+            "end_time": 190.685,
+            "duration": 8.235,
+            "transcript": "I honestly had no idea how long I would be, and I made the choice to take the time and go over there.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.6343,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.6231,
+                "wav2vec2_emotion": "sad",
+                "wav2vec2_score": 0.1316,
+                "text_emotion": "surprise",
+                "text_score": 0.8947,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 111.33850477336942,
+                "jitter_local": 0.01277082837772011,
+                "shimmer_local": 0.14840258309255616,
+                "hnr_mean": 9.63265409307905
+            }
+        },
+        {
+            "segment_id": 18,
+            "speaker": "SPEAKER_01",
+            "start_time": 193.233,
+            "end_time": 194.06,
+            "duration": 0.827,
+            "transcript": "Oh, dear.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.1349,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.3747,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.1396,
+                "text_emotion": "neutral",
+                "text_score": 0.3955,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 89.75216624924616,
+                "jitter_local": 0.023528535973294636,
+                "shimmer_local": 0.18586018080987138,
+                "hnr_mean": 4.9656904461731
+            }
+        },
+        {
+            "segment_id": 19,
+            "speaker": "SPEAKER_01",
+            "start_time": 195.359,
+            "end_time": 204.1,
+            "duration": 8.741,
+            "transcript": "Well, it's definitely more important than my refill. I guess I owe your receptionist an apology.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.328,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.8199,
+                "wav2vec2_emotion": "sad",
+                "wav2vec2_score": 0.1331,
+                "text_emotion": "neutral",
+                "text_score": 0.5542,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 112.6596313548597,
+                "jitter_local": 0.015124097173961886,
+                "shimmer_local": 0.13143948162888802,
+                "hnr_mean": 7.238528439654932
+            }
+        },
+        {
+            "segment_id": 20,
+            "speaker": "SPEAKER_00",
+            "start_time": 205.67,
+            "end_time": 219.811,
+            "duration": 14.141,
+            "transcript": "Well, you know Joe, it sounds like you're maybe feeling a little bit of regret now,  thinking about how you spoke to Jessica. It's okay to feel that way. And it's also okay to feel  upset when you weren't getting the predictability and the information you'd been hoping for.",
+            "predicted_emotion": {
+                "label": "sad",
+                "score": 0.4537,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.4403,
+                "wav2vec2_emotion": "disgust",
+                "wav2vec2_score": 0.1333,
+                "text_emotion": "sadness",
+                "text_score": 0.825,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 138.86656481526342,
+                "jitter_local": 0.014526212805479137,
+                "shimmer_local": 0.18304845892152238,
+                "hnr_mean": 8.138236624524056
+            }
+        },
+        {
+            "segment_id": 21,
+            "speaker": "SPEAKER_00",
+            "start_time": 223.912,
+            "end_time": 229.582,
+            "duration": 5.67,
+            "transcript": "I do my very best to consider everyone's needs, Joe. Yours included.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.6215,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.4846,
+                "wav2vec2_emotion": "disgust",
+                "wav2vec2_score": 0.129,
+                "text_emotion": "neutral",
+                "text_score": 0.9522,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 139.46718161050114,
+                "jitter_local": 0.016320795387245547,
+                "shimmer_local": 0.16755296309846857,
+                "hnr_mean": 8.45202259580228
+            }
+        },
+        {
+            "segment_id": 22,
+            "speaker": "SPEAKER_00",
+            "start_time": 230.729,
+            "end_time": 243.942,
+            "duration": 13.213,
+            "transcript": "I agree that Jessica would appreciate it if you would acknowledge her own needs in the  situation too.  For all she was doing her best to honor my patient's privacy and my own flexibility.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.3664,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.4886,
+                "wav2vec2_emotion": "sad",
+                "wav2vec2_score": 0.1309,
+                "text_emotion": "neutral",
+                "text_score": 0.6837,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 127.3863860824248,
+                "jitter_local": 0.015744403398133336,
+                "shimmer_local": 0.1520496545748696,
+                "hnr_mean": 9.106277207137314
+            }
+        },
+        {
+            "segment_id": 23,
+            "speaker": "SPEAKER_00",
+            "start_time": 245.326,
+            "end_time": 245.748,
+            "duration": 0.422,
+            "transcript": "All right.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.3761,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.5162,
+                "wav2vec2_emotion": "disgust",
+                "wav2vec2_score": 0.1489,
+                "text_emotion": "neutral",
+                "text_score": 0.6786,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 164.35162218130066,
+                "jitter_local": 0.021329295504160163,
+                "shimmer_local": 0.18618857669287495,
+                "hnr_mean": 7.367759123238996
+            }
+        },
+        {
+            "segment_id": 24,
+            "speaker": "SPEAKER_00",
+            "start_time": 247.165,
+            "end_time": 254.675,
+            "duration": 7.509,
+            "transcript": "So, uh, what did you need refilled?  Ah.  Yes.  Ah-ha.  Okay.  Good.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.3482,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.8706,
+                "wav2vec2_emotion": "disgust",
+                "wav2vec2_score": 0.1352,
+                "text_emotion": "neutral",
+                "text_score": 0.4408,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 187.5826468134901,
+                "jitter_local": 0.012572772587480427,
+                "shimmer_local": 0.21248156930434833,
+                "hnr_mean": 9.539798985996583
+            }
+        }
+    ]
+}

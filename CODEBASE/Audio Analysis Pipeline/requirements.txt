@@ -1,0 +1,17 @@
+# Core ML Models
+pyannote.audio>=3.1
+faster-whisper>=0.10
+transformers>=4.30
+praat-parselmouth>=0.4
+
+# Core ML & Audio Frameworks
+torch>=2.0
+torchaudio>=2.0
+
+# Data Handling
+pandas>=2.0
+numpy>=1.24,<2.0
+
+# Utilities
+tqdm  # For progress bars
+

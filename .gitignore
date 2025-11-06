@@ -62,3 +62,8 @@ Thumbs.db
 # do NOT want large model files in this repo at all, you can add the
 # relevant paths here (for example `CODEBASE/Vocal Feature Analysis/wav2vec2_checkpoints/`).
 
+
+# API tokens and sensitive files
+replacements.txt
+*.token
+*.key
