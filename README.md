@@ -49,10 +49,15 @@ This is the single authoritative index for all DHF elements, folders, and docume
 ## 3. Design Output
 
 - Folder: [Design Output](https://github.com/TACH04/Synapse/tree/main/DHF/Design%20Output)
-- ***NEW***: [Touchpoint Meeting 10/9 Slides](https://docs.google.com/presentation/d/1ns0ZDvTHIcmyZcgFo3FhUwHNYUX99S2SuaqlfBuAWkE/edit?usp=drive_link)
-- ***NEW***: [DT 4 - Assignment_ Concept Iteration](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT4/DT%204%20-%20Assignment_%20Concept%20Iteration.md)
-- ***NEW***: [DT 4 - Assignment_ Generating Design Solutions](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT4/DT%204%20-%20Assignment_%20Generating%20Design%20Solutions.md)
-- ***NEW***: [DT 4 - Assignment_ Preliminary Business Model](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT4/DT%204%20-%20Assignment_%20Preliminary%20Business%20Model.pdf)
+- [Touchpoint Meeting 10/9 Slides](https://docs.google.com/presentation/d/1ns0ZDvTHIcmyZcgFo3FhUwHNYUX99S2SuaqlfBuAWkE/edit?usp=drive_link)
+- [DT 4 - Assignment_ Concept Iteration](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT4/DT%204%20-%20Assignment_%20Concept%20Iteration.md)
+- [DT 4 - Assignment_ Generating Design Solutions](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT4/DT%204%20-%20Assignment_%20Generating%20Design%20Solutions.md)
+- [DT 4 - Assignment_ Preliminary Business Model](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT4/DT%204%20-%20Assignment_%20Preliminary%20Business%20Model.pdf)
+- ***NEW***:[DT 5 - House of Quality](https://docs.google.com/spreadsheets/d/1Ps3i7QbpODdJg2FdjLxwnCgqNGkJnbOCPAeCzxF5wMg/edit?usp=drive_link)
+- ***NEW***:[DT 5 - Initial Screening and Evaluation](https://docs.google.com/document/d/16wYz5LNCA4j-idhLw1NuzBJoynaZCnzBdnOuNzRRwyE/edit?usp=drive_link)
+- ***NEW***:[DT 5 - Initial Technical Model](https://docs.google.com/document/d/134Ho1FfFz25_Yvg67tMQN8KR4oltF4UifCV-AKALE4Y/edit?usp=drive_link)
+- ***NEW***:[DT 5 - Assignment Product Architecture](https://drive.google.com/file/d/1Hfg507qKlflcbUnkqIHz13u1J3d5kS0F/view?usp=drive_link)
+- ***NEW***:[DT 5 - Advanced Concept Analysis](https://docs.google.com/document/d/14siwGuy41ZGzbYtkOh3MVZZ1QBT1oLE_4ln4kIuj_As/edit?usp=drive_link)
 
 
 
