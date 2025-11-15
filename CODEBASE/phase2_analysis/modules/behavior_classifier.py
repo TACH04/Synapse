@@ -187,3 +187,4 @@ class BehaviorClassifier:
             tags.append(BehaviorTag(label="Event:Possible_Bad_News", confidence=0.45))
         return tags
 
+

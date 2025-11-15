@@ -65,3 +65,4 @@ class ConversationalDynamicsAnalyzer:
         LOGGER.debug("Interruption count: %d", interruptions)
         return interruptions
 
+

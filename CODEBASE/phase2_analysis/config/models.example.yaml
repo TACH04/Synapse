@@ -13,3 +13,4 @@ behavior_classifier:
   batch_size: 8
   device: "auto"   # "cpu", "mps", "cuda", or "auto"
 
+

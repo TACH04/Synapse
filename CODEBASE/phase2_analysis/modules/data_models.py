@@ -162,3 +162,4 @@ def chunk_iterable(items: Sequence[Any], size: int) -> Iterable[Sequence[Any]]:
     for idx in range(0, len(items), size):
         yield items[idx : idx + size]
 
+

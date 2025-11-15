@@ -97,3 +97,4 @@ class KeyMomentAnalyzer:
             quotes=payload.get("quotes", []),
         )
 
+
