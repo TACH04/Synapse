@@ -1,0 +1,41 @@
+{
+  "events": [
+    {
+      "event_id": "segment-31",
+      "scores": {
+        "P": {
+          "category": "P",
+          "score": 4.0,
+          "rationale": "The clinician sets the stage for a pain assessment, using the standard scale (1-10) and making the patient feel comfortable sharing their experience."
+        },
+        "I": {
+          "category": "I",
+          "score": 5.0,
+          "rationale": "The clinician actively listens to the patient's response, acknowledging their current pain level and validating their previous experiences."
+        },
+        "K": {
+          "category": "K",
+          "score": 4.0,
+          "rationale": "The clinician keeps the focus on the patient's experience, asking follow-up questions to understand their perspective."
+        },
+        "E": {
+          "category": "E",
+          "score": 5.0,
+          "rationale": "The clinician shows empathy by acknowledging the patient's pain and validating their feelings (e.g., 'Yeah, okay')."
+        },
+        "S": {
+          "category": "S",
+          "score": 4.0,
+          "rationale": "The clinician summarizes the patient's concerns accurately ('Right now, it's not that bad... when it was just a few days ago, it was like probably an eight or nine.')"
+        }
+      },
+      "overall_score": 4.5,
+      "summary": "In this key moment, the clinician effectively sets the stage for a pain assessment, actively listens to the patient, and shows empathy by acknowledging their pain and validating their feelings.",
+      "quotes": [
+        "Right now, it's not that bad...",
+        "Yeah, okay"
+      ]
+    }
+  ],
+  "model_name": "llama3:8b"
+}

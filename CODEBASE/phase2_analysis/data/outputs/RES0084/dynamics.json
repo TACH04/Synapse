@@ -1,0 +1,18 @@
+{
+  "patient": {
+    "talk_ratio": 0.5570087889170268,
+    "average_turn_length": 6.888,
+    "median_turn_length": 4.016,
+    "total_duration": 392.6160000000001
+  },
+  "clinician": {
+    "talk_ratio": 0.4429912110829733,
+    "average_turn_length": 3.4694333333333334,
+    "median_turn_length": 2.303,
+    "total_duration": 312.24899999999997
+  },
+  "avg_pause_seconds": 1.4114518518518528,
+  "median_pause_seconds": 1.214999999999975,
+  "interruption_count": 9,
+  "total_turns": 147
+}

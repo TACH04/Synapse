@@ -1,0 +1,6 @@
+{
+  "clinician": "SPEAKER_01",
+  "patient": "SPEAKER_00",
+  "confidence": "high",
+  "rationale": "The clinician introduces themselves ('That brings you in'), asks diagnostic questions ('Let's rewind a little bit... You said the, what started first... How they started four days ago...'), provides instructions and reassurance ('Okay', 'I know, okay'). The patient shares their concerns and experiences ('I've been very concerned lately this past week... I was just very concerned that I came here today.'"
+}

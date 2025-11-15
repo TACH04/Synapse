@@ -1,0 +1,3578 @@
+{
+    "file": "GAS0003.mp3",
+    "segments": [
+        {
+            "segment_id": 0,
+            "speaker": "SPEAKER_00",
+            "start_time": 0.031,
+            "end_time": 1.178,
+            "duration": 1.147,
+            "transcript": "what brings you in here today.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.297,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.7425,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.1366,
+                "text_emotion": "surprise",
+                "text_score": 0.5843,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 150.48257594585633,
+                "jitter_local": 0.010890363438793285,
+                "shimmer_local": 0.1403899862255392,
+                "hnr_mean": 13.001904942783263
+            }
+        },
+        {
+            "segment_id": 1,
+            "speaker": "SPEAKER_01",
+            "start_time": 2.09,
+            "end_time": 7.068,
+            "duration": 4.978,
+            "transcript": "uh yeah hi i'm uh i have been in my belly",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.2388,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.5428,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1317,
+                "text_emotion": "sadness",
+                "text_score": 0.4727,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 257.1488702005205,
+                "jitter_local": 0.0043894191579891524,
+                "shimmer_local": 0.11772032118082927,
+                "hnr_mean": 12.702641474079238
+            }
+        },
+        {
+            "segment_id": 2,
+            "speaker": "SPEAKER_01",
+            "start_time": 8.789,
+            "end_time": 10.763,
+            "duration": 1.974,
+            "transcript": "It started a couple hours ago.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4321,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.5364,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1374,
+                "text_emotion": "neutral",
+                "text_score": 0.8643,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 213.10756644728136,
+                "jitter_local": 0.004719935402909367,
+                "shimmer_local": 0.1471782615328935,
+                "hnr_mean": 9.317688221150004
+            }
+        },
+        {
+            "segment_id": 3,
+            "speaker": "SPEAKER_00",
+            "start_time": 12.248,
+            "end_time": 15.91,
+            "duration": 3.662,
+            "transcript": "Okay, and where exactly in your belly do you have the spin?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.5036,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.7237,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1332,
+                "text_emotion": "neutral",
+                "text_score": 0.7604,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 146.45585551193892,
+                "jitter_local": 0.008643833004385232,
+                "shimmer_local": 0.10857877146564392,
+                "hnr_mean": 12.49541037493199
+            }
+        },
+        {
+            "segment_id": 4,
+            "speaker": "SPEAKER_01",
+            "start_time": 16.737,
+            "end_time": 19.488,
+            "duration": 2.751,
+            "transcript": "It's also up here on the right side.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.476,
+                "confidence": "medium",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.5634,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1292,
+                "text_emotion": "neutral",
+                "text_score": 0.952,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 252.75117357756682,
+                "jitter_local": 0.007918409379507597,
+                "shimmer_local": 0.12555658118500282,
+                "hnr_mean": 8.353525029329957
+            }
+        },
+        {
+            "segment_id": 5,
+            "speaker": "SPEAKER_00",
+            "start_time": 20.905,
+            "end_time": 22.306,
+            "duration": 1.401,
+            "transcript": "On the right side",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4709,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.6559,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1388,
+                "text_emotion": "neutral",
+                "text_score": 0.8342,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 113.59680089951112,
+                "jitter_local": 0.006279804032391845,
+                "shimmer_local": 0.17450971136227847,
+                "hnr_mean": 9.141604764401704
+            }
+        },
+        {
+            "segment_id": 6,
+            "speaker": "SPEAKER_01",
+            "start_time": 22.306,
+            "end_time": 22.778,
+            "duration": 0.473,
+            "transcript": "Yeah.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.2402,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.6004,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.1371,
+                "text_emotion": "neutral",
+                "text_score": 0.8143,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 144.55552088897386,
+                "jitter_local": 0.019742739176327673,
+                "shimmer_local": 0.15892581700189654,
+                "hnr_mean": 4.421004108039783
+            }
+        },
+        {
+            "segment_id": 7,
+            "speaker": "SPEAKER_00",
+            "start_time": 22.34,
+            "end_time": 29.039,
+            "duration": 6.699,
+            "transcript": "Okay. And can you describe what kind of pain is it? Is it like a dull pain, a sharp pain,  an aching pain?",
+            "predicted_emotion": {
+                "label": "sad",
+                "score": 0.7722,
+                "confidence": "very_high",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.459,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1311,
+                "text_emotion": "sadness",
+                "text_score": 0.9533,
+                "agreement": "text_veto",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble",
+                "note": "Text model very high confidence override"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 152.72876788126737,
+                "jitter_local": 0.012279831771862272,
+                "shimmer_local": 0.1314155093967377,
+                "hnr_mean": 12.253966376266444
+            }
+        },
+        {
+            "segment_id": 8,
+            "speaker": "SPEAKER_01",
+            "start_time": 30.524,
+            "end_time": 31.165,
+            "duration": 0.641,
+            "transcript": "Ahh!",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.5432,
+                "confidence": "medium",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.8281,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.137,
+                "text_emotion": "surprise",
+                "text_score": 0.848,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 337.8889240289655,
+                "jitter_local": 0.0023569380975384103,
+                "shimmer_local": 0.18031028305821953,
+                "hnr_mean": 9.068690884937283
+            }
+        },
+        {
+            "segment_id": 9,
+            "speaker": "SPEAKER_01",
+            "start_time": 33.646,
+            "end_time": 35.266,
+            "duration": 1.62,
+            "transcript": "I guess it's a...",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.458,
+                "confidence": "medium",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.7276,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1347,
+                "text_emotion": "neutral",
+                "text_score": 0.9159,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 271.0134150703847,
+                "jitter_local": 0.007402560003192567,
+                "shimmer_local": 0.18136674615357504,
+                "hnr_mean": 7.758542457540524
+            }
+        },
+        {
+            "segment_id": 10,
+            "speaker": "SPEAKER_01",
+            "start_time": 36.818,
+            "end_time": 47.467,
+            "duration": 10.648,
+            "transcript": "It's an aching pain I'd say. It kind of just, um, it would initially just come and go, but now it's just staying, it's not going away.",
+            "predicted_emotion": {
+                "label": "sad",
+                "score": 0.7593,
+                "confidence": "very_high",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.5787,
+                "wav2vec2_emotion": "calm",
+                "wav2vec2_score": 0.1346,
+                "text_emotion": "sadness",
+                "text_score": 0.9001,
+                "agreement": "text_veto",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble",
+                "note": "Text model very high confidence override"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 245.40001627641763,
+                "jitter_local": 0.004975242931973157,
+                "shimmer_local": 0.11255994018223811,
+                "hnr_mean": 14.009361201077644
+            }
+        },
+        {
+            "segment_id": 11,
+            "speaker": "SPEAKER_00",
+            "start_time": 49.002,
+            "end_time": 56.917,
+            "duration": 7.914,
+            "transcript": "Okay, and so it's in the right area. Does it travel anywhere elsewhere besides it on from the right side?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.8471,
+                "confidence": "high",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.6413,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1328,
+                "text_emotion": "neutral",
+                "text_score": 0.9652,
+                "agreement": "full",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 142.53986905126467,
+                "jitter_local": 0.007717799359760375,
+                "shimmer_local": 0.13435678857502567,
+                "hnr_mean": 12.053024096601211
+            }
+        },
+        {
+            "segment_id": 12,
+            "speaker": "SPEAKER_01",
+            "start_time": 58.25,
+            "end_time": 58.925,
+            "duration": 0.675,
+            "transcript": "No.",
+            "predicted_emotion": {
+                "label": "ang",
+                "score": 0.4488,
+                "confidence": "high",
+                "hubert_emotion": "ang",
+                "hubert_score": 0.5517,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1386,
+                "text_emotion": "neutral",
+                "text_score": 0.8299,
+                "agreement": "audio_consensus",
+                "sarcasm_flag": true,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 319.07087762142544,
+                "jitter_local": 0.003462688109389335,
+                "shimmer_local": 0.08794170627973381,
+                "hnr_mean": 14.894356106871577
+            }
+        },
+        {
+            "segment_id": 13,
+            "speaker": "SPEAKER_00",
+            "start_time": 60.73,
+            "end_time": 61.22,
+            "duration": 0.489,
+            "transcript": "Okay",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4123,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.5065,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1361,
+                "text_emotion": "neutral",
+                "text_score": 0.6484,
+                "agreement": "full",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 142.28316761988418,
+                "jitter_local": 0.008400989948451657,
+                "shimmer_local": 0.243539319294927,
+                "hnr_mean": 6.186351684406301
+            }
+        },
+        {
+            "segment_id": 14,
+            "speaker": "SPEAKER_00",
+            "start_time": 62.452,
+            "end_time": 71.21,
+            "duration": 8.758,
+            "transcript": "And on a scale of one to ten, one being the least amount of pain in your  cells in your life and ten being the worst, how much would you rate it right now?",
+            "predicted_emotion": {
+                "label": "ang",
+                "score": 0.787,
+                "confidence": "very_high",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.672,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1333,
+                "text_emotion": "disgust",
+                "text_score": 0.9133,
+                "agreement": "text_veto",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble",
+                "note": "Text model very high confidence override"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 134.19251860497903,
+                "jitter_local": 0.007468677641559025,
+                "shimmer_local": 0.11001113294932255,
+                "hnr_mean": 12.846518743822056
+            }
+        },
+        {
+            "segment_id": 15,
+            "speaker": "SPEAKER_01",
+            "start_time": 72.138,
+            "end_time": 75.428,
+            "duration": 3.291,
+            "transcript": "Ah, it's about a 10, an 8, maybe?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4429,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.5597,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.1374,
+                "text_emotion": "neutral",
+                "text_score": 0.8857,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 246.30018804513963,
+                "jitter_local": 0.007546390860562965,
+                "shimmer_local": 0.13225235421056356,
+                "hnr_mean": 9.766954985980602
+            }
+        },
+        {
+            "segment_id": 16,
+            "speaker": "SPEAKER_00",
+            "start_time": 76.171,
+            "end_time": 77.082,
+            "duration": 0.911,
+            "transcript": "Okay.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4376,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.7596,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.1423,
+                "text_emotion": "neutral",
+                "text_score": 0.5349,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 124.52088665462662,
+                "jitter_local": 0.013263602688229233,
+                "shimmer_local": 0.16369365606066763,
+                "hnr_mean": 8.999987379194636
+            }
+        },
+        {
+            "segment_id": 17,
+            "speaker": "SPEAKER_01",
+            "start_time": 77.082,
+            "end_time": 77.453,
+            "duration": 0.371,
+            "transcript": "Yeah.  OK.  OK.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4182,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.5409,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1327,
+                "text_emotion": "neutral",
+                "text_score": 0.6214,
+                "agreement": "full",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 117.85171414651728,
+                "jitter_local": 0.029693323449888072,
+                "shimmer_local": 0.2302255604067313,
+                "hnr_mean": 3.5750492312103934
+            }
+        },
+        {
+            "segment_id": 18,
+            "speaker": "SPEAKER_00",
+            "start_time": 77.42,
+            "end_time": 80.153,
+            "duration": 2.734,
+            "transcript": "And so just to clarify, when did it start?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4291,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.5433,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.1366,
+                "text_emotion": "neutral",
+                "text_score": 0.8473,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 164.24673427953007,
+                "jitter_local": 0.011796910456229192,
+                "shimmer_local": 0.13429125498966107,
+                "hnr_mean": 10.396344831514789
+            }
+        },
+        {
+            "segment_id": 19,
+            "speaker": "SPEAKER_01",
+            "start_time": 81.284,
+            "end_time": 83.005,
+            "duration": 1.721,
+            "transcript": "Is that about eight hours ago?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.3307,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.5012,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.136,
+                "text_emotion": "neutral",
+                "text_score": 0.5207,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 282.1223654667856,
+                "jitter_local": 0.005741897024791613,
+                "shimmer_local": 0.14763572687444776,
+                "hnr_mean": 9.478813072523119
+            }
+        },
+        {
+            "segment_id": 20,
+            "speaker": "SPEAKER_00",
+            "start_time": 83.849,
+            "end_time": 94.126,
+            "duration": 10.277,
+            "transcript": "eight hours ago okay and were you doing anything before like did you have a meal or  how were you asleep and it woke you up what was going on before you had the pain",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.5013,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.6178,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1325,
+                "text_emotion": "surprise",
+                "text_score": 0.4865,
+                "agreement": "full",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 135.45646267604857,
+                "jitter_local": 0.007571035762399095,
+                "shimmer_local": 0.0941103978235477,
+                "hnr_mean": 13.653031293756726
+            }
+        },
+        {
+            "segment_id": 21,
+            "speaker": "SPEAKER_01",
+            "start_time": 95.138,
+            "end_time": 101.787,
+            "duration": 6.649,
+            "transcript": "Um, I was just about to go to sleep. I wasn't doing anything in particular at the time.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.3567,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.428,
+                "wav2vec2_emotion": "calm",
+                "wav2vec2_score": 0.1322,
+                "text_emotion": "neutral",
+                "text_score": 0.557,
+                "agreement": "full",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 219.23288428395284,
+                "jitter_local": 0.006387460987636291,
+                "shimmer_local": 0.14508991148392963,
+                "hnr_mean": 10.68508991070507
+            }
+        },
+        {
+            "segment_id": 22,
+            "speaker": "SPEAKER_00",
+            "start_time": 103.019,
+            "end_time": 103.559,
+            "duration": 0.54,
+            "transcript": "Okay",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4537,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.729,
+                "wav2vec2_emotion": "sad",
+                "wav2vec2_score": 0.1337,
+                "text_emotion": "neutral",
+                "text_score": 0.6484,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 118.97139001950818,
+                "jitter_local": 0.014243221454686424,
+                "shimmer_local": 0.20710672147160897,
+                "hnr_mean": 5.453390384924787
+            }
+        },
+        {
+            "segment_id": 23,
+            "speaker": "SPEAKER_00",
+            "start_time": 104.943,
+            "end_time": 108.183,
+            "duration": 3.24,
+            "transcript": "And has it been getting worse since it first started?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.3429,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.8165,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1317,
+                "text_emotion": "disgust",
+                "text_score": 0.7486,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 148.89315871272518,
+                "jitter_local": 0.011124179479230669,
+                "shimmer_local": 0.12542949524155592,
+                "hnr_mean": 12.252858379364767
+            }
+        },
+        {
+            "segment_id": 24,
+            "speaker": "SPEAKER_01",
+            "start_time": 108.757,
+            "end_time": 110.512,
+            "duration": 1.755,
+            "transcript": "Oh yeah, you definitely.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.2261,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.5647,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1332,
+                "text_emotion": "neutral",
+                "text_score": 0.7181,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 205.9399667151933,
+                "jitter_local": 0.016147101378804346,
+                "shimmer_local": 0.19036996321709151,
+                "hnr_mean": 7.61378925970721
+            }
+        },
+        {
+            "segment_id": 25,
+            "speaker": "SPEAKER_01",
+            "start_time": 110.748,
+            "end_time": 113.195,
+            "duration": 2.447,
+            "transcript": "It would come and go, but...",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.1984,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.4509,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1297,
+                "text_emotion": "neutral",
+                "text_score": 0.2834,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 220.28748799056882,
+                "jitter_local": 0.006304129228110024,
+                "shimmer_local": 0.11710474392395077,
+                "hnr_mean": 14.081922214792119
+            }
+        },
+        {
+            "segment_id": 26,
+            "speaker": "SPEAKER_00",
+            "start_time": 110.9,
+            "end_time": 111.271,
+            "duration": 0.371,
+            "transcript": "It would come in.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.5912,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.4819,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.1343,
+                "text_emotion": "neutral",
+                "text_score": 0.8933,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 255.67736136047733,
+                "jitter_local": 0.006937669365886061,
+                "shimmer_local": 0.13873652493477223,
+                "hnr_mean": 12.764281339453973
+            }
+        },
+        {
+            "segment_id": 27,
+            "speaker": "SPEAKER_01",
+            "start_time": 114.173,
+            "end_time": 121.683,
+            "duration": 7.509,
+            "transcript": "Now, for the past, I'd say, five to six hours, it's then constant.  It's just not there all the time.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4933,
+                "confidence": "medium",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.3891,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1328,
+                "text_emotion": "neutral",
+                "text_score": 0.9334,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 200.765449668437,
+                "jitter_local": 0.00710984858625163,
+                "shimmer_local": 0.12598353493105363,
+                "hnr_mean": 9.629770303926435
+            }
+        },
+        {
+            "segment_id": 28,
+            "speaker": "SPEAKER_00",
+            "start_time": 120.552,
+            "end_time": 120.957,
+            "duration": 0.405,
+            "transcript": "It just isn't there.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.3196,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.4534,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.133,
+                "text_emotion": "neutral",
+                "text_score": 0.553,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 158.76788071783426,
+                "jitter_local": 0.010656662709268972,
+                "shimmer_local": 0.16227904860267142,
+                "hnr_mean": 6.536611810937238
+            }
+        },
+        {
+            "segment_id": 29,
+            "speaker": "SPEAKER_00",
+            "start_time": 122.932,
+            "end_time": 127.673,
+            "duration": 4.742,
+            "transcript": "Okay, and have you had any similar pain like this in the past?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.5056,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.5899,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1339,
+                "text_emotion": "neutral",
+                "text_score": 0.7949,
+                "agreement": "full",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 132.848974421783,
+                "jitter_local": 0.010658271993897146,
+                "shimmer_local": 0.09487640062552961,
+                "hnr_mean": 12.552785183721126
+            }
+        },
+        {
+            "segment_id": 30,
+            "speaker": "SPEAKER_01",
+            "start_time": 129.192,
+            "end_time": 137.984,
+            "duration": 8.792,
+            "transcript": "Yeah, I have the same pain that sort of comes and goes after I eat.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.2915,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.6626,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1352,
+                "text_emotion": "neutral",
+                "text_score": 0.3241,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 251.87339073841284,
+                "jitter_local": 0.0035608088674388997,
+                "shimmer_local": 0.12543877600435674,
+                "hnr_mean": 11.4502980941263
+            }
+        },
+        {
+            "segment_id": 31,
+            "speaker": "SPEAKER_01",
+            "start_time": 139.452,
+            "end_time": 153.374,
+            "duration": 13.922,
+            "transcript": "Usually after I've had something, like something fatty, something from outdoors, maybe like a burger or fries or something,  I initially thought it was indigestion, but I don't know what's going on now.",
+            "predicted_emotion": {
+                "label": "ang",
+                "score": 0.4465,
+                "confidence": "medium",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.5791,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1348,
+                "text_emotion": "disgust",
+                "text_score": 0.893,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 229.52570856593707,
+                "jitter_local": 0.006674224592634822,
+                "shimmer_local": 0.12294070112839026,
+                "hnr_mean": 10.98358716633147
+            }
+        },
+        {
+            "segment_id": 32,
+            "speaker": "SPEAKER_00",
+            "start_time": 154.724,
+            "end_time": 160.327,
+            "duration": 5.602,
+            "transcript": "Okay, and does it does anything make it better or worse anything that you've tried?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4806,
+                "confidence": "high",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.682,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1339,
+                "text_emotion": "disgust",
+                "text_score": 0.6183,
+                "agreement": "audio_consensus",
+                "sarcasm_flag": true,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 147.62343844440306,
+                "jitter_local": 0.010139333823930277,
+                "shimmer_local": 0.1315456618460434,
+                "hnr_mean": 12.191170745096274
+            }
+        },
+        {
+            "segment_id": 33,
+            "speaker": "SPEAKER_01",
+            "start_time": 161.66,
+            "end_time": 169.034,
+            "duration": 7.374,
+            "transcript": "Well, I guess eating sometimes makes it worse, but I don't think there's anything that's making it better.",
+            "predicted_emotion": {
+                "label": "ang",
+                "score": 0.7555,
+                "confidence": "very_high",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.4137,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1313,
+                "text_emotion": "disgust",
+                "text_score": 0.9423,
+                "agreement": "text_veto",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble",
+                "note": "Text model very high confidence override"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 229.7918259570399,
+                "jitter_local": 0.006759332639686113,
+                "shimmer_local": 0.1323878446791055,
+                "hnr_mean": 11.378898846749232
+            }
+        },
+        {
+            "segment_id": 34,
+            "speaker": "SPEAKER_00",
+            "start_time": 170.283,
+            "end_time": 172.291,
+            "duration": 2.008,
+            "transcript": "Have you tried any medications at all?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.8078,
+                "confidence": "high",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.7209,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.134,
+                "text_emotion": "neutral",
+                "text_score": 0.8518,
+                "agreement": "full",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 140.14330283810196,
+                "jitter_local": 0.007748120964735621,
+                "shimmer_local": 0.12143968348037584,
+                "hnr_mean": 12.69676518148489
+            }
+        },
+        {
+            "segment_id": 35,
+            "speaker": "SPEAKER_01",
+            "start_time": 173.962,
+            "end_time": 178.197,
+            "duration": 4.236,
+            "transcript": "Uh, I tried Tylenol, but that didn't do anything.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.2458,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.5586,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1313,
+                "text_emotion": "sadness",
+                "text_score": 0.6097,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 221.7132086331501,
+                "jitter_local": 0.006312678165531323,
+                "shimmer_local": 0.1471569627460278,
+                "hnr_mean": 10.308240027881947
+            }
+        },
+        {
+            "segment_id": 36,
+            "speaker": "SPEAKER_00",
+            "start_time": 179.007,
+            "end_time": 185.605,
+            "duration": 6.598,
+            "transcript": "Okay. And besides the pain that you're having, do you have any knowledge or  vomiting?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4584,
+                "confidence": "high",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.6857,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1325,
+                "text_emotion": "disgust",
+                "text_score": 0.4609,
+                "agreement": "audio_consensus",
+                "sarcasm_flag": true,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 137.88002716968182,
+                "jitter_local": 0.00950513783733009,
+                "shimmer_local": 0.1035036379126547,
+                "hnr_mean": 12.370499863275588
+            }
+        },
+        {
+            "segment_id": 37,
+            "speaker": "SPEAKER_01",
+            "start_time": 186.483,
+            "end_time": 192.44,
+            "duration": 5.957,
+            "transcript": "I am a little nauseous, but, uh, no, I didn't, I haven't, I haven't wanted it yet, no.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4051,
+                "confidence": "high",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.5926,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1354,
+                "text_emotion": "disgust",
+                "text_score": 0.4096,
+                "agreement": "audio_consensus",
+                "sarcasm_flag": true,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 207.75965189920407,
+                "jitter_local": 0.009856262616573179,
+                "shimmer_local": 0.1698710863373538,
+                "hnr_mean": 8.479621262835847
+            }
+        },
+        {
+            "segment_id": 38,
+            "speaker": "SPEAKER_00",
+            "start_time": 193.638,
+            "end_time": 196.928,
+            "duration": 3.291,
+            "transcript": "Okay, and have you been having any fevers?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4671,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.635,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1319,
+                "text_emotion": "neutral",
+                "text_score": 0.7636,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 135.15937854862162,
+                "jitter_local": 0.008198000914420212,
+                "shimmer_local": 0.13691038526915175,
+                "hnr_mean": 12.371016296843807
+            }
+        },
+        {
+            "segment_id": 39,
+            "speaker": "SPEAKER_01",
+            "start_time": 198.802,
+            "end_time": 201.417,
+            "duration": 2.616,
+            "transcript": "I don't think so, I'm having chapped.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.3188,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.7969,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1326,
+                "text_emotion": "neutral",
+                "text_score": 0.561,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 262.9736775717861,
+                "jitter_local": 0.00849215112791944,
+                "shimmer_local": 0.14869089392948892,
+                "hnr_mean": 7.343720159011172
+            }
+        },
+        {
+            "segment_id": 40,
+            "speaker": "SPEAKER_01",
+            "start_time": 202.666,
+            "end_time": 203.476,
+            "duration": 0.81,
+            "transcript": "I don't think we'll see.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.1665,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.4163,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1362,
+                "text_emotion": "surprise",
+                "text_score": 0.4944,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 194.80527484731687,
+                "jitter_local": 0.008989742302749865,
+                "shimmer_local": 0.136412322801374,
+                "hnr_mean": 9.459594656387686
+            }
+        },
+        {
+            "segment_id": 41,
+            "speaker": "SPEAKER_00",
+            "start_time": 203.476,
+            "end_time": 203.881,
+            "duration": 0.405,
+            "transcript": "Thank you very much.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.2874,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.7186,
+                "wav2vec2_emotion": "happy",
+                "wav2vec2_score": 0.1366,
+                "text_emotion": "joy",
+                "text_score": 0.7039,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 87.17957180913564,
+                "jitter_local": 0.0178541317305687,
+                "shimmer_local": 0.2197498511304457,
+                "hnr_mean": 2.8235166269356466
+            }
+        },
+        {
+            "segment_id": 42,
+            "speaker": "SPEAKER_00",
+            "start_time": 203.898,
+            "end_time": 206.412,
+            "duration": 2.514,
+            "transcript": "Any sweats or like chills?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.6246,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.5289,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1326,
+                "text_emotion": "neutral",
+                "text_score": 0.8724,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 121.85995704997563,
+                "jitter_local": 0.009055805208297355,
+                "shimmer_local": 0.14509353422812457,
+                "hnr_mean": 10.05603235587327
+            }
+        },
+        {
+            "segment_id": 43,
+            "speaker": "SPEAKER_01",
+            "start_time": 206.969,
+            "end_time": 208.758,
+            "duration": 1.789,
+            "transcript": "No, I don't think so.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.2034,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.4623,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1371,
+                "text_emotion": "neutral",
+                "text_score": 0.5827,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 275.77346467751573,
+                "jitter_local": 0.003707497721424121,
+                "shimmer_local": 0.129437425562361,
+                "hnr_mean": 15.242563021459048
+            }
+        },
+        {
+            "segment_id": 44,
+            "speaker": "SPEAKER_00",
+            "start_time": 209.602,
+            "end_time": 213.162,
+            "duration": 3.561,
+            "transcript": "Okay, any changes in your bowel movements like constipation diarrhea?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.3262,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.7767,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.136,
+                "text_emotion": "disgust",
+                "text_score": 0.5725,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 137.9450464921794,
+                "jitter_local": 0.010443728573442852,
+                "shimmer_local": 0.12051546181435295,
+                "hnr_mean": 12.113621577480908
+            }
+        },
+        {
+            "segment_id": 45,
+            "speaker": "SPEAKER_01",
+            "start_time": 213.719,
+            "end_time": 214.023,
+            "duration": 0.304,
+            "transcript": "No.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4086,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.5029,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1332,
+                "text_emotion": "neutral",
+                "text_score": 0.8299,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 231.8292331662869,
+                "jitter_local": 0.009152365082427422,
+                "shimmer_local": 0.1529449290019008,
+                "hnr_mean": 9.915219623854352
+            }
+        },
+        {
+            "segment_id": 46,
+            "speaker": "SPEAKER_00",
+            "start_time": 215.153,
+            "end_time": 215.525,
+            "duration": 0.371,
+            "transcript": "Okay.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.44,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.7657,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.137,
+                "text_emotion": "neutral",
+                "text_score": 0.5349,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 234.09622543222548,
+                "jitter_local": 0.02658150893036308,
+                "shimmer_local": 0.13824558616971888,
+                "hnr_mean": 2.815381679216558
+            }
+        },
+        {
+            "segment_id": 47,
+            "speaker": "SPEAKER_00",
+            "start_time": 216.672,
+            "end_time": 219.355,
+            "duration": 2.683,
+            "transcript": "Have you traveled the anywhere recently?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.5948,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.7525,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1304,
+                "text_emotion": "neutral",
+                "text_score": 0.6824,
+                "agreement": "full",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 155.83399058078086,
+                "jitter_local": 0.009746932154975184,
+                "shimmer_local": 0.15029118382780782,
+                "hnr_mean": 14.660579927776984
+            }
+        },
+        {
+            "segment_id": 48,
+            "speaker": "SPEAKER_01",
+            "start_time": 220.773,
+            "end_time": 221.718,
+            "duration": 0.945,
+            "transcript": "No, I haven't.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.5075,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.4089,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.1369,
+                "text_emotion": "neutral",
+                "text_score": 0.7368,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 202.51549820697693,
+                "jitter_local": 0.007476019371759467,
+                "shimmer_local": 0.12309269418124702,
+                "hnr_mean": 12.757819347239765
+            }
+        },
+        {
+            "segment_id": 49,
+            "speaker": "SPEAKER_00",
+            "start_time": 223.237,
+            "end_time": 229.362,
+            "duration": 6.126,
+            "transcript": "And have you been feeling it all very tired, not your usual self, fatigue?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4496,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.7563,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1348,
+                "text_emotion": "neutral",
+                "text_score": 0.5025,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 129.69523984241724,
+                "jitter_local": 0.006083222167109868,
+                "shimmer_local": 0.0935601760605151,
+                "hnr_mean": 14.82557867481651
+            }
+        },
+        {
+            "segment_id": 50,
+            "speaker": "SPEAKER_01",
+            "start_time": 230.155,
+            "end_time": 234.577,
+            "duration": 4.421,
+            "transcript": "Well, the pain is making it difficult for me to do things.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.2355,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.5352,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1339,
+                "text_emotion": "sadness",
+                "text_score": 0.6653,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 221.17090865007106,
+                "jitter_local": 0.005956834524927819,
+                "shimmer_local": 0.11738125157989161,
+                "hnr_mean": 14.813042604121494
+            }
+        },
+        {
+            "segment_id": 51,
+            "speaker": "SPEAKER_01",
+            "start_time": 235.758,
+            "end_time": 239.082,
+            "duration": 3.324,
+            "transcript": "But I guess I'm not a little fatigued, maybe.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.3223,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.7324,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1368,
+                "text_emotion": "neutral",
+                "text_score": 0.826,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 307.34741440701794,
+                "jitter_local": 0.004792296152514953,
+                "shimmer_local": 0.10052277565473776,
+                "hnr_mean": 13.109115549666937
+            }
+        },
+        {
+            "segment_id": 52,
+            "speaker": "SPEAKER_00",
+            "start_time": 240.196,
+            "end_time": 246.187,
+            "duration": 5.991,
+            "transcript": "Okay, um, have you been having any changes in your urinary patterns?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4672,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.7537,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1334,
+                "text_emotion": "neutral",
+                "text_score": 0.5738,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 140.78368643122437,
+                "jitter_local": 0.006095282904301363,
+                "shimmer_local": 0.1180381246441867,
+                "hnr_mean": 14.171648299283854
+            }
+        },
+        {
+            "segment_id": 53,
+            "speaker": "SPEAKER_01",
+            "start_time": 247.402,
+            "end_time": 247.773,
+            "duration": 0.371,
+            "transcript": "No.",
+            "predicted_emotion": {
+                "label": "ang",
+                "score": 0.3383,
+                "confidence": "high",
+                "hubert_emotion": "ang",
+                "hubert_score": 0.3354,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1317,
+                "text_emotion": "neutral",
+                "text_score": 0.8299,
+                "agreement": "audio_consensus",
+                "sarcasm_flag": true,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 312.07849228570944,
+                "jitter_local": 0.001874641852907135,
+                "shimmer_local": 0.08110330176587266,
+                "hnr_mean": 20.776572712844803
+            }
+        },
+        {
+            "segment_id": 54,
+            "speaker": "SPEAKER_00",
+            "start_time": 247.773,
+            "end_time": 253.443,
+            "duration": 5.67,
+            "transcript": "You know any changes in your skin and your rashes any yellowing of your skin",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.3338,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.4801,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.135,
+                "text_emotion": "neutral",
+                "text_score": 0.5669,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 155.76701268449838,
+                "jitter_local": 0.0077904223244929,
+                "shimmer_local": 0.13031266815258621,
+                "hnr_mean": 15.04563562250112
+            }
+        },
+        {
+            "segment_id": 55,
+            "speaker": "SPEAKER_01",
+            "start_time": 249.376,
+            "end_time": 249.798,
+            "duration": 0.422,
+            "transcript": "Any.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.6534,
+                "confidence": "high",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.6431,
+                "wav2vec2_emotion": "sad",
+                "wav2vec2_score": 0.1339,
+                "text_emotion": "neutral",
+                "text_score": 0.8588,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 122.64897955861034,
+                "jitter_local": 0.010861154155090778,
+                "shimmer_local": 0.11311614225277429,
+                "hnr_mean": 10.690387850788863
+            }
+        },
+        {
+            "segment_id": 56,
+            "speaker": "SPEAKER_01",
+            "start_time": 253.848,
+            "end_time": 256.885,
+            "duration": 3.037,
+            "transcript": "Nothing that I've noticed. No, I don't think so",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.4055,
+                "confidence": "medium",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.6033,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.1394,
+                "text_emotion": "surprise",
+                "text_score": 0.5092,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 260.39800889341797,
+                "jitter_local": 0.005665636475972317,
+                "shimmer_local": 0.10470472891906266,
+                "hnr_mean": 13.630424147285709
+            }
+        },
+        {
+            "segment_id": 57,
+            "speaker": "SPEAKER_00",
+            "start_time": 259.484,
+            "end_time": 261.02,
+            "duration": 1.536,
+            "transcript": "Any changes in your urine color?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.3975,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.7038,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.1352,
+                "text_emotion": "neutral",
+                "text_score": 0.4639,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 153.9086340404094,
+                "jitter_local": 0.00962187149581782,
+                "shimmer_local": 0.12167316109838537,
+                "hnr_mean": 13.217948537699794
+            }
+        },
+        {
+            "segment_id": 58,
+            "speaker": "SPEAKER_01",
+            "start_time": 261.779,
+            "end_time": 262.589,
+            "duration": 0.81,
+            "transcript": "No.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.2657,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.6039,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.141,
+                "text_emotion": "neutral",
+                "text_score": 0.8299,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 244.47875274743677,
+                "jitter_local": 0.004799271259478978,
+                "shimmer_local": 0.09715608045603089,
+                "hnr_mean": 18.2256281473742
+            }
+        },
+        {
+            "segment_id": 59,
+            "speaker": "SPEAKER_00",
+            "start_time": 263.973,
+            "end_time": 266.858,
+            "duration": 2.886,
+            "transcript": "Okay, have you noticed blood in your stool at all?",
+            "predicted_emotion": {
+                "label": "ang",
+                "score": 0.2562,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.5894,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1322,
+                "text_emotion": "disgust",
+                "text_score": 0.8399,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 150.53488444526118,
+                "jitter_local": 0.009319226449452293,
+                "shimmer_local": 0.13566563702078985,
+                "hnr_mean": 12.387404892565705
+            }
+        },
+        {
+            "segment_id": 60,
+            "speaker": "SPEAKER_01",
+            "start_time": 268.343,
+            "end_time": 269.525,
+            "duration": 1.181,
+            "transcript": "I have not known.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4159,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.3047,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1368,
+                "text_emotion": "neutral",
+                "text_score": 0.7562,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 242.52573207259678,
+                "jitter_local": 0.007458331174052234,
+                "shimmer_local": 0.2043093600122349,
+                "hnr_mean": 10.472294045835396
+            }
+        },
+        {
+            "segment_id": 61,
+            "speaker": "SPEAKER_00",
+            "start_time": 270.605,
+            "end_time": 273.558,
+            "duration": 2.953,
+            "transcript": "Okay, and how about your appetite has this changed at all",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.669,
+                "confidence": "high",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.7389,
+                "wav2vec2_emotion": "sad",
+                "wav2vec2_score": 0.133,
+                "text_emotion": "neutral",
+                "text_score": 0.8947,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 155.6134498569441,
+                "jitter_local": 0.01133467129629674,
+                "shimmer_local": 0.14256877228883078,
+                "hnr_mean": 10.301854941300766
+            }
+        },
+        {
+            "segment_id": 62,
+            "speaker": "SPEAKER_01",
+            "start_time": 274.823,
+            "end_time": 283.278,
+            "duration": 8.454,
+            "transcript": "Um, well, I guess because this being happened, usually happened after I eat, I think I've been eating less than usual.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.476,
+                "confidence": "medium",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.5612,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1358,
+                "text_emotion": "neutral",
+                "text_score": 0.8976,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 222.6143055495117,
+                "jitter_local": 0.007731916903285765,
+                "shimmer_local": 0.1253911152815579,
+                "hnr_mean": 12.128823437004632
+            }
+        },
+        {
+            "segment_id": 63,
+            "speaker": "SPEAKER_00",
+            "start_time": 284.172,
+            "end_time": 284.915,
+            "duration": 0.743,
+            "transcript": "Just because I do a-",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.2004,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.5009,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1357,
+                "text_emotion": "neutral",
+                "text_score": 0.352,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 204.3812350099638,
+                "jitter_local": 0.006396032244933907,
+                "shimmer_local": 0.14321540976283756,
+                "hnr_mean": 9.574558118914947
+            }
+        },
+        {
+            "segment_id": 64,
+            "speaker": "SPEAKER_01",
+            "start_time": 284.375,
+            "end_time": 286.99,
+            "duration": 2.616,
+            "transcript": "Just because I don't want to, you know, I don't like the pain.",
+            "predicted_emotion": {
+                "label": "ang",
+                "score": 0.4554,
+                "confidence": "medium",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.3771,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1328,
+                "text_emotion": "disgust",
+                "text_score": 0.828,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 174.2944516584281,
+                "jitter_local": 0.007976656003538694,
+                "shimmer_local": 0.14564975933712598,
+                "hnr_mean": 8.504805188440997
+            }
+        },
+        {
+            "segment_id": 65,
+            "speaker": "SPEAKER_00",
+            "start_time": 288.998,
+            "end_time": 291.108,
+            "duration": 2.109,
+            "transcript": "Any significant rate loss recently?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4726,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.7656,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1344,
+                "text_emotion": "neutral",
+                "text_score": 0.6654,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 161.06141680593677,
+                "jitter_local": 0.008301235122978038,
+                "shimmer_local": 0.13727411490590427,
+                "hnr_mean": 12.80322720050581
+            }
+        },
+        {
+            "segment_id": 66,
+            "speaker": "SPEAKER_01",
+            "start_time": 292.508,
+            "end_time": 294.112,
+            "duration": 1.603,
+            "transcript": "I don't think so.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.7378,
+                "confidence": "very_high",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.908,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1366,
+                "text_emotion": "neutral",
+                "text_score": 0.7488,
+                "agreement": "hubert_veto",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble",
+                "note": "HuBERT very high confidence override"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 286.7474665216602,
+                "jitter_local": 0.0036142759720837934,
+                "shimmer_local": 0.1338719249632271,
+                "hnr_mean": 11.565232736402839
+            }
+        },
+        {
+            "segment_id": 67,
+            "speaker": "SPEAKER_00",
+            "start_time": 295.597,
+            "end_time": 299.579,
+            "duration": 3.983,
+            "transcript": "and any recent infections, some little.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.6402,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.5898,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1343,
+                "text_emotion": "neutral",
+                "text_score": 0.8729,
+                "agreement": "full",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 158.24639696348015,
+                "jitter_local": 0.005523778363347042,
+                "shimmer_local": 0.10840771149447628,
+                "hnr_mean": 14.737562532803196
+            }
+        },
+        {
+            "segment_id": 68,
+            "speaker": "SPEAKER_01",
+            "start_time": 300.575,
+            "end_time": 300.946,
+            "duration": 0.371,
+            "transcript": "Nope.",
+            "predicted_emotion": {
+                "label": "ang",
+                "score": 0.3898,
+                "confidence": "medium",
+                "hubert_emotion": "ang",
+                "hubert_score": 0.5804,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.142,
+                "text_emotion": "disgust",
+                "text_score": 0.6307,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 368.390520400728,
+                "jitter_local": 0.004811011079680299,
+                "shimmer_local": 0.11453866121576542,
+                "hnr_mean": 17.37602697900342
+            }
+        },
+        {
+            "segment_id": 69,
+            "speaker": "SPEAKER_00",
+            "start_time": 301.908,
+            "end_time": 310.733,
+            "duration": 8.826,
+            "transcript": "And otherwise are you, do you have any other medical conditions like diabetes, high blood  pressure or anything else?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.6744,
+                "confidence": "high",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.6973,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1333,
+                "text_emotion": "neutral",
+                "text_score": 0.8662,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 141.91936233850495,
+                "jitter_local": 0.009161648550836524,
+                "shimmer_local": 0.11151188411796983,
+                "hnr_mean": 12.957604772925414
+            }
+        },
+        {
+            "segment_id": 70,
+            "speaker": "SPEAKER_01",
+            "start_time": 311.273,
+            "end_time": 315.813,
+            "duration": 4.539,
+            "transcript": "I do have diabetes, but that's about it, I think.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4536,
+                "confidence": "medium",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.5055,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.1412,
+                "text_emotion": "neutral",
+                "text_score": 0.9072,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 227.87593816507436,
+                "jitter_local": 0.008387687217757945,
+                "shimmer_local": 0.17209140560603095,
+                "hnr_mean": 6.716739867852538
+            }
+        },
+        {
+            "segment_id": 71,
+            "speaker": "SPEAKER_00",
+            "start_time": 314.024,
+            "end_time": 314.53,
+            "duration": 0.506,
+            "transcript": "Down.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.3526,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.5819,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1354,
+                "text_emotion": "neutral",
+                "text_score": 0.4792,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 105.5173962296205,
+                "jitter_local": 0.00583471085285202,
+                "shimmer_local": 0.145233823133158,
+                "hnr_mean": 3.6774463913777993
+            }
+        },
+        {
+            "segment_id": 72,
+            "speaker": "SPEAKER_00",
+            "start_time": 317.669,
+            "end_time": 320.875,
+            "duration": 3.206,
+            "transcript": "And do you take anything for your diabetes?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.565,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.8921,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.135,
+                "text_emotion": "neutral",
+                "text_score": 0.8325,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 154.67395595563391,
+                "jitter_local": 0.007143192288230154,
+                "shimmer_local": 0.11781224773932886,
+                "hnr_mean": 13.20338638411194
+            }
+        },
+        {
+            "segment_id": 73,
+            "speaker": "SPEAKER_01",
+            "start_time": 321.652,
+            "end_time": 322.85,
+            "duration": 1.198,
+            "transcript": "I did not form it.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.2066,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.4696,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.141,
+                "text_emotion": "neutral",
+                "text_score": 0.6685,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 282.53039307608725,
+                "jitter_local": 0.006011263796166981,
+                "shimmer_local": 0.13510410044479476,
+                "hnr_mean": 11.204690931855742
+            }
+        },
+        {
+            "segment_id": 74,
+            "speaker": "SPEAKER_00",
+            "start_time": 323.963,
+            "end_time": 326.933,
+            "duration": 2.97,
+            "transcript": "Okay, do you take any other medications at all?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4569,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.6786,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.1335,
+                "text_emotion": "neutral",
+                "text_score": 0.6549,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 137.7001907849074,
+                "jitter_local": 0.010569560567050489,
+                "shimmer_local": 0.15332243839993862,
+                "hnr_mean": 11.25974865803676
+            }
+        },
+        {
+            "segment_id": 75,
+            "speaker": "SPEAKER_00",
+            "start_time": 329.853,
+            "end_time": 330.967,
+            "duration": 1.114,
+            "transcript": "No, I don't.  Sorry.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.2886,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.656,
+                "wav2vec2_emotion": "sad",
+                "wav2vec2_score": 0.1389,
+                "text_emotion": "sadness",
+                "text_score": 0.7106,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 227.33468122314844,
+                "jitter_local": 0.006959432215583777,
+                "shimmer_local": 0.13519315284892192,
+                "hnr_mean": 11.257018236908907
+            }
+        },
+        {
+            "segment_id": 76,
+            "speaker": "SPEAKER_01",
+            "start_time": 330.089,
+            "end_time": 331.203,
+            "duration": 1.114,
+            "transcript": "No, I don't. Sorry.",
+            "predicted_emotion": {
+                "label": "sad",
+                "score": 0.4124,
+                "confidence": "medium",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.8744,
+                "wav2vec2_emotion": "sad",
+                "wav2vec2_score": 0.1413,
+                "text_emotion": "sadness",
+                "text_score": 0.86,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 218.03428222393237,
+                "jitter_local": 0.014056258392869293,
+                "shimmer_local": 0.15569920938653797,
+                "hnr_mean": 10.730710901260084
+            }
+        },
+        {
+            "segment_id": 77,
+            "speaker": "SPEAKER_00",
+            "start_time": 331.861,
+            "end_time": 337.733,
+            "duration": 5.873,
+            "transcript": "No, no. Do you have any allergies to any medications?  No.  Environmental allergies?  No.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.3858,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.6106,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1336,
+                "text_emotion": "neutral",
+                "text_score": 0.4926,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 139.8401566797419,
+                "jitter_local": 0.007881535610503537,
+                "shimmer_local": 0.12748130236219002,
+                "hnr_mean": 13.546650023284515
+            }
+        },
+        {
+            "segment_id": 78,
+            "speaker": "SPEAKER_01",
+            "start_time": 335.86,
+            "end_time": 336.316,
+            "duration": 0.456,
+            "transcript": "No.  No.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.206,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.4681,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1349,
+                "text_emotion": "neutral",
+                "text_score": 0.6324,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 168.1708358722889,
+                "jitter_local": 0.009161719271401473,
+                "shimmer_local": 0.14176074374029027,
+                "hnr_mean": 10.716521916535545
+            }
+        },
+        {
+            "segment_id": 79,
+            "speaker": "SPEAKER_01",
+            "start_time": 337.852,
+            "end_time": 338.729,
+            "duration": 0.877,
+            "transcript": "No, no I don't.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.2147,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.488,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1372,
+                "text_emotion": "fear",
+                "text_score": 0.3007,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 177.69587984079968,
+                "jitter_local": 0.008192092164112425,
+                "shimmer_local": 0.1631625227846722,
+                "hnr_mean": 10.581867083660757
+            }
+        },
+        {
+            "segment_id": 80,
+            "speaker": "SPEAKER_00",
+            "start_time": 339.64,
+            "end_time": 343.235,
+            "duration": 3.594,
+            "transcript": "Okay. Have you been hospitalized in the past?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4318,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.4855,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1385,
+                "text_emotion": "neutral",
+                "text_score": 0.6741,
+                "agreement": "full",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 142.6981554903996,
+                "jitter_local": 0.008667123493347218,
+                "shimmer_local": 0.1539827421012772,
+                "hnr_mean": 10.906014596012337
+            }
+        },
+        {
+            "segment_id": 81,
+            "speaker": "SPEAKER_01",
+            "start_time": 344.332,
+            "end_time": 349.107,
+            "duration": 4.776,
+            "transcript": "Not no haven't ever. I've been very I've been healthy. No hospitalizations",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.5195,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.3942,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1331,
+                "text_emotion": "neutral",
+                "text_score": 0.7169,
+                "agreement": "full",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 215.96896579206108,
+                "jitter_local": 0.008838709126278266,
+                "shimmer_local": 0.15436611140682394,
+                "hnr_mean": 9.632685685674792
+            }
+        },
+        {
+            "segment_id": 82,
+            "speaker": "SPEAKER_00",
+            "start_time": 348.719,
+            "end_time": 349.343,
+            "duration": 0.624,
+            "transcript": "applications.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4295,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.679,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1378,
+                "text_emotion": "neutral",
+                "text_score": 0.859,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 198.55104771022647,
+                "jitter_local": 0.020069122307695125,
+                "shimmer_local": 0.1858341948569522,
+                "hnr_mean": 7.461250400874409
+            }
+        },
+        {
+            "segment_id": 83,
+            "speaker": "SPEAKER_00",
+            "start_time": 350.508,
+            "end_time": 351.655,
+            "duration": 1.148,
+            "transcript": "Any past surgeries?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.546,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.774,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.134,
+                "text_emotion": "neutral",
+                "text_score": 0.8417,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 141.10193135585286,
+                "jitter_local": 0.00902752351989312,
+                "shimmer_local": 0.09236342633063188,
+                "hnr_mean": 11.576859848994728
+            }
+        },
+        {
+            "segment_id": 84,
+            "speaker": "SPEAKER_01",
+            "start_time": 352.735,
+            "end_time": 355.621,
+            "duration": 2.886,
+            "transcript": "Hmm, I got like this empty for move to when I was a teenager.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.2211,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.5024,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1348,
+                "text_emotion": "neutral",
+                "text_score": 0.5932,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 254.90111222363137,
+                "jitter_local": 0.0037064569136768186,
+                "shimmer_local": 0.08436806988455044,
+                "hnr_mean": 16.383195149695965
+            }
+        },
+        {
+            "segment_id": 85,
+            "speaker": "SPEAKER_00",
+            "start_time": 356.887,
+            "end_time": 361.949,
+            "duration": 5.062,
+            "transcript": "Okay, have you been in contact with anyone who has been ill recently?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.442,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.5884,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1335,
+                "text_emotion": "neutral",
+                "text_score": 0.7422,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 130.50783794774426,
+                "jitter_local": 0.007211249369974519,
+                "shimmer_local": 0.13129916180377205,
+                "hnr_mean": 12.950112004701449
+            }
+        },
+        {
+            "segment_id": 86,
+            "speaker": "SPEAKER_01",
+            "start_time": 363.012,
+            "end_time": 364.7,
+            "duration": 1.688,
+            "transcript": "No, I don't think so.",
+            "predicted_emotion": {
+                "label": "sad",
+                "score": 0.3008,
+                "confidence": "high",
+                "hubert_emotion": "sad",
+                "hubert_score": 0.3298,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.1386,
+                "text_emotion": "neutral",
+                "text_score": 0.5827,
+                "agreement": "audio_consensus",
+                "sarcasm_flag": true,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 246.29904741094379,
+                "jitter_local": 0.006246886351582651,
+                "shimmer_local": 0.09825869254641059,
+                "hnr_mean": 17.406077651476238
+            }
+        },
+        {
+            "segment_id": 87,
+            "speaker": "SPEAKER_00",
+            "start_time": 366.151,
+            "end_time": 366.674,
+            "duration": 0.523,
+            "transcript": "Okay.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.3822,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.6211,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1367,
+                "text_emotion": "neutral",
+                "text_score": 0.5349,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 204.31302687663631,
+                "jitter_local": 0.010810316366851088,
+                "shimmer_local": 0.17956052476133594,
+                "hnr_mean": 3.411508476508203
+            }
+        },
+        {
+            "segment_id": 88,
+            "speaker": "SPEAKER_00",
+            "start_time": 367.788,
+            "end_time": 368.581,
+            "duration": 0.793,
+            "transcript": "Um",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.7013,
+                "confidence": "high",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.7856,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1326,
+                "text_emotion": "neutral",
+                "text_score": 0.8645,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 112.58468636970157,
+                "jitter_local": 0.004354738481277764,
+                "shimmer_local": 0.10709632607804352,
+                "hnr_mean": 10.922388791171004
+            }
+        },
+        {
+            "segment_id": 89,
+            "speaker": "SPEAKER_00",
+            "start_time": 370.285,
+            "end_time": 370.943,
+            "duration": 0.658,
+            "transcript": "and",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.2232,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.5073,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1315,
+                "text_emotion": "neutral",
+                "text_score": 0.7382,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 163.31579190866165,
+                "jitter_local": 0.0035682688114923628,
+                "shimmer_local": 0.05743585640773852,
+                "hnr_mean": 17.06449022263075
+            }
+        },
+        {
+            "segment_id": 90,
+            "speaker": "SPEAKER_00",
+            "start_time": 372.007,
+            "end_time": 383.043,
+            "duration": 11.036,
+            "transcript": "But in terms of your family history, has anyone had any cancers or any IBD like Crohn's disease  or ulcerative colitis?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4889,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.734,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1324,
+                "text_emotion": "neutral",
+                "text_score": 0.6879,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 138.5932693284955,
+                "jitter_local": 0.008479063054219284,
+                "shimmer_local": 0.12009194196767406,
+                "hnr_mean": 13.125266136904324
+            }
+        },
+        {
+            "segment_id": 91,
+            "speaker": "SPEAKER_01",
+            "start_time": 383.33,
+            "end_time": 385.118,
+            "duration": 1.789,
+            "transcript": "No, not that I know off.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.2621,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.5956,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1338,
+                "text_emotion": "neutral",
+                "text_score": 0.8115,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 244.649883771768,
+                "jitter_local": 0.004912206980738702,
+                "shimmer_local": 0.11568977456042742,
+                "hnr_mean": 15.049827708692996
+            }
+        },
+        {
+            "segment_id": 92,
+            "speaker": "SPEAKER_00",
+            "start_time": 386.367,
+            "end_time": 390.417,
+            "duration": 4.05,
+            "transcript": "Okay, anything that runs in the family at all?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.3937,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.5421,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1351,
+                "text_emotion": "neutral",
+                "text_score": 0.6324,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 143.15047137944862,
+                "jitter_local": 0.005582281286061679,
+                "shimmer_local": 0.12112043331527925,
+                "hnr_mean": 13.54189154676501
+            }
+        },
+        {
+            "segment_id": 93,
+            "speaker": "SPEAKER_01",
+            "start_time": 391.396,
+            "end_time": 398.855,
+            "duration": 7.459,
+            "transcript": "My dad had a heart attack when he was in his 60s, but that's it.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.2648,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.6018,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1327,
+                "text_emotion": "sadness",
+                "text_score": 0.8158,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 211.65778182744913,
+                "jitter_local": 0.009735582402842089,
+                "shimmer_local": 0.1316487334471809,
+                "hnr_mean": 10.998143470260633
+            }
+        },
+        {
+            "segment_id": 94,
+            "speaker": "SPEAKER_00",
+            "start_time": 400.947,
+            "end_time": 404.137,
+            "duration": 3.189,
+            "transcript": "And currently right now, do you work?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.5149,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.8465,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.1315,
+                "text_emotion": "neutral",
+                "text_score": 0.6073,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 148.1858891756352,
+                "jitter_local": 0.008886317979820495,
+                "shimmer_local": 0.1083198254125583,
+                "hnr_mean": 12.703267986247647
+            }
+        },
+        {
+            "segment_id": 95,
+            "speaker": "SPEAKER_01",
+            "start_time": 405.47,
+            "end_time": 407.63,
+            "duration": 2.16,
+            "transcript": "Uh, no, I'm- I'm lead off.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.5005,
+                "confidence": "high",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.7114,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1298,
+                "text_emotion": "fear",
+                "text_score": 0.6622,
+                "agreement": "audio_consensus",
+                "sarcasm_flag": true,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 229.12215051711283,
+                "jitter_local": 0.002710460824378196,
+                "shimmer_local": 0.09523006435092382,
+                "hnr_mean": 13.494911354532562
+            }
+        },
+        {
+            "segment_id": 96,
+            "speaker": "SPEAKER_01",
+            "start_time": 408.828,
+            "end_time": 409.722,
+            "duration": 0.894,
+            "transcript": "because of COVID.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.2372,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.5931,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1334,
+                "text_emotion": "neutral",
+                "text_score": 0.6443,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 197.76752841191325,
+                "jitter_local": 0.01777366401659742,
+                "shimmer_local": 0.19722831577700092,
+                "hnr_mean": 7.761892398626005
+            }
+        },
+        {
+            "segment_id": 97,
+            "speaker": "SPEAKER_00",
+            "start_time": 410.819,
+            "end_time": 411.359,
+            "duration": 0.54,
+            "transcript": "Okay",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.3608,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.4968,
+                "wav2vec2_emotion": "sad",
+                "wav2vec2_score": 0.1328,
+                "text_emotion": "neutral",
+                "text_score": 0.6484,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 122.71841433781844,
+                "jitter_local": 0.01052694157442836,
+                "shimmer_local": 0.16892029451544588,
+                "hnr_mean": 5.846221868333972
+            }
+        },
+        {
+            "segment_id": 98,
+            "speaker": "SPEAKER_00",
+            "start_time": 412.49,
+            "end_time": 416.0,
+            "duration": 3.51,
+            "transcript": "And currently, what is your home situation like?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.7322,
+                "confidence": "high",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.7982,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1306,
+                "text_emotion": "neutral",
+                "text_score": 0.9158,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 135.7574326012159,
+                "jitter_local": 0.008436815477062511,
+                "shimmer_local": 0.13830853958263722,
+                "hnr_mean": 12.27499611887028
+            }
+        },
+        {
+            "segment_id": 99,
+            "speaker": "SPEAKER_01",
+            "start_time": 417.147,
+            "end_time": 417.991,
+            "duration": 0.844,
+            "transcript": "What do you mean?",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.4948,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.4067,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.1392,
+                "text_emotion": "surprise",
+                "text_score": 0.8178,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 258.6443475845949,
+                "jitter_local": 0.006423029684439546,
+                "shimmer_local": 0.145475372494355,
+                "hnr_mean": 12.687777225992464
+            }
+        },
+        {
+            "segment_id": 100,
+            "speaker": "SPEAKER_00",
+            "start_time": 418.919,
+            "end_time": 422.024,
+            "duration": 3.105,
+            "transcript": "So do you live in an apartment, a house, and do you live with anyone?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.5131,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.7885,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.1334,
+                "text_emotion": "neutral",
+                "text_score": 0.693,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 130.63986070426878,
+                "jitter_local": 0.01055368343945527,
+                "shimmer_local": 0.14594028613741772,
+                "hnr_mean": 12.43335860607167
+            }
+        },
+        {
+            "segment_id": 101,
+            "speaker": "SPEAKER_01",
+            "start_time": 420.64,
+            "end_time": 421.028,
+            "duration": 0.388,
+            "transcript": "the housing.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.2033,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.5082,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1312,
+                "text_emotion": "sadness",
+                "text_score": 0.3884,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 129.89405191133466,
+                "jitter_local": 0.007901088878919812,
+                "shimmer_local": 0.1641343643977708,
+                "hnr_mean": 7.701148369159071
+            }
+        },
+        {
+            "segment_id": 102,
+            "speaker": "SPEAKER_01",
+            "start_time": 422.817,
+            "end_time": 427.222,
+            "duration": 4.404,
+            "transcript": "I live in an apartment. I live alone.",
+            "predicted_emotion": {
+                "label": "sad",
+                "score": 0.8356,
+                "confidence": "very_high",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.8679,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1323,
+                "text_emotion": "sadness",
+                "text_score": 0.9269,
+                "agreement": "text_veto",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble",
+                "note": "Text model very high confidence override"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 250.75008182326496,
+                "jitter_local": 0.003525426087323991,
+                "shimmer_local": 0.11719784429005227,
+                "hnr_mean": 12.081653895626193
+            }
+        },
+        {
+            "segment_id": 103,
+            "speaker": "SPEAKER_00",
+            "start_time": 430.259,
+            "end_time": 440.772,
+            "duration": 10.513,
+            "transcript": "And in terms of your daily routine, you feel that you get enough exercise to use both sides of the walks or runs, anything like that.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4823,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.6832,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1318,
+                "text_emotion": "neutral",
+                "text_score": 0.7442,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 134.19815520982786,
+                "jitter_local": 0.007582339774403983,
+                "shimmer_local": 0.13216519483175335,
+                "hnr_mean": 12.995597808769446
+            }
+        },
+        {
+            "segment_id": 104,
+            "speaker": "SPEAKER_01",
+            "start_time": 442.375,
+            "end_time": 450.273,
+            "duration": 7.898,
+            "transcript": "I usually go out for a run, especially when it's a little bit warmer, which it now is.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4697,
+                "confidence": "medium",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.7021,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1341,
+                "text_emotion": "neutral",
+                "text_score": 0.8858,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 251.4083160637011,
+                "jitter_local": 0.0067361034809209006,
+                "shimmer_local": 0.14388287878571734,
+                "hnr_mean": 10.193555006790216
+            }
+        },
+        {
+            "segment_id": 105,
+            "speaker": "SPEAKER_00",
+            "start_time": 450.948,
+            "end_time": 451.252,
+            "duration": 0.304,
+            "transcript": "Yep.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4908,
+                "confidence": "medium",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.558,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1338,
+                "text_emotion": "neutral",
+                "text_score": 0.9281,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 197.98806444708006,
+                "jitter_local": 0.015793372495686315,
+                "shimmer_local": 0.1672627838788205,
+                "hnr_mean": 1.6784890007556443
+            }
+        },
+        {
+            "segment_id": 106,
+            "speaker": "SPEAKER_00",
+            "start_time": 452.281,
+            "end_time": 454.492,
+            "duration": 2.211,
+            "transcript": "And do you drink alcohol?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.454,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.7625,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.1386,
+                "text_emotion": "neutral",
+                "text_score": 0.5962,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 158.21034026348698,
+                "jitter_local": 0.011989118389339954,
+                "shimmer_local": 0.11056931204275745,
+                "hnr_mean": 11.355216133667097
+            }
+        },
+        {
+            "segment_id": 107,
+            "speaker": "SPEAKER_01",
+            "start_time": 455.487,
+            "end_time": 456.533,
+            "duration": 1.046,
+            "transcript": "Uh, sometimes?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4492,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.6784,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.1373,
+                "text_emotion": "neutral",
+                "text_score": 0.7113,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 248.38099293783324,
+                "jitter_local": 0.004383157483194381,
+                "shimmer_local": 0.15635098969219016,
+                "hnr_mean": 10.187264693391443
+            }
+        },
+        {
+            "segment_id": 108,
+            "speaker": "SPEAKER_00",
+            "start_time": 457.951,
+            "end_time": 460.617,
+            "duration": 2.666,
+            "transcript": "Hey, how much would you say you drink in an average week?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4037,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.6513,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1362,
+                "text_emotion": "neutral",
+                "text_score": 0.496,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 143.94957578366345,
+                "jitter_local": 0.009030135621108713,
+                "shimmer_local": 0.14760933149473782,
+                "hnr_mean": 10.557386963217695
+            }
+        },
+        {
+            "segment_id": 109,
+            "speaker": "SPEAKER_01",
+            "start_time": 461.393,
+            "end_time": 464.178,
+            "duration": 2.784,
+            "transcript": "I wanted to drink a day.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.2697,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.6129,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.1319,
+                "text_emotion": "sadness",
+                "text_score": 0.5446,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 271.4100847597675,
+                "jitter_local": 0.005235985666640685,
+                "shimmer_local": 0.15665443099245696,
+                "hnr_mean": 10.344325605961359
+            }
+        },
+        {
+            "segment_id": 110,
+            "speaker": "SPEAKER_00",
+            "start_time": 463.553,
+            "end_time": 464.077,
+            "duration": 0.523,
+            "transcript": "Now a day.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.3818,
+                "confidence": "medium",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.8678,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.1368,
+                "text_emotion": "neutral",
+                "text_score": 0.7578,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 234.886910797733,
+                "jitter_local": 0.007304797538679583,
+                "shimmer_local": 0.16340423660247227,
+                "hnr_mean": 10.531599315242074
+            }
+        },
+        {
+            "segment_id": 111,
+            "speaker": "SPEAKER_00",
+            "start_time": 465.68,
+            "end_time": 468.143,
+            "duration": 2.464,
+            "transcript": "Okay, and what do you usually drink?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.5088,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.7681,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1332,
+                "text_emotion": "neutral",
+                "text_score": 0.7092,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 149.51751640533186,
+                "jitter_local": 0.008844474858745831,
+                "shimmer_local": 0.11684771807185955,
+                "hnr_mean": 12.726422829170156
+            }
+        },
+        {
+            "segment_id": 112,
+            "speaker": "SPEAKER_01",
+            "start_time": 469.493,
+            "end_time": 473.695,
+            "duration": 4.202,
+            "transcript": "I'll just drink a glass of wine at night, it just helps me relax.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.293,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.3997,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1358,
+                "text_emotion": "joy",
+                "text_score": 0.5323,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 209.05831123034562,
+                "jitter_local": 0.0055898786819085396,
+                "shimmer_local": 0.1552280751880658,
+                "hnr_mean": 9.401847047666172
+            }
+        },
+        {
+            "segment_id": 113,
+            "speaker": "SPEAKER_00",
+            "start_time": 474.86,
+            "end_time": 477.728,
+            "duration": 2.869,
+            "transcript": "Okay, and do you smoke cigarettes?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.209,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.5226,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.1344,
+                "text_emotion": "anger",
+                "text_score": 0.4364,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 155.11265235598856,
+                "jitter_local": 0.010695495256908629,
+                "shimmer_local": 0.1500102774226928,
+                "hnr_mean": 10.336359704947936
+            }
+        },
+        {
+            "segment_id": 114,
+            "speaker": "SPEAKER_01",
+            "start_time": 478.218,
+            "end_time": 479.112,
+            "duration": 0.894,
+            "transcript": "I don't know.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.1787,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.4467,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1372,
+                "text_emotion": "surprise",
+                "text_score": 0.6273,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 193.61632385272128,
+                "jitter_local": 0.011799120306872343,
+                "shimmer_local": 0.1960461205466588,
+                "hnr_mean": 5.5083240290705024
+            }
+        },
+        {
+            "segment_id": 115,
+            "speaker": "SPEAKER_00",
+            "start_time": 481.053,
+            "end_time": 484.58,
+            "duration": 3.527,
+            "transcript": "And do you use any recreational drugs like marijuana?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.5419,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.85,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.134,
+                "text_emotion": "neutral",
+                "text_score": 0.7045,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 135.71108095965081,
+                "jitter_local": 0.005778249051357428,
+                "shimmer_local": 0.1186052244088949,
+                "hnr_mean": 15.169159907701374
+            }
+        },
+        {
+            "segment_id": 116,
+            "speaker": "SPEAKER_01",
+            "start_time": 485.761,
+            "end_time": 486.368,
+            "duration": 0.608,
+            "transcript": "No, I don't.",
+            "predicted_emotion": {
+                "label": "ang",
+                "score": 0.2854,
+                "confidence": "high",
+                "hubert_emotion": "ang",
+                "hubert_score": 0.3192,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.139,
+                "text_emotion": "neutral",
+                "text_score": 0.5141,
+                "agreement": "audio_consensus",
+                "sarcasm_flag": true,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 232.76113460522728,
+                "jitter_local": 0.009084560934792789,
+                "shimmer_local": 0.19271556876737755,
+                "hnr_mean": 10.675553095415152
+            }
+        },
+        {
+            "segment_id": 117,
+            "speaker": "SPEAKER_00",
+            "start_time": 487.55,
+            "end_time": 487.921,
+            "duration": 0.371,
+            "transcript": "Okay.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.5035,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.6459,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1307,
+                "text_emotion": "neutral",
+                "text_score": 0.5349,
+                "agreement": "full",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 277.83292885061314,
+                "jitter_local": 0.009113439077576993,
+                "shimmer_local": 0.2995616804338848,
+                "hnr_mean": 2.254789813436167
+            }
+        },
+        {
+            "segment_id": 118,
+            "speaker": "SPEAKER_00",
+            "start_time": 489.085,
+            "end_time": 493.945,
+            "duration": 4.86,
+            "transcript": "All right so that's all the questions I have and just to clarify",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.7017,
+                "confidence": "high",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.7323,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1338,
+                "text_emotion": "neutral",
+                "text_score": 0.964,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 161.87669533824686,
+                "jitter_local": 0.00962315500044119,
+                "shimmer_local": 0.11352634871822817,
+                "hnr_mean": 13.066783751907039
+            }
+        },
+        {
+            "segment_id": 119,
+            "speaker": "SPEAKER_00",
+            "start_time": 495.278,
+            "end_time": 497.877,
+            "duration": 2.599,
+            "transcript": "Does your pain come and go or is it constant?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.3391,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.5493,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1326,
+                "text_emotion": "neutral",
+                "text_score": 0.4777,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 154.45279268300055,
+                "jitter_local": 0.01136073439530111,
+                "shimmer_local": 0.14135978352179543,
+                "hnr_mean": 12.740227496826744
+            }
+        },
+        {
+            "segment_id": 120,
+            "speaker": "SPEAKER_01",
+            "start_time": 498.535,
+            "end_time": 517.739,
+            "duration": 19.204,
+            "transcript": "Yeah, so initially it would come and go, but now, so for the first two hours it would come  and go, and when I would have the spin, when I was eating, it would come and go, but over  the past six hours it's just been constant.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.2522,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.5955,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1348,
+                "text_emotion": "neutral",
+                "text_score": 0.8199,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 243.65103149235142,
+                "jitter_local": 0.00614792878642912,
+                "shimmer_local": 0.1401970980798645,
+                "hnr_mean": 11.981701471571022
+            }
+        },
+        {
+            "segment_id": 121,
+            "speaker": "SPEAKER_00",
+            "start_time": 519.376,
+            "end_time": 519.916,
+            "duration": 0.54,
+            "transcript": "Okay",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.3975,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.5886,
+                "wav2vec2_emotion": "disgust",
+                "wav2vec2_score": 0.1353,
+                "text_emotion": "neutral",
+                "text_score": 0.6484,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 124.69129084355377,
+                "jitter_local": 0.016240204318149612,
+                "shimmer_local": 0.1549693639960684,
+                "hnr_mean": 9.23168398343848
+            }
+        },
+        {
+            "segment_id": 122,
+            "speaker": "SPEAKER_00",
+            "start_time": 521.03,
+            "end_time": 521.468,
+            "duration": 0.439,
+            "transcript": "Great.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.4826,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.6039,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1318,
+                "text_emotion": "joy",
+                "text_score": 0.8774,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 217.5657300066923,
+                "jitter_local": 0.014738670075278616,
+                "shimmer_local": 0.1385293795782102,
+                "hnr_mean": 11.026583279821441
+            }
+        }
+    ]
+}

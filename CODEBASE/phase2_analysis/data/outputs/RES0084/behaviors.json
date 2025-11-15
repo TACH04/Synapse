@@ -1,0 +1,920 @@
+{
+  "model_name": "heuristic",
+  "entries": [
+    {
+      "segment_id": 0,
+      "speaker": "SPEAKER_01",
+      "transcript": "That brings you in.",
+      "start_time": 0.031,
+      "end_time": 0.807,
+      "tags": []
+    },
+    {
+      "segment_id": 3,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay, yeah, it's good that you came in.  Let's rewind a little bit and get a full history.  So...",
+      "start_time": 40.801,
+      "end_time": 48.31,
+      "tags": []
+    },
+    {
+      "segment_id": 5,
+      "speaker": "SPEAKER_01",
+      "transcript": "You said the, what started first, the fever or headache?",
+      "start_time": 48.715,
+      "end_time": 53.373,
+      "tags": [
+        {
+          "label": "VRM:Question_Open",
+          "confidence": 0.6
+        }
+      ]
+    },
+    {
+      "segment_id": 7,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay.",
+      "start_time": 60.68,
+      "end_time": 61.152,
+      "tags": []
+    },
+    {
+      "segment_id": 9,
+      "speaker": "SPEAKER_01",
+      "transcript": "And then...",
+      "start_time": 69.691,
+      "end_time": 70.248,
+      "tags": []
+    },
+    {
+      "segment_id": 10,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay, okay, and you said the highest recorded temp your highest recorded temperature was 39",
+      "start_time": 81.115,
+      "end_time": 86.768,
+      "tags": []
+    },
+    {
+      "segment_id": 12,
+      "speaker": "SPEAKER_01",
+      "transcript": "30. I know, okay.",
+      "start_time": 90.312,
+      "end_time": 93.13,
+      "tags": []
+    },
+    {
+      "segment_id": 13,
+      "speaker": "SPEAKER_01",
+      "transcript": "Where, okay, so how they started four days ago, is it persistent or constant or does it come and go?",
+      "start_time": 94.261,
+      "end_time": 101.247,
+      "tags": [
+        {
+          "label": "VRM:Question_Open",
+          "confidence": 0.6
+        }
+      ]
+    },
+    {
+      "segment_id": 15,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay. Okay. Does anything make it better or worse?",
+      "start_time": 117.481,
+      "end_time": 123.657,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 17,
+      "speaker": "SPEAKER_01",
+      "transcript": "Mm.",
+      "start_time": 138.659,
+      "end_time": 139.165,
+      "tags": []
+    },
+    {
+      "segment_id": 18,
+      "speaker": "SPEAKER_01",
+      "transcript": "How long does a headache last when you get it?",
+      "start_time": 140.178,
+      "end_time": 142.422,
+      "tags": [
+        {
+          "label": "VRM:Question_Open",
+          "confidence": 0.6
+        }
+      ]
+    },
+    {
+      "segment_id": 20,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay",
+      "start_time": 148.548,
+      "end_time": 149.02,
+      "tags": []
+    },
+    {
+      "segment_id": 21,
+      "speaker": "SPEAKER_01",
+      "transcript": "Yeah, um, and if you want to describe it as a sharp, dull, achy...",
+      "start_time": 151.214,
+      "end_time": 158.183,
+      "tags": []
+    },
+    {
+      "segment_id": 23,
+      "speaker": "SPEAKER_01",
+      "transcript": "Oh, okay.",
+      "start_time": 164.9,
+      "end_time": 165.457,
+      "tags": []
+    },
+    {
+      "segment_id": 24,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay",
+      "start_time": 170.232,
+      "end_time": 170.755,
+      "tags": []
+    },
+    {
+      "segment_id": 25,
+      "speaker": "SPEAKER_01",
+      "transcript": "and",
+      "start_time": 171.852,
+      "end_time": 172.915,
+      "tags": []
+    },
+    {
+      "segment_id": 26,
+      "speaker": "SPEAKER_01",
+      "transcript": "All right, and you said it's mostly at the front of your head. How about near the crown of your head temples?",
+      "start_time": 174.502,
+      "end_time": 182.146,
+      "tags": [
+        {
+          "label": "VRM:Question_Open",
+          "confidence": 0.6
+        }
+      ]
+    },
+    {
+      "segment_id": 28,
+      "speaker": "SPEAKER_01",
+      "transcript": "It can go to the...",
+      "start_time": 183.125,
+      "end_time": 184.002,
+      "tags": []
+    },
+    {
+      "segment_id": 29,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay",
+      "start_time": 188.423,
+      "end_time": 189.014,
+      "tags": []
+    },
+    {
+      "segment_id": 30,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay",
+      "start_time": 190.347,
+      "end_time": 190.972,
+      "tags": []
+    },
+    {
+      "segment_id": 31,
+      "speaker": "SPEAKER_01",
+      "transcript": "And, severity-wise, 1 to 10, 10 being the worst pain you've ever felt, how bad is it?",
+      "start_time": 192.001,
+      "end_time": 200.438,
+      "tags": [
+        {
+          "label": "VRM:Question_Open",
+          "confidence": 0.6
+        },
+        {
+          "label": "Event:Possible_Bad_News",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "segment_id": 33,
+      "speaker": "SPEAKER_01",
+      "transcript": "Yeah, okay.",
+      "start_time": 212.47,
+      "end_time": 213.753,
+      "tags": []
+    },
+    {
+      "segment_id": 34,
+      "speaker": "SPEAKER_01",
+      "transcript": "And then have you ever experienced something like this before?",
+      "start_time": 215.845,
+      "end_time": 220.84,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 36,
+      "speaker": "SPEAKER_01",
+      "transcript": "Yeah.",
+      "start_time": 231.303,
+      "end_time": 231.86,
+      "tags": []
+    },
+    {
+      "segment_id": 37,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay.",
+      "start_time": 232.973,
+      "end_time": 234.391,
+      "tags": []
+    },
+    {
+      "segment_id": 38,
+      "speaker": "SPEAKER_01",
+      "transcript": "Put them in.",
+      "start_time": 234.408,
+      "end_time": 235.285,
+      "tags": []
+    },
+    {
+      "segment_id": 39,
+      "speaker": "SPEAKER_01",
+      "transcript": "You mentioned the headache is getting a little bit better now.",
+      "start_time": 236.416,
+      "end_time": 239.234,
+      "tags": []
+    },
+    {
+      "segment_id": 41,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay",
+      "start_time": 249.815,
+      "end_time": 250.338,
+      "tags": []
+    },
+    {
+      "segment_id": 42,
+      "speaker": "SPEAKER_01",
+      "transcript": "All right, and",
+      "start_time": 252.262,
+      "end_time": 254.236,
+      "tags": []
+    },
+    {
+      "segment_id": 43,
+      "speaker": "SPEAKER_01",
+      "transcript": "Have you had any fainting spells or dizziness?",
+      "start_time": 255.586,
+      "end_time": 259.383,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 45,
+      "speaker": "SPEAKER_01",
+      "transcript": "Any confusion or memory loss?",
+      "start_time": 264.631,
+      "end_time": 266.622,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 47,
+      "speaker": "SPEAKER_01",
+      "transcript": "Any neck pain?",
+      "start_time": 269.761,
+      "end_time": 271.398,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 49,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay.",
+      "start_time": 282.316,
+      "end_time": 282.788,
+      "tags": []
+    },
+    {
+      "segment_id": 50,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay",
+      "start_time": 284.122,
+      "end_time": 285.674,
+      "tags": []
+    },
+    {
+      "segment_id": 51,
+      "speaker": "SPEAKER_01",
+      "transcript": "And...",
+      "start_time": 287.142,
+      "end_time": 288.323,
+      "tags": []
+    },
+    {
+      "segment_id": 52,
+      "speaker": "SPEAKER_01",
+      "transcript": "Do any weight loss recently?",
+      "start_time": 290.146,
+      "end_time": 292.947,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 54,
+      "speaker": "SPEAKER_01",
+      "transcript": "Any excessive fatigue?",
+      "start_time": 299.512,
+      "end_time": 302.684,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 57,
+      "speaker": "SPEAKER_01",
+      "transcript": "Yeah.",
+      "start_time": 322.107,
+      "end_time": 322.765,
+      "tags": []
+    },
+    {
+      "segment_id": 58,
+      "speaker": "SPEAKER_01",
+      "transcript": "Um, okay, any changes in your hair, nails, or skin like rashes?",
+      "start_time": 324.368,
+      "end_time": 328.958,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 60,
+      "speaker": "SPEAKER_01",
+      "transcript": "How about changes in your vision or hearing?",
+      "start_time": 334.004,
+      "end_time": 337.531,
+      "tags": [
+        {
+          "label": "VRM:Question_Open",
+          "confidence": 0.6
+        }
+      ]
+    },
+    {
+      "segment_id": 62,
+      "speaker": "SPEAKER_01",
+      "transcript": "No, okay. How about stuffy nose or runny nose?",
+      "start_time": 340.265,
+      "end_time": 344.635,
+      "tags": [
+        {
+          "label": "VRM:Question_Open",
+          "confidence": 0.6
+        }
+      ]
+    },
+    {
+      "segment_id": 64,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay, okay  How about changes in smaller taste?",
+      "start_time": 365.543,
+      "end_time": 371.146,
+      "tags": [
+        {
+          "label": "VRM:Question_Open",
+          "confidence": 0.6
+        }
+      ]
+    },
+    {
+      "segment_id": 66,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay, I am coughing or shortness of breath",
+      "start_time": 392.375,
+      "end_time": 397.319,
+      "tags": []
+    },
+    {
+      "segment_id": 68,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay",
+      "start_time": 403.748,
+      "end_time": 404.288,
+      "tags": []
+    },
+    {
+      "segment_id": 69,
+      "speaker": "SPEAKER_01",
+      "transcript": "Um, how about...",
+      "start_time": 405.588,
+      "end_time": 407.579,
+      "tags": []
+    },
+    {
+      "segment_id": 70,
+      "speaker": "SPEAKER_01",
+      "transcript": "Weezing.",
+      "start_time": 408.828,
+      "end_time": 410.465,
+      "tags": []
+    },
+    {
+      "segment_id": 72,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay, any chest pain?",
+      "start_time": 416.32,
+      "end_time": 418.936,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 74,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay, how about if you're feeling like you're heart's racing",
+      "start_time": 421.197,
+      "end_time": 426.209,
+      "tags": []
+    },
+    {
+      "segment_id": 76,
+      "speaker": "SPEAKER_01",
+      "transcript": "No, okay.",
+      "start_time": 429.702,
+      "end_time": 430.63,
+      "tags": []
+    },
+    {
+      "segment_id": 77,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay, any swelling that you've noticed in your limbs?",
+      "start_time": 432.149,
+      "end_time": 435.794,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 79,
+      "speaker": "SPEAKER_01",
+      "transcript": "Any issues with their bowel movements or urine?",
+      "start_time": 438.983,
+      "end_time": 441.498,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 81,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay. How about...",
+      "start_time": 445.126,
+      "end_time": 449.429,
+      "tags": []
+    },
+    {
+      "segment_id": 82,
+      "speaker": "SPEAKER_01",
+      "transcript": "Not sure about vomiting.",
+      "start_time": 451.049,
+      "end_time": 452.18,
+      "tags": []
+    },
+    {
+      "segment_id": 84,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay.",
+      "start_time": 456.466,
+      "end_time": 456.905,
+      "tags": []
+    },
+    {
+      "segment_id": 85,
+      "speaker": "SPEAKER_01",
+      "transcript": "And those were all the questions I had about your symptoms. Are you otherwise healthy or do you have any  long standing medical conditions?",
+      "start_time": 459.723,
+      "end_time": 472.092,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 87,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay",
+      "start_time": 497.354,
+      "end_time": 497.86,
+      "tags": []
+    },
+    {
+      "segment_id": 89,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay, when were you diagnosed with all of these things?",
+      "start_time": 503.243,
+      "end_time": 507.209,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 92,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay.",
+      "start_time": 527.527,
+      "end_time": 528.067,
+      "tags": []
+    },
+    {
+      "segment_id": 93,
+      "speaker": "SPEAKER_01",
+      "transcript": "So you said diabetes, high blood pressure, fatty liver, and sorry, what was the other one?",
+      "start_time": 528.725,
+      "end_time": 535.188,
+      "tags": [
+        {
+          "label": "VRM:Question_Open",
+          "confidence": 0.6
+        }
+      ]
+    },
+    {
+      "segment_id": 95,
+      "speaker": "SPEAKER_01",
+      "transcript": "Hi, cholesterol. Okay. Are you on medications for all of these things?",
+      "start_time": 537.702,
+      "end_time": 542.039,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 97,
+      "speaker": "SPEAKER_01",
+      "transcript": "I don't know.",
+      "start_time": 560.872,
+      "end_time": 561.361,
+      "tags": []
+    },
+    {
+      "segment_id": 99,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay",
+      "start_time": 566.137,
+      "end_time": 566.761,
+      "tags": []
+    },
+    {
+      "segment_id": 100,
+      "speaker": "SPEAKER_01",
+      "transcript": "And do you take your medications regularly as prescribed?",
+      "start_time": 568.195,
+      "end_time": 572.077,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 102,
+      "speaker": "SPEAKER_01",
+      "transcript": "Are you up to date with all your immunizations?",
+      "start_time": 579.485,
+      "end_time": 582.691,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 104,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay, good. Do you have any allergies?",
+      "start_time": 588.952,
+      "end_time": 593.356,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 106,
+      "speaker": "SPEAKER_01",
+      "transcript": "How about family history of lung conditions or heart conditions?",
+      "start_time": 599.195,
+      "end_time": 603.548,
+      "tags": [
+        {
+          "label": "VRM:Question_Open",
+          "confidence": 0.6
+        }
+      ]
+    },
+    {
+      "segment_id": 108,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay, well I'm sorry to hear that.",
+      "start_time": 623.647,
+      "end_time": 626.144,
+      "tags": []
+    },
+    {
+      "segment_id": 109,
+      "speaker": "SPEAKER_01",
+      "transcript": "Any cancers in the family?",
+      "start_time": 627.663,
+      "end_time": 629.165,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 111,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay, do you smoke?",
+      "start_time": 633.468,
+      "end_time": 634.852,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 113,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay.",
+      "start_time": 643.39,
+      "end_time": 643.863,
+      "tags": []
+    },
+    {
+      "segment_id": 114,
+      "speaker": "SPEAKER_01",
+      "transcript": "How much did you smoke before that?",
+      "start_time": 644.977,
+      "end_time": 647.339,
+      "tags": [
+        {
+          "label": "VRM:Question_Open",
+          "confidence": 0.6
+        }
+      ]
+    },
+    {
+      "segment_id": 116,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay, yeah",
+      "start_time": 659.27,
+      "end_time": 662.746,
+      "tags": []
+    },
+    {
+      "segment_id": 117,
+      "speaker": "SPEAKER_01",
+      "transcript": "And did you drink alcohol?",
+      "start_time": 664.147,
+      "end_time": 665.547,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 119,
+      "speaker": "SPEAKER_01",
+      "transcript": "But",
+      "start_time": 672.044,
+      "end_time": 672.567,
+      "tags": []
+    },
+    {
+      "segment_id": 120,
+      "speaker": "SPEAKER_01",
+      "transcript": "once a month. Okay. Any other recreational drugs?",
+      "start_time": 680.279,
+      "end_time": 686.894,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 122,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay.",
+      "start_time": 692.378,
+      "end_time": 692.682,
+      "tags": []
+    },
+    {
+      "segment_id": 123,
+      "speaker": "SPEAKER_01",
+      "transcript": "no rotational drugs, and where do you live right now?",
+      "start_time": 693.88,
+      "end_time": 697.103,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 125,
+      "speaker": "SPEAKER_01",
+      "transcript": "Any old carpets, dust, molds, anything that is concerning from that standpoint?",
+      "start_time": 709.253,
+      "end_time": 715.565,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 127,
+      "speaker": "SPEAKER_01",
+      "transcript": "No.",
+      "start_time": 717.202,
+      "end_time": 717.607,
+      "tags": []
+    },
+    {
+      "segment_id": 128,
+      "speaker": "SPEAKER_01",
+      "transcript": "And have you been in contact with anyone who's been sick recently?",
+      "start_time": 718.754,
+      "end_time": 722.264,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 130,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay",
+      "start_time": 741.518,
+      "end_time": 742.261,
+      "tags": []
+    },
+    {
+      "segment_id": 131,
+      "speaker": "SPEAKER_01",
+      "transcript": "hmm",
+      "start_time": 743.645,
+      "end_time": 744.674,
+      "tags": []
+    },
+    {
+      "segment_id": 133,
+      "speaker": "SPEAKER_01",
+      "transcript": "Okay, good.  And have you traveled to anywhere recently?",
+      "start_time": 749.872,
+      "end_time": 755.103,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 135,
+      "speaker": "SPEAKER_01",
+      "transcript": "Pretty homebound, okay.",
+      "start_time": 760.52,
+      "end_time": 761.887,
+      "tags": []
+    },
+    {
+      "segment_id": 136,
+      "speaker": "SPEAKER_01",
+      "transcript": "All right, well that's good and those are all the questions that I have for you.  Did you have any questions for myself?",
+      "start_time": 763.237,
+      "end_time": 772.214,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 138,
+      "speaker": "SPEAKER_01",
+      "transcript": "Yeah, it sounds like, um, you have some sort of infection. So the first thing we need to rule  out is COVID, of course. So we'll do a swab and those swabs should come back to you in about 24 to  48 hours. Um, and until then, it's important that you do isolate and you isolate for 14 days at  least and that includes from other people at home. Um, and",
+      "start_time": 778.508,
+      "end_time": 806.707,
+      "tags": [
+        {
+          "label": "VRM:Reflection",
+          "confidence": 0.65
+        }
+      ]
+    },
+    {
+      "segment_id": 139,
+      "speaker": "SPEAKER_01",
+      "transcript": "So if those swabs come back negative, you could possibly have like another infection.  But if your symptoms worsen, like you start getting neurological deficits, like weakness  or seizures or anything like that, you should come back to the ER and we'll get that checked  out.",
+      "start_time": 808.04,
+      "end_time": 830.095,
+      "tags": []
+    },
+    {
+      "segment_id": 140,
+      "speaker": "SPEAKER_01",
+      "transcript": "So that's where we'll start for now because your presentation is acute, we think it is likely infection-related.",
+      "start_time": 831.952,
+      "end_time": 839.377,
+      "tags": []
+    },
+    {
+      "segment_id": 142,
+      "speaker": "SPEAKER_01",
+      "transcript": "Yeah, if you can, it's recommended that you try to isolate in your own room for the next 14 days  because your symptoms do overlap with that of COVID. Yeah.",
+      "start_time": 849.012,
+      "end_time": 860.133,
+      "tags": []
+    },
+    {
+      "segment_id": 145,
+      "speaker": "SPEAKER_01",
+      "transcript": "Again, worries. Take care.",
+      "start_time": 863.069,
+      "end_time": 864.436,
+      "tags": []
+    }
+  ],
+  "source": "heuristic"
+}

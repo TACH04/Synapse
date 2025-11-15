@@ -5,6 +5,8 @@ Encapsulates the pyannote.audio pipeline for speaker diarization.
 
 import warnings
 import os
+from pathlib import Path
+from typing import List, Dict, Any, Optional, Tuple
 
 # Suppress deprecation warnings for better performance
 warnings.filterwarnings('ignore', category=UserWarning)
@@ -17,7 +19,11 @@ os.environ['PYTHONWARNINGS'] = 'ignore::UserWarning'
 import torch
 import torchaudio
 from pyannote.audio import Pipeline
-from typing import List, Dict, Any
+
+try:
+    from huggingface_hub import HfFolder
+except ImportError:
+    HfFolder = None
 
 
 class DiarizationService:
@@ -28,40 +34,51 @@ class DiarizationService:
     This service answers the question: "Who spoke, and when?"
     """
 
-    def __init__(self, model_name: str = "pyannote/speaker-diarization-3.1", auth_token: str = None):
+    def __init__(self, model_name: str = "pyannote/speaker-diarization-3.1", auth_token: Optional[str] = None):
         """
         Initializes the service by loading the diarization pipeline.
 
         Args:
             model_name (str): The name of the pyannote model to load
-            auth_token (str): The Hugging Face auth token.
-                            Required for gated models like 3.1.
+            auth_token (Optional[str]): Hugging Face auth token. If omitted, we look for
+                                        HF_TOKEN / HUGGINGFACEHUB_API_TOKEN env vars or
+                                        cached CLI credentials.
 
         Raises:
-            ValueError: If auth_token is not provided
+            ValueError: If no auth token can be found
             RuntimeError: If the model fails to load
         """
-        if auth_token is None:
+        hf_token, token_source = self._resolve_hf_token(auth_token)
+        if hf_token is None:
             raise ValueError(
                 "Hugging Face auth token is required for pyannote/speaker-diarization-3.1. "
-                "Please provide it via HF_TOKEN env var or argument."
+                "Provide it via the 'auth_token' argument, the HF_TOKEN or HUGGINGFACEHUB_API_TOKEN "
+                "environment variables, or run 'huggingface-cli login'."
             )
 
-        # Create torch.device object (pyannote requires torch.device, not string)
-        device_str = "cuda" if torch.cuda.is_available() else "cpu"
-        self.device = torch.device(device_str)
+        self.hf_token = hf_token
+        self.hf_token_source = token_source
+        os.environ.setdefault("HF_TOKEN", self.hf_token)
+        print(f"DiarizationService: Using Hugging Face token from {self.hf_token_source}.")
 
-        # Show GPU info if available
+        # Detect device: CUDA (NVIDIA) > MPS (Apple Silicon) > CPU
         if torch.cuda.is_available():
+            device_str = "cuda"
             gpu_name = torch.cuda.get_device_name(0)
-            print(f"DiarizationService: Using GPU - {gpu_name}")
+            print(f"DiarizationService: Using GPU (CUDA) - {gpu_name}")
+        elif hasattr(torch.backends, 'mps') and torch.backends.mps.is_available():
+            device_str = "mps"
+            print(f"DiarizationService: Using GPU (Apple Silicon MPS)")
         else:
+            device_str = "cpu"
             print(f"DiarizationService: Using CPU (GPU not available)")
+        
+        self.device = torch.device(device_str)
 
         try:
             self.pipeline = Pipeline.from_pretrained(
                 model_name,
-                token=auth_token
+                use_auth_token=self.hf_token
             ).to(self.device)
             print(f"DiarizationService loaded on {device_str}.")
         except Exception as e:
@@ -101,9 +118,15 @@ class DiarizationService:
             diarization_output = self.pipeline(audio, num_speakers=num_speakers)
 
             segments = []
-            # pyannote.audio 4.0.1 returns a DiarizeOutput object
-            # The actual annotation is in the speaker_diarization attribute
-            diarization = diarization_output.speaker_diarization
+            # Handle different pyannote.audio API versions:
+            # - Newer versions return DiarizeOutput with .speaker_diarization attribute
+            # - Older versions or certain configurations return Annotation directly
+            if hasattr(diarization_output, 'speaker_diarization'):
+                # pyannote.audio 4.0.1+ returns a DiarizeOutput object
+                diarization = diarization_output.speaker_diarization
+            else:
+                # Direct Annotation object (older API or different configuration)
+                diarization = diarization_output
 
             # Now iterate through the annotation using itertracks
             for segment, _, label in diarization.itertracks(yield_label=True):
@@ -118,4 +141,32 @@ class DiarizationService:
         except Exception as e:
             print(f"Error during diarization processing: {e}")
             return []
+
+    def _resolve_hf_token(self, auth_token: Optional[str]) -> Tuple[Optional[str], str]:
+        """
+        Resolve the Hugging Face token from multiple sources for robustness.
+        Returns (token, source_description).
+        """
+        if auth_token:
+            return auth_token.strip(), "constructor argument"
+
+        env_vars = ["HF_TOKEN", "HUGGINGFACEHUB_API_TOKEN", "HUGGINGFACE_TOKEN"]
+        for env_var in env_vars:
+            value = os.environ.get(env_var)
+            if value:
+                return value.strip(), f"environment variable {env_var}"
+
+        if HfFolder:
+            stored = HfFolder.get_token()
+            if stored:
+                return stored.strip(), "huggingface_hub cache"
+
+        token_path = Path.home() / ".huggingface" / "token"
+        if token_path.exists():
+            try:
+                return token_path.read_text().strip(), str(token_path)
+            except OSError:
+                pass
+
+        return None, ""
 

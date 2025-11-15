@@ -1,0 +1,6 @@
+{
+  "clinician": "SPEAKER_00",
+  "patient": "SPEAKER_01",
+  "confidence": "high",
+  "rationale": "The clinician introduces themselves with 'I see. Okay. Um', and asks diagnostic questions such as 'When did this start?' and 'Have you had any vomiting?'. The patient provides information about their symptoms, including the timing of nausea onset."
+}

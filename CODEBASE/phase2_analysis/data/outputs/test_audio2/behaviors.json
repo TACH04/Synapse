@@ -1,0 +1,160 @@
+{
+  "model_name": "heuristic",
+  "entries": [
+    {
+      "segment_id": 0,
+      "speaker": "SPEAKER_01",
+      "transcript": "Joe, have a seat.  Finally.  Sounds like you're feeling a bit frustrated.",
+      "start_time": 22.171,
+      "end_time": 28.567,
+      "tags": [
+        {
+          "label": "VRM:Reflection",
+          "confidence": 0.65
+        }
+      ]
+    },
+    {
+      "segment_id": 3,
+      "speaker": "SPEAKER_01",
+      "transcript": "So it sounds like you didn't get the straight answer you were looking for.",
+      "start_time": 61.068,
+      "end_time": 64.628,
+      "tags": [
+        {
+          "label": "VRM:Reflection",
+          "confidence": 0.65
+        }
+      ]
+    },
+    {
+      "segment_id": 6,
+      "speaker": "SPEAKER_01",
+      "transcript": "Well, Joe, it sounds to me like you waited a lot longer than you had expected to.  Then you didn't get the information or respect you'd hoped for from Jessica, my assistant.",
+      "start_time": 86.38,
+      "end_time": 97.028,
+      "tags": []
+    },
+    {
+      "segment_id": 8,
+      "speaker": "SPEAKER_01",
+      "transcript": "And now you're pretty irritated using time efficiently is very important to you especially  in the middle of a busy work day right?",
+      "start_time": 97.248,
+      "end_time": 108.74,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 10,
+      "speaker": "SPEAKER_01",
+      "transcript": "And I imagine you might be a little bit worried about your son, too.  I know how important his safety is to you.  Is this partly what's going on here?",
+      "start_time": 109.567,
+      "end_time": 118.645,
+      "tags": [
+        {
+          "label": "VRM:Question_Open",
+          "confidence": 0.6
+        }
+      ]
+    },
+    {
+      "segment_id": 12,
+      "speaker": "SPEAKER_01",
+      "transcript": "pretty well shot. So the having some predictability would have been nice.",
+      "start_time": 128.973,
+      "end_time": 134.322,
+      "tags": []
+    },
+    {
+      "segment_id": 14,
+      "speaker": "SPEAKER_01",
+      "transcript": "Well, you know, Joe, predictability is something that I value as well, and using time efficiently  is something that's really important to me.  I really want to be able to give you immediate attention, and so when I hear that you are  waiting around for such a long period of time without any explanation as to why that's happening,  I feel a bit of disappointment and regret.",
+      "start_time": 137.512,
+      "end_time": 164.68,
+      "tags": [
+        {
+          "label": "Encounter:Closing",
+          "confidence": 0.52
+        },
+        {
+          "label": "VRM:Reflection",
+          "confidence": 0.65
+        }
+      ]
+    },
+    {
+      "segment_id": 15,
+      "speaker": "SPEAKER_01",
+      "transcript": "As it turns out, I was just across the street at the hospital attending to  a delivery for a patient of mine. They were having an unexpected crunch in  laboring and delivery area and taking care of that patient and her baby  is very important to me too.",
+      "start_time": 166.452,
+      "end_time": 181.302,
+      "tags": []
+    },
+    {
+      "segment_id": 16,
+      "speaker": "SPEAKER_01",
+      "transcript": "I honestly had no idea how long I would be, and I made the choice to take the time and go over there.",
+      "start_time": 182.45,
+      "end_time": 190.685,
+      "tags": []
+    },
+    {
+      "segment_id": 19,
+      "speaker": "SPEAKER_01",
+      "transcript": "Well, you know Joe, it sounds like you're maybe feeling a little bit of regret now,  thinking about how you spoke to Jessica. It's okay to feel that way. And it's also okay to feel  upset when you weren't getting the predictability and the information you'd been hoping for.",
+      "start_time": 205.67,
+      "end_time": 219.811,
+      "tags": [
+        {
+          "label": "VRM:Reflection",
+          "confidence": 0.65
+        }
+      ]
+    },
+    {
+      "segment_id": 20,
+      "speaker": "SPEAKER_01",
+      "transcript": "I do my very best to consider everyone's needs, Joe. Yours included.",
+      "start_time": 223.912,
+      "end_time": 229.582,
+      "tags": []
+    },
+    {
+      "segment_id": 21,
+      "speaker": "SPEAKER_01",
+      "transcript": "I agree that Jessica would appreciate it if you would acknowledge her own needs in the  situation too.  For all she was doing her best to honor my patient's privacy and my own flexibility.",
+      "start_time": 230.729,
+      "end_time": 243.942,
+      "tags": []
+    },
+    {
+      "segment_id": 22,
+      "speaker": "SPEAKER_01",
+      "transcript": "All right.",
+      "start_time": 245.326,
+      "end_time": 245.748,
+      "tags": []
+    },
+    {
+      "segment_id": 23,
+      "speaker": "SPEAKER_01",
+      "transcript": "So, uh, what did you need refilled?  Ah.  Yes.  Uh-huh.  Okay.",
+      "start_time": 247.165,
+      "end_time": 254.033,
+      "tags": []
+    },
+    {
+      "segment_id": 25,
+      "speaker": "SPEAKER_01",
+      "transcript": "Good.",
+      "start_time": 254.354,
+      "end_time": 254.675,
+      "tags": []
+    }
+  ],
+  "source": "heuristic"
+}

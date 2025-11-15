@@ -1,0 +1,6 @@
+{
+  "clinician": "SPEAKER_01",
+  "patient": "SPEAKER_00",
+  "confidence": "high",
+  "rationale": "The clinician introduces themselves as Dr. Miller (Turn 2), asks diagnostic questions (Turns 5, 11), provides instructions or reassurance (Turns 7, 13), and references staff (Jessica, my assistant) in Turn 9."
+}

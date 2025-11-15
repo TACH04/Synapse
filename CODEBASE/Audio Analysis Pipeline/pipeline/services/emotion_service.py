@@ -50,15 +50,19 @@ class EmotionService:
             sample_rate: Audio sample rate (16000 Hz)
         """
         self.mode = mode
-        self.device = "cuda" if torch.cuda.is_available() else "cpu"
-        self.sample_rate = sample_rate
-
-        # Show GPU info
+        # Detect device: CUDA (NVIDIA) > MPS (Apple Silicon) > CPU
         if torch.cuda.is_available():
+            self.device = "cuda"
             gpu_name = torch.cuda.get_device_name(0)
-            print(f"EmotionService: Using GPU - {gpu_name}")
+            print(f"EmotionService: Using GPU (CUDA) - {gpu_name}")
+        elif hasattr(torch.backends, 'mps') and torch.backends.mps.is_available():
+            self.device = "mps"
+            print(f"EmotionService: Using GPU (Apple Silicon MPS)")
         else:
+            self.device = "cpu"
             print(f"EmotionService: Using CPU (GPU not available)")
+        
+        self.sample_rate = sample_rate
 
         try:
             # Load MODEL 1: HuBERT (prosody-focused, 4 emotions)
@@ -76,10 +80,13 @@ class EmotionService:
             # Load MODEL 3: Text model (semantic-focused, 7 emotions) - only if triple mode
             if mode == 'triple_ensemble':
                 print(f"Loading Text model (semantic analysis)...")
+                # Set device for transformers pipeline: 0 for CUDA, -1 for CPU/MPS
+                # Note: transformers pipeline doesn't directly support MPS, so use CPU for text model
+                pipeline_device = 0 if self.device == "cuda" else -1
                 self.text_classifier = pipeline(
                     "text-classification",
                     model=text_model,
-                    device=0 if self.device == "cuda" else -1,
+                    device=pipeline_device,
                     top_k=None  # Get scores for all emotions
                 )
             else:

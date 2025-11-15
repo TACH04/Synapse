@@ -1,0 +1,15 @@
+# Copy this file to config/models.yaml and adjust paths/models as needed.
+
+ollama:
+  speaker_role_model: "llama3:8b"
+  key_moment_model: "llama3:8b"
+  feedback_model: "mistral-nemo"
+  timeout_seconds: 120
+
+behavior_classifier:
+  model_dir: "/Users/tannerhochberg/Desktop/Synapse/CODEBASE/phase2_analysis/models/ccae-behavior-classifier-v1"
+  labels_file: "/Users/tannerhochberg/Desktop/Synapse/CODEBASE/phase2_analysis/models/ccae-behavior-classifier-v1/labels.json"
+  thresholds_file: "/Users/tannerhochberg/Desktop/Synapse/CODEBASE/phase2_analysis/models/ccae-behavior-classifier-v1/thresholds.json"
+  batch_size: 8
+  device: "auto"   # "cpu", "mps", "cuda", or "auto"
+

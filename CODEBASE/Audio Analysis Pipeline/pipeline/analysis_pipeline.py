@@ -43,14 +43,16 @@ class AnalysisPipeline:
     """
 
     def __init__(self,
-                 hf_token: str,
+                 hf_token: Optional[str] = None,
                  emotion_model_path: str = "superb/hubert-base-superb-er",
                  asr_model: str = "base.en"):
         """
         Initializes the pipeline by loading all ML models into memory.
 
         Args:
-            hf_token (str): Hugging Face auth token (for Diarization)
+            hf_token (Optional[str]): Hugging Face auth token (for Diarization). If omitted,
+                                      DiarizationService will fall back to environment variables
+                                      or cached CLI credentials.
             emotion_model_path (str): Path for the EmotionService (supports hot-swap)
             asr_model (str): The faster-whisper model to use
         """

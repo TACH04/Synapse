@@ -1,0 +1,626 @@
+{
+  "model_name": "heuristic",
+  "entries": [
+    {
+      "segment_id": 6,
+      "speaker": "SPEAKER_00",
+      "transcript": "Mm.",
+      "start_time": 31.503,
+      "end_time": 31.857,
+      "tags": []
+    },
+    {
+      "segment_id": 7,
+      "speaker": "SPEAKER_00",
+      "transcript": "And do you always have the sensation of nausea or is it related or does it sort of come and go?",
+      "start_time": 33.022,
+      "end_time": 41.358,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 9,
+      "speaker": "SPEAKER_00",
+      "transcript": "I see. Okay. Um, have you had any vomiting?",
+      "start_time": 58.115,
+      "end_time": 63.616,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 12,
+      "speaker": "SPEAKER_00",
+      "transcript": "Mmm, and this is all been over the past week week two weeks or so",
+      "start_time": 73.673,
+      "end_time": 78.28,
+      "tags": []
+    },
+    {
+      "segment_id": 14,
+      "speaker": "SPEAKER_00",
+      "transcript": "Hmm, okay. Any other symptoms that you have?",
+      "start_time": 80.525,
+      "end_time": 85.823,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 19,
+      "speaker": "SPEAKER_00",
+      "transcript": "How often do you have to pee?",
+      "start_time": 111.355,
+      "end_time": 112.739,
+      "tags": [
+        {
+          "label": "VRM:Question_Open",
+          "confidence": 0.6
+        }
+      ]
+    },
+    {
+      "segment_id": 22,
+      "speaker": "SPEAKER_00",
+      "transcript": "Okay, so we'll save about every two hours every hour",
+      "start_time": 123.016,
+      "end_time": 127.522,
+      "tags": []
+    },
+    {
+      "segment_id": 23,
+      "speaker": "SPEAKER_00",
+      "transcript": "I'll be fine then.  Yeah.",
+      "start_time": 128.669,
+      "end_time": 129.817,
+      "tags": []
+    },
+    {
+      "segment_id": 25,
+      "speaker": "SPEAKER_00",
+      "transcript": "Do you wake up at night?",
+      "start_time": 137.714,
+      "end_time": 139.165,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 26,
+      "speaker": "SPEAKER_00",
+      "transcript": "It",
+      "start_time": 139.435,
+      "end_time": 139.925,
+      "tags": []
+    },
+    {
+      "segment_id": 28,
+      "speaker": "SPEAKER_00",
+      "transcript": "I'll be right back.",
+      "start_time": 148.025,
+      "end_time": 148.565,
+      "tags": []
+    },
+    {
+      "segment_id": 29,
+      "speaker": "SPEAKER_00",
+      "transcript": "Yeah. Do you feel like you have control over when you are going to a bathroom or is it difficult for you to hold it in?",
+      "start_time": 151.349,
+      "end_time": 157.441,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 31,
+      "speaker": "SPEAKER_00",
+      "transcript": "I see, I see. So you have urinary frequency, but do you feel like  you said that you can control it? You don't feel like you need to run to the bathroom or you'll be in your  bed?",
+      "start_time": 164.377,
+      "end_time": 180.543,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 33,
+      "speaker": "SPEAKER_00",
+      "transcript": "Okay, do you have any fame on your being?",
+      "start_time": 184.694,
+      "end_time": 186.533,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 34,
+      "speaker": "SPEAKER_00",
+      "transcript": "No.  Okay.  All right.  Do you feel like you've been more thirsty recently?  Why do you feel you've been drinking more?",
+      "start_time": 188.812,
+      "end_time": 196.186,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 35,
+      "speaker": "SPEAKER_00",
+      "transcript": "More water, I think.",
+      "start_time": 197.654,
+      "end_time": 199.24,
+      "tags": []
+    },
+    {
+      "segment_id": 37,
+      "speaker": "SPEAKER_00",
+      "transcript": "I see.",
+      "start_time": 203.83,
+      "end_time": 204.134,
+      "tags": []
+    },
+    {
+      "segment_id": 39,
+      "speaker": "SPEAKER_00",
+      "transcript": "Wow, um, I see. Okay.",
+      "start_time": 207.644,
+      "end_time": 212.605,
+      "tags": []
+    },
+    {
+      "segment_id": 40,
+      "speaker": "SPEAKER_00",
+      "transcript": "Have you...",
+      "start_time": 214.58,
+      "end_time": 215.373,
+      "tags": []
+    },
+    {
+      "segment_id": 41,
+      "speaker": "SPEAKER_00",
+      "transcript": "other than the nausea and the vomiting.",
+      "start_time": 217.094,
+      "end_time": 221.397,
+      "tags": []
+    },
+    {
+      "segment_id": 42,
+      "speaker": "SPEAKER_00",
+      "transcript": "Have you, I had any other sort of stomach related issues, any belly pain or changes in  your bowel movement?",
+      "start_time": 222.832,
+      "end_time": 232.72,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 44,
+      "speaker": "SPEAKER_00",
+      "transcript": "No, listen.",
+      "start_time": 238.306,
+      "end_time": 238.778,
+      "tags": []
+    },
+    {
+      "segment_id": 45,
+      "speaker": "SPEAKER_00",
+      "transcript": "Not a...",
+      "start_time": 244.938,
+      "end_time": 245.444,
+      "tags": []
+    },
+    {
+      "segment_id": 47,
+      "speaker": "SPEAKER_00",
+      "transcript": "Am I serious?  Mm.",
+      "start_time": 245.528,
+      "end_time": 247.385,
+      "tags": []
+    },
+    {
+      "segment_id": 48,
+      "speaker": "SPEAKER_00",
+      "transcript": "When did you last have your period?",
+      "start_time": 248.667,
+      "end_time": 252.278,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 53,
+      "speaker": "SPEAKER_00",
+      "transcript": "Okay. Do you know if you get your periods regularly or are your periods irregular?",
+      "start_time": 268.715,
+      "end_time": 274.25,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 55,
+      "speaker": "SPEAKER_00",
+      "transcript": "True yeah",
+      "start_time": 283.885,
+      "end_time": 286.045,
+      "tags": []
+    },
+    {
+      "segment_id": 57,
+      "speaker": "SPEAKER_00",
+      "transcript": "Is it normal for you to go six weeks without a period?",
+      "start_time": 288.323,
+      "end_time": 291.428,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 60,
+      "speaker": "SPEAKER_00",
+      "transcript": "All right, okay.",
+      "start_time": 299.63,
+      "end_time": 303.899,
+      "tags": []
+    },
+    {
+      "segment_id": 61,
+      "speaker": "SPEAKER_00",
+      "transcript": "I'll just ask you a couple more questions about your symptoms, so I know that you've been nauseous  and have laminated a couple of times with past two weeks, and you have had some cramps in your  belly. Have you had any flu-like symptoms?",
+      "start_time": 306.481,
+      "end_time": 324.79,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 62,
+      "speaker": "SPEAKER_00",
+      "transcript": "No, nothing like that.  I don't think so.  Any headaches.",
+      "start_time": 327.035,
+      "end_time": 332.722,
+      "tags": []
+    },
+    {
+      "segment_id": 63,
+      "speaker": "SPEAKER_00",
+      "transcript": "Any fevers?",
+      "start_time": 335.81,
+      "end_time": 338.594,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 64,
+      "speaker": "SPEAKER_00",
+      "transcript": "No muscle aches.",
+      "start_time": 341.277,
+      "end_time": 343.302,
+      "tags": []
+    },
+    {
+      "segment_id": 65,
+      "speaker": "SPEAKER_00",
+      "transcript": "I know. Okay. Um, have you had a cough at all?",
+      "start_time": 345.378,
+      "end_time": 350.744,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 66,
+      "speaker": "SPEAKER_00",
+      "transcript": "Oh, no, okay, and have you noticed any blood in your stool?",
+      "start_time": 353.596,
+      "end_time": 359.553,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 68,
+      "speaker": "SPEAKER_00",
+      "transcript": "No? Okay. Have you, uh, you haven't had any, um, palpitations or chest pain or anything on that",
+      "start_time": 363.113,
+      "end_time": 371.112,
+      "tags": []
+    },
+    {
+      "segment_id": 69,
+      "speaker": "SPEAKER_00",
+      "transcript": "No.  All right.  Can you tell me about your past medical history and medical conditions that you have?",
+      "start_time": 372.445,
+      "end_time": 381.288,
+      "tags": [
+        {
+          "label": "VRM:Question_Open",
+          "confidence": 0.6
+        }
+      ]
+    },
+    {
+      "segment_id": 72,
+      "speaker": "SPEAKER_00",
+      "transcript": "Okay.",
+      "start_time": 387.38,
+      "end_time": 387.869,
+      "tags": []
+    },
+    {
+      "segment_id": 73,
+      "speaker": "SPEAKER_00",
+      "transcript": "Have you been taking any medications?",
+      "start_time": 389.506,
+      "end_time": 394.214,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 75,
+      "speaker": "SPEAKER_00",
+      "transcript": "I see.  Any allergies?",
+      "start_time": 406.01,
+      "end_time": 410.465,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 77,
+      "speaker": "SPEAKER_00",
+      "transcript": "and get married.",
+      "start_time": 417.333,
+      "end_time": 418.126,
+      "tags": []
+    },
+    {
+      "segment_id": 79,
+      "speaker": "SPEAKER_00",
+      "transcript": "on medication.",
+      "start_time": 420.725,
+      "end_time": 421.315,
+      "tags": []
+    },
+    {
+      "segment_id": 80,
+      "speaker": "SPEAKER_00",
+      "transcript": "So, um...",
+      "start_time": 422.446,
+      "end_time": 424.927,
+      "tags": []
+    },
+    {
+      "segment_id": 81,
+      "speaker": "SPEAKER_00",
+      "transcript": "And a couple of questions about your social history, who do you currently live with?",
+      "start_time": 426.412,
+      "end_time": 433.432,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 84,
+      "speaker": "SPEAKER_00",
+      "transcript": "Um, and do you currently smoke?",
+      "start_time": 449.395,
+      "end_time": 454.964,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 85,
+      "speaker": "SPEAKER_00",
+      "transcript": "No.",
+      "start_time": 456.837,
+      "end_time": 457.192,
+      "tags": []
+    },
+    {
+      "segment_id": 86,
+      "speaker": "SPEAKER_00",
+      "transcript": "All right.",
+      "start_time": 458.052,
+      "end_time": 458.963,
+      "tags": []
+    },
+    {
+      "segment_id": 88,
+      "speaker": "SPEAKER_00",
+      "transcript": "I do use that.",
+      "start_time": 459.014,
+      "end_time": 459.638,
+      "tags": []
+    },
+    {
+      "segment_id": 89,
+      "speaker": "SPEAKER_00",
+      "transcript": "You don't smoke, okay. Do you can do alcohol?",
+      "start_time": 459.942,
+      "end_time": 463.233,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 91,
+      "speaker": "SPEAKER_00",
+      "transcript": "Okay, when was the last string that you had?",
+      "start_time": 469.561,
+      "end_time": 472.075,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 93,
+      "speaker": "SPEAKER_00",
+      "transcript": "Okay, um, and you can do many illicit drugs",
+      "start_time": 477.762,
+      "end_time": 481.913,
+      "tags": []
+    },
+    {
+      "segment_id": 94,
+      "speaker": "SPEAKER_00",
+      "transcript": "No. No. All right. Are you currently sexually active?",
+      "start_time": 483.179,
+      "end_time": 488.022,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 96,
+      "speaker": "SPEAKER_00",
+      "transcript": "And do you use protection while having sex?",
+      "start_time": 493.625,
+      "end_time": 498.772,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 98,
+      "speaker": "SPEAKER_00",
+      "transcript": "Let's see.  Okay.  And",
+      "start_time": 513.385,
+      "end_time": 517.503,
+      "tags": []
+    },
+    {
+      "segment_id": 99,
+      "speaker": "SPEAKER_00",
+      "transcript": "Let's see.",
+      "start_time": 520.49,
+      "end_time": 521.215,
+      "tags": []
+    },
+    {
+      "segment_id": 100,
+      "speaker": "SPEAKER_00",
+      "transcript": "Family history. Do you have any medical conditions that run in your family?",
+      "start_time": 523.139,
+      "end_time": 527.476,
+      "tags": [
+        {
+          "label": "VRM:Question_Closed",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "segment_id": 103,
+      "speaker": "SPEAKER_00",
+      "transcript": "Uh, I guess.",
+      "start_time": 536.538,
+      "end_time": 537.061,
+      "tags": []
+    },
+    {
+      "segment_id": 104,
+      "speaker": "SPEAKER_00",
+      "transcript": "Yeah.",
+      "start_time": 540.402,
+      "end_time": 540.993,
+      "tags": []
+    },
+    {
+      "segment_id": 106,
+      "speaker": "SPEAKER_00",
+      "transcript": "All right. All right. Well, thank you so much for spending time with me today.  I think I've gathered all the information that I would have liked. I will go to  after my attending. We'll come back, maybe ask a couple more questions, and then share the plan with  you.",
+      "start_time": 545.431,
+      "end_time": 561.648,
+      "tags": [
+        {
+          "label": "Encounter:Closing",
+          "confidence": 0.52
+        }
+      ]
+    },
+    {
+      "segment_id": 108,
+      "speaker": "SPEAKER_00",
+      "transcript": "Welcome",
+      "start_time": 565.073,
+      "end_time": 565.495,
+      "tags": []
+    }
+  ],
+  "source": "heuristic"
+}

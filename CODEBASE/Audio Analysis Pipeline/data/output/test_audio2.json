@@ -3,7 +3,7 @@
     "segments": [
         {
             "segment_id": 0,
-            "speaker": "SPEAKER_00",
+            "speaker": "SPEAKER_01",
             "start_time": 22.171,
             "end_time": 28.567,
             "duration": 6.396,
@@ -14,8 +14,8 @@
                 "confidence": "medium",
                 "hubert_emotion": "hap",
                 "hubert_score": 0.8036,
-                "wav2vec2_emotion": "sad",
-                "wav2vec2_score": 0.1298,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1384,
                 "text_emotion": "anger",
                 "text_score": 0.8819,
                 "agreement": "partial",
@@ -24,73 +24,44 @@
                 "method": "triple_ensemble"
             },
             "acoustic_features": {
-                "pitch_mean_f0": 122.27808527923118,
-                "jitter_local": 0.013932858932821743,
-                "shimmer_local": 0.16662397625379857,
-                "hnr_mean": 7.1309836345853075
+                "pitch_mean_f0": 122.27808523005343,
+                "jitter_local": 0.01393285825863626,
+                "shimmer_local": 0.16662401028584548,
+                "hnr_mean": 7.1309837845601285
             }
         },
         {
             "segment_id": 1,
-            "speaker": "SPEAKER_01",
-            "start_time": 29.765,
-            "end_time": 34.743,
-            "duration": 4.978,
+            "speaker": "SPEAKER_00",
+            "start_time": 29.748,
+            "end_time": 35.35,
+            "duration": 5.602,
             "transcript": "Dr. Miller I've been waiting for over two hours",
             "predicted_emotion": {
                 "label": "hap",
-                "score": 0.4825,
-                "confidence": "high",
+                "score": 0.2509,
+                "confidence": "low",
                 "hubert_emotion": "hap",
-                "hubert_score": 0.6342,
-                "wav2vec2_emotion": "happy",
-                "wav2vec2_score": 0.1271,
+                "hubert_score": 0.6272,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.138,
                 "text_emotion": "neutral",
                 "text_score": 0.806,
-                "agreement": "audio_consensus",
-                "sarcasm_flag": true,
-                "mixed_emotion_flag": false,
-                "method": "triple_ensemble"
-            },
-            "acoustic_features": {
-                "pitch_mean_f0": 115.38627688567081,
-                "jitter_local": 0.016002148781891462,
-                "shimmer_local": 0.1689098926723449,
-                "hnr_mean": 9.024881901167605
-            }
-        },
-        {
-            "segment_id": 2,
-            "speaker": "SPEAKER_01",
-            "start_time": 34.777,
-            "end_time": 35.35,
-            "duration": 0.574,
-            "transcript": "Mm hmm.",
-            "predicted_emotion": {
-                "label": "neu",
-                "score": 0.4738,
-                "confidence": "medium",
-                "hubert_emotion": "neu",
-                "hubert_score": 0.6944,
-                "wav2vec2_emotion": "happy",
-                "wav2vec2_score": 0.1317,
-                "text_emotion": "neutral",
-                "text_score": 0.7843,
                 "agreement": "partial",
                 "sarcasm_flag": false,
                 "mixed_emotion_flag": true,
                 "method": "triple_ensemble"
             },
             "acoustic_features": {
-                "pitch_mean_f0": 91.08467384452882,
-                "jitter_local": 0.014063375073172514,
-                "shimmer_local": 0.11366330105685606,
-                "hnr_mean": 12.788523996911923
+                "pitch_mean_f0": 112.89477930997872,
+                "jitter_local": 0.016509371134661208,
+                "shimmer_local": 0.160539512731656,
+                "hnr_mean": 9.231135052617805
             }
         },
         {
-            "segment_id": 3,
-            "speaker": "SPEAKER_01",
+            "segment_id": 2,
+            "speaker": "SPEAKER_00",
             "start_time": 36.532,
             "end_time": 59.465,
             "duration": 22.933,
@@ -101,8 +72,8 @@
                 "confidence": "low",
                 "hubert_emotion": "sad",
                 "hubert_score": 0.4402,
-                "wav2vec2_emotion": "surprised",
-                "wav2vec2_score": 0.1305,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1385,
                 "text_emotion": "anger",
                 "text_score": 0.5812,
                 "agreement": "partial",
@@ -111,44 +82,44 @@
                 "method": "triple_ensemble"
             },
             "acoustic_features": {
-                "pitch_mean_f0": 129.47409816040397,
-                "jitter_local": 0.017727385754303226,
-                "shimmer_local": 0.16472802146701035,
-                "hnr_mean": 9.683039297962027
+                "pitch_mean_f0": 129.47409820472663,
+                "jitter_local": 0.017727385214547302,
+                "shimmer_local": 0.16472808066259065,
+                "hnr_mean": 9.68303930701776
             }
         },
         {
-            "segment_id": 4,
-            "speaker": "SPEAKER_00",
+            "segment_id": 3,
+            "speaker": "SPEAKER_01",
             "start_time": 61.068,
             "end_time": 64.628,
             "duration": 3.561,
             "transcript": "So it sounds like you didn't get the straight answer you were looking for.",
             "predicted_emotion": {
                 "label": "neu",
-                "score": 0.3075,
-                "confidence": "low",
+                "score": 0.4931,
+                "confidence": "high",
                 "hubert_emotion": "neu",
                 "hubert_score": 0.7321,
-                "wav2vec2_emotion": "sad",
-                "wav2vec2_score": 0.1316,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1379,
                 "text_emotion": "disgust",
                 "text_score": 0.5255,
-                "agreement": "partial",
-                "sarcasm_flag": false,
-                "mixed_emotion_flag": true,
+                "agreement": "audio_consensus",
+                "sarcasm_flag": true,
+                "mixed_emotion_flag": false,
                 "method": "triple_ensemble"
             },
             "acoustic_features": {
-                "pitch_mean_f0": 107.90647350662037,
-                "jitter_local": 0.009390261503259766,
-                "shimmer_local": 0.1025782674782096,
-                "hnr_mean": 11.452409047786395
+                "pitch_mean_f0": 107.90647351954519,
+                "jitter_local": 0.009390261550816056,
+                "shimmer_local": 0.1025783094505624,
+                "hnr_mean": 11.45240916676014
             }
         },
         {
-            "segment_id": 5,
-            "speaker": "SPEAKER_01",
+            "segment_id": 4,
+            "speaker": "SPEAKER_00",
             "start_time": 64.831,
             "end_time": 66.012,
             "duration": 1.181,
@@ -159,8 +130,8 @@
                 "confidence": "low",
                 "hubert_emotion": "hap",
                 "hubert_score": 0.7169,
-                "wav2vec2_emotion": "disgust",
-                "wav2vec2_score": 0.1344,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.1304,
                 "text_emotion": "neutral",
                 "text_score": 0.4769,
                 "agreement": "partial",
@@ -169,15 +140,15 @@
                 "method": "triple_ensemble"
             },
             "acoustic_features": {
-                "pitch_mean_f0": 114.74825366851758,
-                "jitter_local": 0.023820233699563046,
-                "shimmer_local": 0.14712055897990692,
-                "hnr_mean": 9.697643058182809
+                "pitch_mean_f0": 114.74825359660566,
+                "jitter_local": 0.02382023323392118,
+                "shimmer_local": 0.14712057651937402,
+                "hnr_mean": 9.69764328751014
             }
         },
         {
-            "segment_id": 6,
-            "speaker": "SPEAKER_01",
+            "segment_id": 5,
+            "speaker": "SPEAKER_00",
             "start_time": 67.733,
             "end_time": 85.165,
             "duration": 17.432,
@@ -188,8 +159,8 @@
                 "confidence": "low",
                 "hubert_emotion": "hap",
                 "hubert_score": 0.5213,
-                "wav2vec2_emotion": "sad",
-                "wav2vec2_score": 0.1298,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1319,
                 "text_emotion": "sadness",
                 "text_score": 0.6196,
                 "agreement": "partial",
@@ -198,44 +169,44 @@
                 "method": "triple_ensemble"
             },
             "acoustic_features": {
-                "pitch_mean_f0": 168.09135513905747,
-                "jitter_local": 0.017459424362433966,
-                "shimmer_local": 0.16162765297066897,
-                "hnr_mean": 9.369297836831098
+                "pitch_mean_f0": 168.0913552572453,
+                "jitter_local": 0.017459423632679518,
+                "shimmer_local": 0.16162774122198598,
+                "hnr_mean": 9.369297887282753
             }
         },
         {
-            "segment_id": 7,
-            "speaker": "SPEAKER_00",
+            "segment_id": 6,
+            "speaker": "SPEAKER_01",
             "start_time": 86.38,
             "end_time": 97.028,
             "duration": 10.648,
             "transcript": "Well, Joe, it sounds to me like you waited a lot longer than you had expected to.  Then you didn't get the information or respect you'd hoped for from Jessica, my assistant.",
             "predicted_emotion": {
                 "label": "neu",
-                "score": 0.4235,
-                "confidence": "low",
+                "score": 0.5397,
+                "confidence": "medium",
                 "hubert_emotion": "neu",
                 "hubert_score": 0.6261,
-                "wav2vec2_emotion": "disgust",
-                "wav2vec2_score": 0.1321,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.131,
                 "text_emotion": "neutral",
                 "text_score": 0.6922,
-                "agreement": "partial",
+                "agreement": "full",
                 "sarcasm_flag": false,
-                "mixed_emotion_flag": true,
+                "mixed_emotion_flag": false,
                 "method": "triple_ensemble"
             },
             "acoustic_features": {
-                "pitch_mean_f0": 111.56848339265261,
-                "jitter_local": 0.014225790362523373,
-                "shimmer_local": 0.1567532257442559,
-                "hnr_mean": 9.3419616337255
+                "pitch_mean_f0": 111.56848338822263,
+                "jitter_local": 0.014225790770545345,
+                "shimmer_local": 0.1567532350584153,
+                "hnr_mean": 9.341961634392375
             }
         },
         {
-            "segment_id": 8,
-            "speaker": "SPEAKER_01",
+            "segment_id": 7,
+            "speaker": "SPEAKER_00",
             "start_time": 91.612,
             "end_time": 92.168,
             "duration": 0.557,
@@ -246,8 +217,8 @@
                 "confidence": "medium",
                 "hubert_emotion": "neu",
                 "hubert_score": 0.6753,
-                "wav2vec2_emotion": "fearful",
-                "wav2vec2_score": 0.1396,
+                "wav2vec2_emotion": "sad",
+                "wav2vec2_score": 0.1335,
                 "text_emotion": "neutral",
                 "text_score": 0.8337,
                 "agreement": "partial",
@@ -256,15 +227,15 @@
                 "method": "triple_ensemble"
             },
             "acoustic_features": {
-                "pitch_mean_f0": 121.32250246505745,
-                "jitter_local": 0.02357585922649175,
-                "shimmer_local": 0.18936120178817253,
-                "hnr_mean": 8.755425677734598
+                "pitch_mean_f0": 121.32250258057086,
+                "jitter_local": 0.023575861797052615,
+                "shimmer_local": 0.18936123092813964,
+                "hnr_mean": 8.75542599830716
             }
         },
         {
-            "segment_id": 9,
-            "speaker": "SPEAKER_00",
+            "segment_id": 8,
+            "speaker": "SPEAKER_01",
             "start_time": 97.248,
             "end_time": 108.74,
             "duration": 11.492,
@@ -275,8 +246,8 @@
                 "confidence": "low",
                 "hubert_emotion": "hap",
                 "hubert_score": 0.5184,
-                "wav2vec2_emotion": "surprised",
-                "wav2vec2_score": 0.1303,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1377,
                 "text_emotion": "anger",
                 "text_score": 0.8481,
                 "agreement": "partial",
@@ -285,44 +256,44 @@
                 "method": "triple_ensemble"
             },
             "acoustic_features": {
-                "pitch_mean_f0": 131.06105104750318,
-                "jitter_local": 0.013318886157207924,
-                "shimmer_local": 0.1307090159215976,
-                "hnr_mean": 10.718282753982235
+                "pitch_mean_f0": 131.061051040676,
+                "jitter_local": 0.013318886648559241,
+                "shimmer_local": 0.13070898031080708,
+                "hnr_mean": 10.718282704777058
             }
         },
         {
-            "segment_id": 10,
-            "speaker": "SPEAKER_01",
+            "segment_id": 9,
+            "speaker": "SPEAKER_00",
             "start_time": 108.284,
             "end_time": 108.706,
             "duration": 0.422,
             "transcript": "Right? Yeah.",
             "predicted_emotion": {
                 "label": "hap",
-                "score": 0.2658,
-                "confidence": "low",
+                "score": 0.4891,
+                "confidence": "high",
                 "hubert_emotion": "hap",
                 "hubert_score": 0.6646,
-                "wav2vec2_emotion": "disgust",
-                "wav2vec2_score": 0.1485,
+                "wav2vec2_emotion": "happy",
+                "wav2vec2_score": 0.1342,
                 "text_emotion": "neutral",
                 "text_score": 0.7324,
-                "agreement": "partial",
-                "sarcasm_flag": false,
-                "mixed_emotion_flag": true,
+                "agreement": "audio_consensus",
+                "sarcasm_flag": true,
+                "mixed_emotion_flag": false,
                 "method": "triple_ensemble"
             },
             "acoustic_features": {
-                "pitch_mean_f0": 134.91117435437448,
-                "jitter_local": 0.0359934012856478,
-                "shimmer_local": 0.17882616516873656,
-                "hnr_mean": 5.066152086954642
+                "pitch_mean_f0": 134.91117456758928,
+                "jitter_local": 0.03599340362803294,
+                "shimmer_local": 0.1788264413528715,
+                "hnr_mean": 5.066152188691888
             }
         },
         {
-            "segment_id": 11,
-            "speaker": "SPEAKER_00",
+            "segment_id": 10,
+            "speaker": "SPEAKER_01",
             "start_time": 109.567,
             "end_time": 118.645,
             "duration": 9.079,
@@ -333,8 +304,8 @@
                 "confidence": "low",
                 "hubert_emotion": "neu",
                 "hubert_score": 0.6351,
-                "wav2vec2_emotion": "disgust",
-                "wav2vec2_score": 0.1362,
+                "wav2vec2_emotion": "happy",
+                "wav2vec2_score": 0.1332,
                 "text_emotion": "fear",
                 "text_score": 0.7808,
                 "agreement": "partial",
@@ -343,116 +314,116 @@
                 "method": "triple_ensemble"
             },
             "acoustic_features": {
-                "pitch_mean_f0": 129.20832865177937,
-                "jitter_local": 0.01494447274798774,
-                "shimmer_local": 0.1501823420229151,
-                "hnr_mean": 9.891044812283603
+                "pitch_mean_f0": 129.20832863717993,
+                "jitter_local": 0.014944472857611014,
+                "shimmer_local": 0.15018225298709223,
+                "hnr_mean": 9.891044770926788
             }
         },
         {
-            "segment_id": 12,
-            "speaker": "SPEAKER_01",
+            "segment_id": 11,
+            "speaker": "SPEAKER_00",
             "start_time": 120.62,
-            "end_time": 128.028,
-            "duration": 7.408,
-            "transcript": "Yeah, well, I just expected to be in and out of here.  I didn't have to wait all this time.  I guess mine.",
+            "end_time": 128.973,
+            "duration": 8.353,
+            "transcript": "Yeah, well, I just expected to be in and out of here.  I didn't have to wait all this time.  I guess my plans were the day of...",
             "predicted_emotion": {
                 "label": "hap",
-                "score": 0.5758,
+                "score": 0.5549,
                 "confidence": "high",
                 "hubert_emotion": "hap",
-                "hubert_score": 0.8147,
+                "hubert_score": 0.7887,
                 "wav2vec2_emotion": "surprised",
-                "wav2vec2_score": 0.13,
+                "wav2vec2_score": 0.1346,
                 "text_emotion": "neutral",
-                "text_score": 0.8198,
+                "text_score": 0.7561,
                 "agreement": "audio_consensus",
                 "sarcasm_flag": true,
                 "mixed_emotion_flag": false,
                 "method": "triple_ensemble"
             },
             "acoustic_features": {
-                "pitch_mean_f0": 182.53993872654345,
-                "jitter_local": 0.02352769859060883,
-                "shimmer_local": 0.17294389317831135,
-                "hnr_mean": 7.582047629129688
+                "pitch_mean_f0": 169.4652759946855,
+                "jitter_local": 0.02275540538770906,
+                "shimmer_local": 0.16890200134925773,
+                "hnr_mean": 7.518831139419045
             }
         },
         {
-            "segment_id": 13,
-            "speaker": "SPEAKER_00",
-            "start_time": 128.028,
-            "end_time": 134.322,
-            "duration": 6.294,
-            "transcript": "plans with a day are pretty well shot. So the having some predictability would have been nice.",
-            "predicted_emotion": {
-                "label": "hap",
-                "score": 0.2252,
-                "confidence": "low",
-                "hubert_emotion": "hap",
-                "hubert_score": 0.563,
-                "wav2vec2_emotion": "disgust",
-                "wav2vec2_score": 0.1277,
-                "text_emotion": "neutral",
-                "text_score": 0.8159,
-                "agreement": "partial",
-                "sarcasm_flag": false,
-                "mixed_emotion_flag": true,
-                "method": "triple_ensemble"
-            },
-            "acoustic_features": {
-                "pitch_mean_f0": 107.39289294275946,
-                "jitter_local": 0.013917750430249882,
-                "shimmer_local": 0.14302001649895013,
-                "hnr_mean": 8.82048665346674
-            }
-        },
-        {
-            "segment_id": 14,
+            "segment_id": 12,
             "speaker": "SPEAKER_01",
-            "start_time": 135.976,
-            "end_time": 136.381,
-            "duration": 0.405,
-            "transcript": "Yes, exactly.",
+            "start_time": 128.973,
+            "end_time": 134.322,
+            "duration": 5.349,
+            "transcript": "pretty well shot. So the having some predictability would have been nice.",
             "predicted_emotion": {
                 "label": "neu",
-                "score": 0.6719,
-                "confidence": "high",
+                "score": 0.3636,
+                "confidence": "low",
                 "hubert_emotion": "neu",
-                "hubert_score": 0.5792,
+                "hubert_score": 0.4913,
                 "wav2vec2_emotion": "neutral",
-                "wav2vec2_score": 0.1341,
+                "wav2vec2_score": 0.1344,
                 "text_emotion": "neutral",
-                "text_score": 0.9427,
+                "text_score": 0.4801,
                 "agreement": "full",
                 "sarcasm_flag": false,
                 "mixed_emotion_flag": false,
                 "method": "triple_ensemble"
             },
             "acoustic_features": {
-                "pitch_mean_f0": 128.9125875915509,
-                "jitter_local": 0.017030055965565685,
-                "shimmer_local": 0.18520130313277156,
-                "hnr_mean": 7.682927505750923
+                "pitch_mean_f0": 107.08473039060357,
+                "jitter_local": 0.012600577376214448,
+                "shimmer_local": 0.14862187539156893,
+                "hnr_mean": 9.300410787685935
             }
         },
         {
-            "segment_id": 15,
+            "segment_id": 13,
             "speaker": "SPEAKER_00",
-            "start_time": 136.668,
+            "start_time": 135.588,
+            "end_time": 136.6,
+            "duration": 1.012,
+            "transcript": "Yes, exactly.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.498,
+                "confidence": "medium",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.7922,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1331,
+                "text_emotion": "neutral",
+                "text_score": 0.9427,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 144.18086586565195,
+                "jitter_local": 0.026759781869747732,
+                "shimmer_local": 0.15703377371545105,
+                "hnr_mean": 8.052158217674181
+            }
+        },
+        {
+            "segment_id": 14,
+            "speaker": "SPEAKER_01",
+            "start_time": 137.512,
             "end_time": 164.68,
-            "duration": 28.013,
-            "transcript": "Well, you know, Joe, predictability is something that I value as well.  And using time efficiently is something that's really important to me.  I really want to be able to give you immediate attention.  And so when I hear that you are waiting around for such a long period of time, without any  explanation as to why that's happening, I feel a bit of disappointment and regret.",
+            "duration": 27.169,
+            "transcript": "Well, you know, Joe, predictability is something that I value as well, and using time efficiently  is something that's really important to me.  I really want to be able to give you immediate attention, and so when I hear that you are  waiting around for such a long period of time without any explanation as to why that's happening,  I feel a bit of disappointment and regret.",
             "predicted_emotion": {
                 "label": "sad",
-                "score": 0.781,
+                "score": 0.7847,
                 "confidence": "very_high",
-                "hubert_emotion": "hap",
-                "hubert_score": 0.4289,
-                "wav2vec2_emotion": "disgust",
-                "wav2vec2_score": 0.1282,
+                "hubert_emotion": "neu",
+                "hubert_score": 0.4343,
+                "wav2vec2_emotion": "happy",
+                "wav2vec2_score": 0.1301,
                 "text_emotion": "sadness",
-                "text_score": 0.9749,
+                "text_score": 0.9783,
                 "agreement": "text_veto",
                 "sarcasm_flag": false,
                 "mixed_emotion_flag": false,
@@ -460,27 +431,27 @@
                 "note": "Text model very high confidence override"
             },
             "acoustic_features": {
-                "pitch_mean_f0": 118.1132387638597,
-                "jitter_local": 0.014143008938149475,
-                "shimmer_local": 0.14573429127916895,
-                "hnr_mean": 9.543024736969343
+                "pitch_mean_f0": 117.90691473945895,
+                "jitter_local": 0.014379901059983399,
+                "shimmer_local": 0.14724793991118776,
+                "hnr_mean": 9.595190561323784
             }
         },
         {
-            "segment_id": 16,
-            "speaker": "SPEAKER_00",
+            "segment_id": 15,
+            "speaker": "SPEAKER_01",
             "start_time": 166.452,
             "end_time": 181.302,
             "duration": 14.85,
             "transcript": "As it turns out, I was just across the street at the hospital attending to  a delivery for a patient of mine. They were having an unexpected crunch in  laboring and delivery area and taking care of that patient and her baby  is very important to me too.",
             "predicted_emotion": {
                 "label": "neu",
-                "score": 0.395,
+                "score": 0.3975,
                 "confidence": "low",
                 "hubert_emotion": "neu",
                 "hubert_score": 0.551,
-                "wav2vec2_emotion": "surprised",
-                "wav2vec2_score": 0.1306,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1375,
                 "text_emotion": "surprise",
                 "text_score": 0.5157,
                 "agreement": "full",
@@ -489,44 +460,44 @@
                 "method": "triple_ensemble"
             },
             "acoustic_features": {
-                "pitch_mean_f0": 114.78599242571639,
-                "jitter_local": 0.014709602164180812,
-                "shimmer_local": 0.14769517462877405,
-                "hnr_mean": 9.06105434045044
+                "pitch_mean_f0": 114.78599245904577,
+                "jitter_local": 0.014709601898474731,
+                "shimmer_local": 0.1476952550922429,
+                "hnr_mean": 9.061054346746147
             }
         },
         {
-            "segment_id": 17,
-            "speaker": "SPEAKER_00",
+            "segment_id": 16,
+            "speaker": "SPEAKER_01",
             "start_time": 182.45,
             "end_time": 190.685,
             "duration": 8.235,
             "transcript": "I honestly had no idea how long I would be, and I made the choice to take the time and go over there.",
             "predicted_emotion": {
                 "label": "neu",
-                "score": 0.6343,
-                "confidence": "medium",
+                "score": 0.7614,
+                "confidence": "high",
                 "hubert_emotion": "neu",
                 "hubert_score": 0.6231,
-                "wav2vec2_emotion": "sad",
-                "wav2vec2_score": 0.1316,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1392,
                 "text_emotion": "surprise",
                 "text_score": 0.8947,
-                "agreement": "partial",
+                "agreement": "full",
                 "sarcasm_flag": false,
-                "mixed_emotion_flag": true,
+                "mixed_emotion_flag": false,
                 "method": "triple_ensemble"
             },
             "acoustic_features": {
-                "pitch_mean_f0": 111.33850477336942,
-                "jitter_local": 0.01277082837772011,
-                "shimmer_local": 0.14840258309255616,
-                "hnr_mean": 9.63265409307905
+                "pitch_mean_f0": 111.3385047724791,
+                "jitter_local": 0.012770828582500447,
+                "shimmer_local": 0.14840255283266898,
+                "hnr_mean": 9.63265416443542
             }
         },
         {
-            "segment_id": 18,
-            "speaker": "SPEAKER_01",
+            "segment_id": 17,
+            "speaker": "SPEAKER_00",
             "start_time": 193.233,
             "end_time": 194.06,
             "duration": 0.827,
@@ -537,8 +508,8 @@
                 "confidence": "low",
                 "hubert_emotion": "hap",
                 "hubert_score": 0.3747,
-                "wav2vec2_emotion": "fearful",
-                "wav2vec2_score": 0.1396,
+                "wav2vec2_emotion": "calm",
+                "wav2vec2_score": 0.1292,
                 "text_emotion": "neutral",
                 "text_score": 0.3955,
                 "agreement": "partial",
@@ -547,27 +518,27 @@
                 "method": "triple_ensemble"
             },
             "acoustic_features": {
-                "pitch_mean_f0": 89.75216624924616,
-                "jitter_local": 0.023528535973294636,
-                "shimmer_local": 0.18586018080987138,
-                "hnr_mean": 4.9656904461731
+                "pitch_mean_f0": 89.75216587607102,
+                "jitter_local": 0.02352854150061315,
+                "shimmer_local": 0.18586030016960764,
+                "hnr_mean": 4.965690968399852
             }
         },
         {
-            "segment_id": 19,
-            "speaker": "SPEAKER_01",
+            "segment_id": 18,
+            "speaker": "SPEAKER_00",
             "start_time": 195.359,
-            "end_time": 204.1,
-            "duration": 8.741,
+            "end_time": 204.117,
+            "duration": 8.758,
             "transcript": "Well, it's definitely more important than my refill. I guess I owe your receptionist an apology.",
             "predicted_emotion": {
                 "label": "hap",
-                "score": 0.328,
+                "score": 0.3287,
                 "confidence": "low",
                 "hubert_emotion": "hap",
-                "hubert_score": 0.8199,
-                "wav2vec2_emotion": "sad",
-                "wav2vec2_score": 0.1331,
+                "hubert_score": 0.8218,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1463,
                 "text_emotion": "neutral",
                 "text_score": 0.5542,
                 "agreement": "partial",
@@ -576,44 +547,44 @@
                 "method": "triple_ensemble"
             },
             "acoustic_features": {
-                "pitch_mean_f0": 112.6596313548597,
-                "jitter_local": 0.015124097173961886,
-                "shimmer_local": 0.13143948162888802,
-                "hnr_mean": 7.238528439654932
+                "pitch_mean_f0": 112.19262143451714,
+                "jitter_local": 0.014992404037328431,
+                "shimmer_local": 0.1371609778507864,
+                "hnr_mean": 7.322225032638383
             }
         },
         {
-            "segment_id": 20,
-            "speaker": "SPEAKER_00",
+            "segment_id": 19,
+            "speaker": "SPEAKER_01",
             "start_time": 205.67,
             "end_time": 219.811,
             "duration": 14.141,
             "transcript": "Well, you know Joe, it sounds like you're maybe feeling a little bit of regret now,  thinking about how you spoke to Jessica. It's okay to feel that way. And it's also okay to feel  upset when you weren't getting the predictability and the information you'd been hoping for.",
             "predicted_emotion": {
-                "label": "sad",
-                "score": 0.4537,
-                "confidence": "medium",
+                "label": "neu",
+                "score": 0.3902,
+                "confidence": "high",
                 "hubert_emotion": "neu",
                 "hubert_score": 0.4403,
-                "wav2vec2_emotion": "disgust",
-                "wav2vec2_score": 0.1333,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1322,
                 "text_emotion": "sadness",
                 "text_score": 0.825,
-                "agreement": "partial",
-                "sarcasm_flag": false,
-                "mixed_emotion_flag": true,
+                "agreement": "audio_consensus",
+                "sarcasm_flag": true,
+                "mixed_emotion_flag": false,
                 "method": "triple_ensemble"
             },
             "acoustic_features": {
-                "pitch_mean_f0": 138.86656481526342,
-                "jitter_local": 0.014526212805479137,
-                "shimmer_local": 0.18304845892152238,
-                "hnr_mean": 8.138236624524056
+                "pitch_mean_f0": 138.86656485410865,
+                "jitter_local": 0.014526213510094987,
+                "shimmer_local": 0.183048505473533,
+                "hnr_mean": 8.138236597911163
             }
         },
         {
-            "segment_id": 21,
-            "speaker": "SPEAKER_00",
+            "segment_id": 20,
+            "speaker": "SPEAKER_01",
             "start_time": 223.912,
             "end_time": 229.582,
             "duration": 5.67,
@@ -624,8 +595,8 @@
                 "confidence": "medium",
                 "hubert_emotion": "neu",
                 "hubert_score": 0.4846,
-                "wav2vec2_emotion": "disgust",
-                "wav2vec2_score": 0.129,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1295,
                 "text_emotion": "neutral",
                 "text_score": 0.9522,
                 "agreement": "partial",
@@ -634,44 +605,44 @@
                 "method": "triple_ensemble"
             },
             "acoustic_features": {
-                "pitch_mean_f0": 139.46718161050114,
-                "jitter_local": 0.016320795387245547,
-                "shimmer_local": 0.16755296309846857,
-                "hnr_mean": 8.45202259580228
+                "pitch_mean_f0": 139.46718153647603,
+                "jitter_local": 0.016320793946389554,
+                "shimmer_local": 0.1675528423173924,
+                "hnr_mean": 8.452022743699658
             }
         },
         {
-            "segment_id": 22,
-            "speaker": "SPEAKER_00",
+            "segment_id": 21,
+            "speaker": "SPEAKER_01",
             "start_time": 230.729,
             "end_time": 243.942,
             "duration": 13.213,
             "transcript": "I agree that Jessica would appreciate it if you would acknowledge her own needs in the  situation too.  For all she was doing her best to honor my patient's privacy and my own flexibility.",
             "predicted_emotion": {
                 "label": "neu",
-                "score": 0.3664,
+                "score": 0.4138,
                 "confidence": "low",
                 "hubert_emotion": "neu",
                 "hubert_score": 0.4886,
-                "wav2vec2_emotion": "sad",
-                "wav2vec2_score": 0.1309,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1354,
                 "text_emotion": "neutral",
                 "text_score": 0.6837,
-                "agreement": "partial",
+                "agreement": "full",
                 "sarcasm_flag": false,
-                "mixed_emotion_flag": true,
+                "mixed_emotion_flag": false,
                 "method": "triple_ensemble"
             },
             "acoustic_features": {
-                "pitch_mean_f0": 127.3863860824248,
-                "jitter_local": 0.015744403398133336,
-                "shimmer_local": 0.1520496545748696,
-                "hnr_mean": 9.106277207137314
+                "pitch_mean_f0": 127.3863860884249,
+                "jitter_local": 0.01574440517486015,
+                "shimmer_local": 0.15204953299722718,
+                "hnr_mean": 9.10627733042514
             }
         },
         {
-            "segment_id": 23,
-            "speaker": "SPEAKER_00",
+            "segment_id": 22,
+            "speaker": "SPEAKER_01",
             "start_time": 245.326,
             "end_time": 245.748,
             "duration": 0.422,
@@ -682,8 +653,8 @@
                 "confidence": "low",
                 "hubert_emotion": "neu",
                 "hubert_score": 0.5162,
-                "wav2vec2_emotion": "disgust",
-                "wav2vec2_score": 0.1489,
+                "wav2vec2_emotion": "happy",
+                "wav2vec2_score": 0.1333,
                 "text_emotion": "neutral",
                 "text_score": 0.6786,
                 "agreement": "partial",
@@ -692,39 +663,97 @@
                 "method": "triple_ensemble"
             },
             "acoustic_features": {
-                "pitch_mean_f0": 164.35162218130066,
-                "jitter_local": 0.021329295504160163,
-                "shimmer_local": 0.18618857669287495,
-                "hnr_mean": 7.367759123238996
+                "pitch_mean_f0": 164.35162140607918,
+                "jitter_local": 0.02132929729555996,
+                "shimmer_local": 0.18618856985226825,
+                "hnr_mean": 7.36775940938136
             }
         },
         {
-            "segment_id": 24,
-            "speaker": "SPEAKER_00",
+            "segment_id": 23,
+            "speaker": "SPEAKER_01",
             "start_time": 247.165,
-            "end_time": 254.675,
-            "duration": 7.509,
-            "transcript": "So, uh, what did you need refilled?  Ah.  Yes.  Ah-ha.  Okay.  Good.",
+            "end_time": 254.033,
+            "duration": 6.868,
+            "transcript": "So, uh, what did you need refilled?  Ah.  Yes.  Uh-huh.  Okay.",
             "predicted_emotion": {
                 "label": "hap",
-                "score": 0.3482,
+                "score": 0.3441,
                 "confidence": "low",
                 "hubert_emotion": "hap",
-                "hubert_score": 0.8706,
-                "wav2vec2_emotion": "disgust",
-                "wav2vec2_score": 0.1352,
-                "text_emotion": "neutral",
-                "text_score": 0.4408,
+                "hubert_score": 0.8602,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1336,
+                "text_emotion": "fear",
+                "text_score": 0.4899,
                 "agreement": "partial",
                 "sarcasm_flag": false,
                 "mixed_emotion_flag": true,
                 "method": "triple_ensemble"
             },
             "acoustic_features": {
-                "pitch_mean_f0": 187.5826468134901,
-                "jitter_local": 0.012572772587480427,
-                "shimmer_local": 0.21248156930434833,
-                "hnr_mean": 9.539798985996583
+                "pitch_mean_f0": 189.84194030733133,
+                "jitter_local": 0.012302274689636091,
+                "shimmer_local": 0.19568905989588725,
+                "hnr_mean": 9.598308034102033
+            }
+        },
+        {
+            "segment_id": 24,
+            "speaker": "SPEAKER_00",
+            "start_time": 254.033,
+            "end_time": 254.354,
+            "duration": 0.321,
+            "transcript": "Okay.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.3803,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.6165,
+                "wav2vec2_emotion": "disgust",
+                "wav2vec2_score": 0.1341,
+                "text_emotion": "neutral",
+                "text_score": 0.5349,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 93.79622223657104,
+                "jitter_local": 0.017497998750862397,
+                "shimmer_local": 0.1708186485194269,
+                "hnr_mean": 3.3135443191083076
+            }
+        },
+        {
+            "segment_id": 25,
+            "speaker": "SPEAKER_01",
+            "start_time": 254.354,
+            "end_time": 254.675,
+            "duration": 0.321,
+            "transcript": "Good.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4535,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.8802,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.1367,
+                "text_emotion": "neutral",
+                "text_score": 0.4056,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 96.87613553846627,
+                "jitter_local": 0.017573199578272868,
+                "shimmer_local": 0.0682076789764951,
+                "hnr_mean": 1.9030653612781612
             }
         }
     ]
