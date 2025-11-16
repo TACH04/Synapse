@@ -1,0 +1,469 @@
+{
+    "file": "test_audio3.mp3",
+    "segments": [
+        {
+            "segment_id": 0,
+            "speaker": "SPEAKER_00",
+            "start_time": 13.497,
+            "end_time": 33.224,
+            "duration": 19.727,
+            "transcript": "So, uh, this lady got admitted last night with an asthma exacerbation.  Give her a couple breathing treatments during the night.  Uh, she also had some prednisone seems to be doing quite a bit better now today.  Um, plan, hopefully we'll get her discharged today.  You know, if you're doing okay, we'll see how you feel.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.2962,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.7404,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.129,
+                "text_emotion": "neutral",
+                "text_score": 0.628,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 121.51755616240312,
+                "jitter_local": 0.01194228331719766,
+                "shimmer_local": 0.15062463261826184,
+                "hnr_mean": 9.476210275615069
+            }
+        },
+        {
+            "segment_id": 1,
+            "speaker": "SPEAKER_01",
+            "start_time": 33.511,
+            "end_time": 38.438,
+            "duration": 4.928,
+            "transcript": "Mmm, that's not very hot.  I can just charge that patient down the room as well,  then hold.  Hold on.  Hold on.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.2486,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.5651,
+                "wav2vec2_emotion": "calm",
+                "wav2vec2_score": 0.1289,
+                "text_emotion": "neutral",
+                "text_score": 0.6959,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 191.53297892900505,
+                "jitter_local": 0.007572810613507118,
+                "shimmer_local": 0.10596814963588937,
+                "hnr_mean": 15.526580264491814
+            }
+        },
+        {
+            "segment_id": 2,
+            "speaker": "SPEAKER_00",
+            "start_time": 36.076,
+            "end_time": 36.447,
+            "duration": 0.371,
+            "transcript": "I can just try.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.8154,
+                "confidence": "high",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.6919,
+                "wav2vec2_emotion": "calm",
+                "wav2vec2_score": 0.1328,
+                "text_emotion": "neutral",
+                "text_score": 0.9499,
+                "agreement": "full",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 187.83841526303107,
+                "jitter_local": 0.010743115990997724,
+                "shimmer_local": 0.09503600882217118,
+                "hnr_mean": 12.180431500664794
+            }
+        },
+        {
+            "segment_id": 3,
+            "speaker": "SPEAKER_00",
+            "start_time": 38.236,
+            "end_time": 46.741,
+            "duration": 8.505,
+            "transcript": "Oh, the one down in 54. They're not doing real well. So I'm not sure what's going to happen there.  I mean, this should be in our easy room that we're in here today.  So...",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.1988,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.4971,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1298,
+                "text_emotion": "neutral",
+                "text_score": 0.412,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 134.2669457723507,
+                "jitter_local": 0.01523405786403606,
+                "shimmer_local": 0.1271547894019651,
+                "hnr_mean": 8.709897793349892
+            }
+        },
+        {
+            "segment_id": 4,
+            "speaker": "SPEAKER_01",
+            "start_time": 39.687,
+            "end_time": 40.261,
+            "duration": 0.574,
+            "transcript": "for that.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.6885,
+                "confidence": "high",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.7469,
+                "wav2vec2_emotion": "surprised",
+                "wav2vec2_score": 0.1357,
+                "text_emotion": "neutral",
+                "text_score": 0.9289,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 148.70365350473563,
+                "jitter_local": 0.013900695143689386,
+                "shimmer_local": 0.17249814677521508,
+                "hnr_mean": 9.44354590985997
+            }
+        },
+        {
+            "segment_id": 5,
+            "speaker": "SPEAKER_01",
+            "start_time": 45.88,
+            "end_time": 46.319,
+            "duration": 0.439,
+            "transcript": "Okay.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.3033,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.4239,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1492,
+                "text_emotion": "neutral",
+                "text_score": 0.5349,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 231.76952087525444,
+                "jitter_local": 0.0067717876299037555,
+                "shimmer_local": 0.13565674285021112,
+                "hnr_mean": 11.209904660259035
+            }
+        },
+        {
+            "segment_id": 6,
+            "speaker": "SPEAKER_01",
+            "start_time": 47.838,
+            "end_time": 48.53,
+            "duration": 0.692,
+            "transcript": "What about me?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.2587,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.6467,
+                "wav2vec2_emotion": "surprised",
+                "wav2vec2_score": 0.1334,
+                "text_emotion": "fear",
+                "text_score": 0.3233,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 209.4232524058718,
+                "jitter_local": 0.007583654622374931,
+                "shimmer_local": 0.10639370856966308,
+                "hnr_mean": 13.195642067585647
+            }
+        },
+        {
+            "segment_id": 7,
+            "speaker": "SPEAKER_00",
+            "start_time": 49.357,
+            "end_time": 50.167,
+            "duration": 0.81,
+            "transcript": "Uh, what about you?",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.2038,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.5094,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1376,
+                "text_emotion": "surprise",
+                "text_score": 0.347,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 131.24545485170168,
+                "jitter_local": 0.009659538465758174,
+                "shimmer_local": 0.10437493563634796,
+                "hnr_mean": 9.106783051891735
+            }
+        },
+        {
+            "segment_id": 8,
+            "speaker": "SPEAKER_01",
+            "start_time": 51.348,
+            "end_time": 54.453,
+            "duration": 3.105,
+            "transcript": "Am I going to be okay? Are you going to give me more treatments too?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4633,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.6258,
+                "wav2vec2_emotion": "calm",
+                "wav2vec2_score": 0.1298,
+                "text_emotion": "neutral",
+                "text_score": 0.4286,
+                "agreement": "full",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 186.43649160766591,
+                "jitter_local": 0.011920871092467873,
+                "shimmer_local": 0.11942560524020276,
+                "hnr_mean": 13.5414974690536
+            }
+        },
+        {
+            "segment_id": 9,
+            "speaker": "SPEAKER_00",
+            "start_time": 54.824,
+            "end_time": 67.278,
+            "duration": 12.454,
+            "transcript": "We'll see about that. I think we're doing okay  We should be able to get her discharged. I think that's what the doctor was saying. I'm not sure  I'm really worried about that one down the other room. You mind if we listen to your lungs at all right now",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.2664,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.6054,
+                "wav2vec2_emotion": "fearful",
+                "wav2vec2_score": 0.1311,
+                "text_emotion": "neutral",
+                "text_score": 0.4416,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 152.90761953977213,
+                "jitter_local": 0.013064506795987585,
+                "shimmer_local": 0.1584973955287793,
+                "hnr_mean": 10.293120276608333
+            }
+        },
+        {
+            "segment_id": 10,
+            "speaker": "SPEAKER_01",
+            "start_time": 57.473,
+            "end_time": 58.064,
+            "duration": 0.591,
+            "transcript": "Um",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.7607,
+                "confidence": "high",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.6724,
+                "wav2vec2_emotion": "calm",
+                "wav2vec2_score": 0.1377,
+                "text_emotion": "neutral",
+                "text_score": 0.8645,
+                "agreement": "full",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 185.36213326809676,
+                "jitter_local": 0.014829257822155535,
+                "shimmer_local": 0.1191397594838378,
+                "hnr_mean": 11.282353373109922
+            }
+        },
+        {
+            "segment_id": 11,
+            "speaker": "SPEAKER_01",
+            "start_time": 62.35,
+            "end_time": 62.654,
+            "duration": 0.304,
+            "transcript": "I'm.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.5659,
+                "confidence": "medium",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.633,
+                "wav2vec2_emotion": "calm",
+                "wav2vec2_score": 0.1337,
+                "text_emotion": "neutral",
+                "text_score": 0.7684,
+                "agreement": "full",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": false,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 146.84304638365688,
+                "jitter_local": 0.020151460793959627,
+                "shimmer_local": 0.18285869244443143,
+                "hnr_mean": 9.314657347145493
+            }
+        },
+        {
+            "segment_id": 12,
+            "speaker": "SPEAKER_01",
+            "start_time": 67.345,
+            "end_time": 68.712,
+            "duration": 1.367,
+            "transcript": "No, go ahead.",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.24,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.5455,
+                "wav2vec2_emotion": "neutral",
+                "wav2vec2_score": 0.1326,
+                "text_emotion": "anger",
+                "text_score": 0.3574,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 237.6916527492527,
+                "jitter_local": 0.009976656007513001,
+                "shimmer_local": 0.1243333451216363,
+                "hnr_mean": 12.433455869788546
+            }
+        },
+        {
+            "segment_id": 13,
+            "speaker": "SPEAKER_00",
+            "start_time": 69.235,
+            "end_time": 69.775,
+            "duration": 0.54,
+            "transcript": "All right.",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.2157,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.4739,
+                "wav2vec2_emotion": "calm",
+                "wav2vec2_score": 0.1317,
+                "text_emotion": "neutral",
+                "text_score": 0.6786,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 146.82844319995905,
+                "jitter_local": 0.02808763117062765,
+                "shimmer_local": 0.1760889201872638,
+                "hnr_mean": 0.9603556962432364
+            }
+        },
+        {
+            "segment_id": 14,
+            "speaker": "SPEAKER_00",
+            "start_time": 78.348,
+            "end_time": 79.445,
+            "duration": 1.097,
+            "transcript": "Can you lean forward for me?",
+            "predicted_emotion": {
+                "label": "neu",
+                "score": 0.4069,
+                "confidence": "low",
+                "hubert_emotion": "neu",
+                "hubert_score": 0.666,
+                "wav2vec2_emotion": "angry",
+                "wav2vec2_score": 0.1504,
+                "text_emotion": "neutral",
+                "text_score": 0.5619,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 180.61141817525973,
+                "jitter_local": 0.006651424160885457,
+                "shimmer_local": 0.15840900487166357,
+                "hnr_mean": 13.807906232093412
+            }
+        },
+        {
+            "segment_id": 15,
+            "speaker": "SPEAKER_01",
+            "start_time": 79.445,
+            "end_time": 84.625,
+            "duration": 5.181,
+            "transcript": "Yeah, we're gonna kind of come at you from both sides here. I'm Laurie by the way. Who are you guys?",
+            "predicted_emotion": {
+                "label": "hap",
+                "score": 0.308,
+                "confidence": "low",
+                "hubert_emotion": "hap",
+                "hubert_score": 0.7001,
+                "wav2vec2_emotion": "calm",
+                "wav2vec2_score": 0.1281,
+                "text_emotion": "neutral",
+                "text_score": 0.6259,
+                "agreement": "partial",
+                "sarcasm_flag": false,
+                "mixed_emotion_flag": true,
+                "method": "triple_ensemble"
+            },
+            "acoustic_features": {
+                "pitch_mean_f0": 239.69497026627127,
+                "jitter_local": 0.00591207533871109,
+                "shimmer_local": 0.11419633745245741,
+                "hnr_mean": 14.477443986761678
+            }
+        }
+    ]
+}
