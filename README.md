@@ -43,7 +43,7 @@ This is the single authoritative index for all DHF elements, folders, and docume
 - [DT3: Needs Metric Table](https://docs.google.com/document/d/1Rn6ign4Q32LNvc7bvyXXkeR5QmWC3LUQZaWAUHecsU0/edit?usp=drive_link)
 - [DT3: Survey Interview Questions](https://docs.google.com/document/d/1ZWAlE8qKRAdotSlWmRBeya8JlQiNOT1w30CeQTqDZ2E/edit?usp=drive_link)
 - [DT1: Generating insights](https://docs.google.com/document/d/1kNAxS7c4XYkPLRYb_zfLALkN51bi4Dif1TdJimjG3eg/edit?usp=drive_link)
-- ***NEW***: [DT 4 - Assignment_ Continued Benchmarking](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT4/DT%204%20-%20Assignment_%20Continued%20Benchmarking.md)
+- [DT 4 - Assignment_ Continued Benchmarking](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT4/DT%204%20-%20Assignment_%20Continued%20Benchmarking.md)
 
 
 ## 3. Design Output
@@ -53,17 +53,20 @@ This is the single authoritative index for all DHF elements, folders, and docume
 - [DT 4 - Assignment_ Concept Iteration](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT4/DT%204%20-%20Assignment_%20Concept%20Iteration.md)
 - [DT 4 - Assignment_ Generating Design Solutions](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT4/DT%204%20-%20Assignment_%20Generating%20Design%20Solutions.md)
 - [DT 4 - Assignment_ Preliminary Business Model](https://github.com/TACH04/Synapse/blob/main/Google%20Drive%20Folder/DT4/DT%204%20-%20Assignment_%20Preliminary%20Business%20Model.pdf)
-- ***NEW***:[DT 5 - House of Quality](https://docs.google.com/spreadsheets/d/1Ps3i7QbpODdJg2FdjLxwnCgqNGkJnbOCPAeCzxF5wMg/edit?usp=drive_link)
-- ***NEW***:[DT 5 - Initial Screening and Evaluation](https://docs.google.com/document/d/16wYz5LNCA4j-idhLw1NuzBJoynaZCnzBdnOuNzRRwyE/edit?usp=drive_link)
-- ***NEW***:[DT 5 - Initial Technical Model](https://docs.google.com/document/d/134Ho1FfFz25_Yvg67tMQN8KR4oltF4UifCV-AKALE4Y/edit?usp=drive_link)
-- ***NEW***:[DT 5 - Assignment Product Architecture](https://drive.google.com/file/d/1Hfg507qKlflcbUnkqIHz13u1J3d5kS0F/view?usp=drive_link)
-- ***NEW***:[DT 5 - Advanced Concept Analysis](https://docs.google.com/document/d/14siwGuy41ZGzbYtkOh3MVZZ1QBT1oLE_4ln4kIuj_As/edit?usp=drive_link)
-
+- [DT 5 - House of Quality](https://docs.google.com/spreadsheets/d/1Ps3i7QbpODdJg2FdjLxwnCgqNGkJnbOCPAeCzxF5wMg/edit?usp=drive_link)
+- [DT 5 - Initial Screening and Evaluation](https://docs.google.com/document/d/16wYz5LNCA4j-idhLw1NuzBJoynaZCnzBdnOuNzRRwyE/edit?usp=drive_link)
+- [DT 5 - Initial Technical Model](https://docs.google.com/document/d/134Ho1FfFz25_Yvg67tMQN8KR4oltF4UifCV-AKALE4Y/edit?usp=drive_link)
+- [DT 5 - Assignment Product Architecture](https://drive.google.com/file/d/1Hfg507qKlflcbUnkqIHz13u1J3d5kS0F/view?usp=drive_link)
+- [DT 5 - Advanced Concept Analysis](https://docs.google.com/document/d/14siwGuy41ZGzbYtkOh3MVZZ1QBT1oLE_4ln4kIuj_As/edit?usp=drive_link)
+- ***NEW***:[DT 6 - Digital Posters](https://docs.google.com/presentation/d/1sV--MjTYtfB5s9ufTb7CfvKZnhWekyeXElsmv1feYH0/edit?usp=drive_link)
+- ***NEW***:[DT 6 - eBooklet Abstract](https://docs.google.com/document/d/1ncfHU6ZyDnWPI0WQpxyqTOEJkuWaR8nhHYyztL4o7ks/edit?usp=drive_link)
+- ***NEW***:[DT6 - Youtube Thumbnail](https://drive.google.com/file/d/1AK3U_ipGSeBD60Myk8S4Z-mq4ZtpT6dX/view?usp=drive_link)
 
 
 ## 4. Design Review
 
 - Folder: [Design Review](https://github.com/TACH04/Synapse/tree/main/DHF/Design%20Review)
+- ***NEW***:[DT 6 - Formal Design Reviews Presesntation](https://docs.google.com/presentation/d/1xkVV2tzHdp0zqnV4L-_hWzp9C4s1CRAQR4ryYKupwaA/edit?usp=drive_link)
 
 ## 5. Design Verification
 
