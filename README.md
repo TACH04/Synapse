@@ -58,15 +58,20 @@ This is the single authoritative index for all DHF elements, folders, and docume
 - [DT 5 - Initial Technical Model](https://docs.google.com/document/d/134Ho1FfFz25_Yvg67tMQN8KR4oltF4UifCV-AKALE4Y/edit?usp=drive_link)
 - [DT 5 - Assignment Product Architecture](https://drive.google.com/file/d/1Hfg507qKlflcbUnkqIHz13u1J3d5kS0F/view?usp=drive_link)
 - [DT 5 - Advanced Concept Analysis](https://docs.google.com/document/d/14siwGuy41ZGzbYtkOh3MVZZ1QBT1oLE_4ln4kIuj_As/edit?usp=drive_link)
-- ***NEW***:[DT 6 - Digital Posters](https://docs.google.com/presentation/d/1sV--MjTYtfB5s9ufTb7CfvKZnhWekyeXElsmv1feYH0/edit?usp=drive_link)
-- ***NEW***:[DT 6 - eBooklet Abstract](https://docs.google.com/document/d/1ncfHU6ZyDnWPI0WQpxyqTOEJkuWaR8nhHYyztL4o7ks/edit?usp=drive_link)
-- ***NEW***:[DT6 - Youtube Thumbnail](https://drive.google.com/file/d/1AK3U_ipGSeBD60Myk8S4Z-mq4ZtpT6dX/view?usp=drive_link)
+- [DT 6 - Digital Posters](https://docs.google.com/presentation/d/1sV--MjTYtfB5s9ufTb7CfvKZnhWekyeXElsmv1feYH0/edit?usp=drive_link)
+- [DT 6 - eBooklet Abstract](https://docs.google.com/document/d/1ncfHU6ZyDnWPI0WQpxyqTOEJkuWaR8nhHYyztL4o7ks/edit?usp=drive_link)
+- [DT6 - Youtube Thumbnail](https://drive.google.com/file/d/1AK3U_ipGSeBD60Myk8S4Z-mq4ZtpT6dX/view?usp=drive_link)
+- ***NEW***:[DT7 - Bill of Materials](https://drive.google.com/file/d/1t-VxiCW5BxExFNT-CH9q-OCImpB-c6li/view?usp=drive_link)
+- ***NEW***:[DT7 - Final Technical Model](https://docs.google.com/document/d/114R3_GUtnkyXMKsLv-M3uBPg_NIFch0HaNwkNhzKzy0/edit?usp=drive_link)
+- ***NEW***:[DT7 - Review Quality Systems Regulation Analysis](https://docs.google.com/document/d/1ufkIe281nxqXbtrg1klUxfnCQAtYee7ThqwzdsVApWs/edit?usp=drive_link)
+- ***NEW***:[DT7 - Groups of Authority](https://docs.google.com/document/d/1gnoNe0FW9kmsgy2OIXffDrdHIbHeHQ5s97y9dn0TMhk/edit?usp=drive_link)
+- ***NEW***:[DT7 - Refined Technical Model](https://drive.google.com/file/d/1-gr2fBlmxYcU11OzqCUjwnFd8e7ZQzvQ/view?usp=drive_link)
 
 
 ## 4. Design Review
 
-- Folder: [Design Review](https://github.com/TACH04/Synapse/tree/main/DHF/Design%20Review)
-- ***NEW***:[DT 6 - Formal Design Reviews Presesntation](https://docs.google.com/presentation/d/1xkVV2tzHdp0zqnV4L-_hWzp9C4s1CRAQR4ryYKupwaA/edit?usp=drive_link)
+- [DT 6 - Formal Design Reviews Presesntation](https://docs.google.com/presentation/d/1xkVV2tzHdp0zqnV4L-_hWzp9C4s1CRAQR4ryYKupwaA/edit?usp=drive_link)
+- ***NEW***:[DT8 - PDR](https://docs.google.com/document/d/1tKx03OY6HKTH6tZaxVeKl4kPN85_HfThQ7tV-8WGgig/edit?usp=drive_link)
 
 ## 5. Design Verification
 
